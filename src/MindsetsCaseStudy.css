@@ -1128,3 +1128,13 @@
   }
 }
 
+/* EMERGENCY IMAGE FIX */
+@media (max-width: 768px) {
+  .design-solution img {
+    max-width: 280px !important;
+    width: 280px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
