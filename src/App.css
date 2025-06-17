@@ -1948,6 +1948,9 @@ body {
 /* Add this CSS to the very bottom of your App.css file */
 
 /* MOBILE PROJECT CARDS FIX - Better spacing and image sizing */
+/* Add this CSS to the very bottom of your App.css file */
+
+/* MOBILE PROJECT CARDS FIX - Better spacing and FULL image visibility */
 @media (max-width: 768px) {
   /* Better spacing between project cards */
   .projects-grid {
@@ -1968,12 +1971,16 @@ body {
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12) !important; /* Better shadow */
   }
   
-  /* Fix project image container to show full images */
+  /* Fix project image container to show COMPLETE images */
   .project-image-container {
     position: relative !important;
-    height: 220px !important; /* Increased height for mobile */
+    height: 240px !important; /* Increased height for better image visibility */
     width: 100% !important;
     overflow: hidden !important;
+    background: #f8f9fa !important; /* Light background in case image doesn't fill */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .project-image {
@@ -1981,14 +1988,29 @@ body {
     height: 100% !important;
     position: relative !important;
     overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .project-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important; /* CHANGED: Show complete image without cropping */
     object-position: center !important; /* Center the image */
     transition: transform 0.3s ease !important;
+    background: white !important; /* White background for images */
+  }
+  
+  /* Alternative: If images still look small, use this instead */
+  .project-card:nth-child(odd) .project-img {
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  
+  .project-card:nth-child(even) .project-img {
+    object-fit: contain !important;
+    object-position: center !important;
   }
   
   /* Ensure overlay works properly on mobile */
@@ -2129,7 +2151,7 @@ body {
   }
   
   .project-image-container {
-    height: 200px !important;
+    height: 220px !important; /* Adequate height for small screens */
   }
   
   .project-content {
