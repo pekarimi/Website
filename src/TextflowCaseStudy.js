@@ -663,25 +663,6 @@ const TextflowCaseStudy = ({ onBack }) => {
             margin-bottom: 16px;
           }
           
-          /* MOBILE IMAGE OPTIMIZATION - MAKE IMAGES ACTUALLY BIGGER */
-.study-image-container {
-  margin: 16px 0;
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 8px; /* Reduced padding for more image space */
-}
-
-.study-image {
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  min-height: 400px !important; /* FORCE larger minimum height */
-  max-height: 600px !important; /* ALLOW much larger images */
-  object-fit: contain !important;
-  border-radius: 6px;
-  border: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
           
           .gesture-controls-image {
             width: 100% !important;
@@ -736,35 +717,6 @@ const TextflowCaseStudy = ({ onBack }) => {
           
           /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
           
-          /* Step 1 - Topic frequency chart - MUCH BIGGER */
-.timeline-item:nth-child(1) .study-image {
-  min-height: 500px !important;
-  max-height: 700px !important;
-}
-
-/* Step 2 - Message generation model - MUCH BIGGER */
-.timeline-item:nth-child(2) .study-image {
-  min-height: 450px !important;
-  max-height: 650px !important;
-}
-
-/* Step 3 - System architecture - MUCH BIGGER */
-.timeline-item:nth-child(3) .study-image {
-  min-height: 400px !important;
-  max-height: 600px !important;
-}
-
-/* Step 4 - Interaction flow - MUCH BIGGER */
-.timeline-item:nth-child(4) .study-image {
-  min-height: 450px !important;
-  max-height: 650px !important;
-}
-
-/* Step 5 - All charts MUCH BIGGER */
-.timeline-item:nth-child(5) .study-image {
-  min-height: 400px !important;
-  max-height: 600px !important;
-}
           
           /* Step 3 - System architecture - LARGER */
           .timeline-item:nth-child(3) .study-image {
