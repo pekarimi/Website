@@ -1851,6 +1851,17 @@ body {
 
 /* MOBILE LINKEDIN CONTACT FIX - MAXIMUM SPECIFICITY */
 @media (max-width: 768px) {
+  /* REMOVE THE DUPLICATE CONTACT INFO PSEUDO-ELEMENTS */
+  .title::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  .header-text::after {
+    display: none !important;
+    content: none !important;
+  }
+  
   /* Use the most specific selectors possible to override hiding rules */
   body .header .container .header-content .contact-info.portfolio-contact-override,
   body .portfolio-contact-override,
@@ -1934,19 +1945,6 @@ body {
     color: #1a1a1a !important;
     position: relative !important;
     z-index: 10000 !important;
-  }
-  
-  /* Override the ::after pseudo-element that might be interfering */
-  .title::after {
-    content: "📍 SF Bay Area • ✉️ pekarimi67@gmail.com" !important;
-    display: block !important;
-    font-size: 10px !important;
-    margin: 5px 0 0 0 !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-    line-height: 1.3 !important;
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
   }
   
   /* Remove any conflicting rules */
