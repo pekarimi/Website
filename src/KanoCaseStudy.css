@@ -1219,3 +1219,83 @@
     padding: 24px;
   }
 }
+
+/* Add this to the bottom of your KanoCaseStudy.css file */
+
+/* Enhanced Mobile Fix for 2D Positioning Charts */
+@media (max-width: 768px) {
+  /* Convert charts grid to single column on mobile for better visibility */
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 24px !important;
+    margin-top: 20px !important;
+  }
+  
+  /* Make chart items larger on mobile */
+  .chart-item {
+    padding: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* Increase chart image size significantly on mobile */
+  .chart-image {
+    padding: 12px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .chart-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 400px !important; /* Increased from 320px */
+    object-fit: contain !important;
+    border-radius: 6px !important;
+  }
+  
+  /* Make chart titles more prominent on mobile */
+  .chart-item h6 {
+    font-size: 20px !important; /* Increased from 18px */
+    margin-bottom: 16px !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Improve chart captions */
+  .chart-caption {
+    font-size: 16px !important; /* Increased from 14px */
+    color: #666 !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Adjust the program charts container */
+  .program-charts {
+    margin: 24px 0 !important;
+    padding: 20px !important;
+  }
+  
+  /* Make the description more readable */
+  .program-charts h5 {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .charts-description {
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Additional fix for very small screens */
+@media (max-width: 480px) {
+  .chart-item {
+    padding: 16px !important;
+  }
+  
+  .chart-image img {
+    max-height: 350px !important;
+  }
+  
+  .chart-item h6 {
+    font-size: 18px !important;
+  }
+}
