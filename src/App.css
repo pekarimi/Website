@@ -1048,341 +1048,114 @@ body {
 
 /* ADD THIS TO THE BOTTOM OF YOUR App.css FILE - Header Mobile Fix */
 
-/* REPLACE the Header Mobile Fixes section with this improved version */
+/* MINIMAL MOBILE HEADER - Replace ALL previous mobile header fixes with this */
 
-/* Header Mobile Fixes - Final Version */
 @media (max-width: 768px) {
-  /* Fix header content overflow */
-  .header-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-right: 0 !important;
-  }
-  
-  /* Fix title truncation */
-  .title {
-    font-size: 18px !important;
-    line-height: 1.3 !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
-    max-width: 100% !important;
-  }
-  
-  /* Contact info mobile adjustments - Make it stack vertically */
-  .header .container .header-content .contact-info.portfolio-contact-override,
-  .portfolio-contact-override {
-    padding: 10px 15px !important;
-    margin-bottom: 15px !important;
-    font-size: 13px !important;
-    max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-    align-items: flex-start !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Make each contact item wrap properly */
-  .header .container .header-content .contact-info.portfolio-contact-override *,
-  .portfolio-contact-override * {
-    font-size: 12px !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-  
-  /* Ensure header doesn't cause horizontal scroll */
+  /* Force simple layout */
   .header {
-    overflow-x: hidden !important;
-    width: 100% !important;
+    padding: 20px 0 !important;
+    min-height: auto !important;
   }
   
   .header .container {
-    overflow-x: hidden !important;
+    padding: 0 10px !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    margin: 0 !important;
   }
   
-  /* Fix name overflow */
+  .header-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  
+  /* Hide ALL problematic elements */
+  .header .container .header-content .contact-info.portfolio-contact-override,
+  .portfolio-contact-override,
+  .header img,
+  .header-content img {
+    display: none !important;
+  }
+  
+  /* Super simple name */
   .name {
-    max-width: 100% !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
+    font-size: 20px !important;
     line-height: 1.1 !important;
-    font-size: 32px !important;
+    margin: 0 0 5px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    word-break: break-word !important;
   }
   
-  /* Fix description overflow */
-  .description {
+  /* Super simple title */
+  .title {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
     max-width: 100% !important;
-    overflow: hidden !important;
-    word-wrap: break-word !important;
-    font-size: 15px !important;
-    line-height: 1.5 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+  }
+  
+  /* Add contact as plain text */
+  .title::after {
+    content: "San Francisco | pekarimi67@gmail.com";
+    display: block;
+    font-size: 11px;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.2;
+  }
+  
+  /* Super simple description */
+  .description {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    margin: 10px 0 0 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    word-break: break-word !important;
+  }
+  
+  /* Override any flexbox or grid that might be causing issues */
+  .header,
+  .header *,
+  .header-content,
+  .header-content * {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 }
 
-/* Extra small screens (very narrow phones) */
+/* Extra small screens */
 @media (max-width: 375px) {
+  .header .container {
+    padding: 0 8px !important;
+  }
+  
   .name {
-    font-size: 28px !important;
+    font-size: 18px !important;
   }
   
   .title {
-    font-size: 16px !important;
+    font-size: 13px !important;
   }
   
-  .description {
-    font-size: 14px !important;
-  }
-  
-  .contact-info.portfolio-contact-override {
-    padding: 8px 12px !important;
-    font-size: 11px !important;
-  }
-  
-  .contact-info.portfolio-contact-override * {
+  .title::after {
     font-size: 10px !important;
   }
-}
-
-/* MOBILE HEADER COMPLETE REDESIGN - Add this to the very bottom of App.css */
-
-/* Hide original contact info on mobile and create new layout */
-@media (max-width: 768px) {
-  /* Hide the problematic contact box completely on mobile */
-  .header .container .header-content .contact-info.portfolio-contact-override,
-  .portfolio-contact-override {
-    display: none !important;
-  }
   
-  /* Create new mobile header layout */
-  .header {
-    text-align: center !important;
-    padding: 30px 0 40px !important;
-  }
-  
-  .header-content {
-    max-width: 100% !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-  
-  /* Fix name - make it smaller and centered */
-  .name {
-    font-size: 28px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 8px !important;
-    text-align: center !important;
-    word-wrap: break-word !important;
-  }
-  
-  /* Fix title - make it wrap properly */
-  .title {
-    font-size: 16px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 12px !important;
-    text-align: center !important;
-    word-wrap: break-word !important;
-    white-space: normal !important;
-  }
-  
-  /* Add simple contact info after title */
-  .title::after {
-    content: "\A📍 San Francisco Bay Area \A✉️ pekarimi67@gmail.com \A💼 LinkedIn";
-    white-space: pre-line;
-    display: block;
-    font-size: 13px;
-    margin-top: 15px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.95);
-  }
-  
-  /* Fix description */
   .description {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    margin-top: 20px !important;
-    text-align: center !important;
-    max-width: 100% !important;
-    word-wrap: break-word !important;
-  }
-  
-  /* Ensure proper container padding */
-  .header .container {
-    padding: 0 20px !important;
-    max-width: 100% !important;
-  }
-}
-
-/* Even smaller phones */
-@media (max-width: 375px) {
-  .name {
-    font-size: 24px !important;
-  }
-  
-  .title {
-    font-size: 14px !important;
-  }
-  
-  .title::after {
     font-size: 11px !important;
-    padding: 10px !important;
-  }
-  
-  .description {
-    font-size: 13px !important;
-  }
-  
-  .header .container {
-    padding: 0 16px !important;
-  }
-}
-
-/* COMPLETE MOBILE LAYOUT RESTRUCTURE - Add this to bottom of App.css */
-
-/* Mobile-specific header layout */
-@media (max-width: 768px) {
-  /* Change the entire header structure on mobile */
-  .header {
-    padding: 25px 0 35px !important;
-    text-align: center !important;
-  }
-  
-  .header .container {
-    padding: 0 15px !important;
-    max-width: 100% !important;
-  }
-  
-  .header-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    max-width: 100% !important;
-    gap: 15px !important;
-  }
-  
-  /* Make the profile image much smaller on mobile */
-  .header-content img,
-  .header img,
-  img[src*="profile"],
-  img[src*="pegah"] {
-    width: 80px !important;
-    height: 80px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    margin: 0 auto 10px auto !important;
-    display: block !important;
-  }
-  
-  /* Text content container */
-  .header-text-content {
-    text-align: center !important;
-    width: 100% !important;
-  }
-  
-  /* Name styling */
-  .name {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 8px !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-  
-  /* Title styling - make it shorter */
-  .title {
-    font-size: 14px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 10px !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-  
-  /* Replace the contact box with simple text */
-  .header .container .header-content .contact-info.portfolio-contact-override,
-  .portfolio-contact-override {
-    display: none !important;
-  }
-  
-  /* Add simple contact info as text */
-  .title::after {
-    content: "San Francisco • pekarimi67@gmail.com";
-    display: block;
-    font-size: 12px;
-    margin-top: 8px;
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.3;
-  }
-  
-  /* Description styling */
-  .description {
-    font-size: 13px !important;
-    line-height: 1.4 !important;
-    margin-top: 15px !important;
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 280px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  
-  /* If there's a flex layout causing issues, override it */
-  .header-content > * {
-    flex-shrink: 0 !important;
-  }
-  
-  /* Force header to not exceed viewport width */
-  .header,
-  .header * {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-  }
-}
-
-/* Very small phones */
-@media (max-width: 375px) {
-  .header-content img,
-  .header img,
-  img[src*="profile"],
-  img[src*="pegah"] {
-    width: 70px !important;
-    height: 70px !important;
-  }
-  
-  .name {
-    font-size: 22px !important;
-  }
-  
-  .title {
-    font-size: 13px !important;
-  }
-  
-  .title::after {
-    font-size: 11px !important;
-  }
-  
-  .description {
-    font-size: 12px !important;
-    max-width: 260px !important;
-  }
-  
-  .header .container {
-    padding: 0 12px !important;
   }
 }
