@@ -1,0 +1,926 @@
+/* Case Study Styles */
+.case-study {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+/* Navigation */
+.case-nav {
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #1a1a1a;
+}
+
+/* Hero Image Section - Default size for readability */
+.hero-image-section {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container {
+  max-width: 1000px;
+  width: 80%;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: white;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 400px;
+}
+
+/* Mindsets-specific hero sizing - larger for text readability */
+.mindsets-hero {
+  padding: 60px 0 !important; /* Much more padding for bigger purple area */
+}
+
+.mindsets-hero-container {
+  max-width: 1400px !important; /* Wider container */
+  width: 95% !important; /* Take up more width */
+}
+
+.mindsets-hero-container img {
+  max-height: 650px !important; /* Much taller image for better text readability */
+}
+
+/* Title Section - REDUCED PADDING */
+.title-section {
+  padding: 40px 0; /* Reduced from 60px */
+  background: white;
+  text-align: center;
+}
+
+.case-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.case-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #666;
+}
+
+.case-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Project Overview - REDUCED PADDING */
+.project-overview {
+  padding: 50px 0; /* Reduced from 80px */
+  background: white;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.overview-item {
+  text-align: center;
+  padding: 32px 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.overview-item:hover {
+  transform: translateY(-4px);
+}
+
+.overview-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: #667eea;
+}
+
+.overview-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.overview-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Content Sections - REDUCED PADDING */
+.problem-section,
+.process-section,
+.framework-section,
+.learnings-section {
+  padding: 50px 0; /* Reduced from 80px */
+}
+
+/* BALANCED WHITE SPACE ABOVE DESIGN IMPLICATIONS - MORE SPACE */
+.impact-section {
+  padding: 30px 0 50px 0 !important; /* More top padding for better breathing room */
+  margin-top: 0 !important;
+  background: white;
+}
+
+/* Profiles section with small bottom space */
+.profiles-section {
+  background: #f8f9fa;
+  padding: 30px 0 30px 0 !important; /* More bottom padding */
+  margin-bottom: 0 !important;
+}
+
+/* Remove any margin from the last mindset profile */
+.mindset-profile:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* More generous spacing for Design Implications header */
+.impact-section h2 {
+  margin-top: 0 !important;
+  padding-top: 30px !important; /* More space above the header */
+  margin-bottom: 24px;
+}
+
+/* Remove extra margin from first design solution */
+.design-solution:first-child {
+  margin-top: 0 !important;
+}
+
+.next-steps {
+  padding: 50px 0; /* Reduced from 80px */
+}
+
+.problem-section {
+  background: white;
+}
+
+.process-section {
+  background: #f8f9fa;
+}
+
+.framework-section {
+  background: white;
+}
+
+.profiles-section {
+  background: #f8f9fa;
+  padding: 30px 0 0px 0 !important; /* NO bottom padding */
+  margin-bottom: 0 !important;
+}
+
+.learnings-section {
+  background: #f8f9fa;
+}
+
+.next-steps {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Section Headers - REDUCED MARGIN */
+.case-study h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 24px; /* Reduced from 32px */
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.next-steps h2 {
+  color: white;
+}
+
+/* Problem Section */
+.problem-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto 40px; /* Reduced from 60px */
+}
+
+.problem-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.problem-highlights {
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.problem-highlights h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.problem-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.problem-highlights li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.problem-highlights li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Full-width image - REDUCED MARGIN */
+.full-width-image {
+  margin-top: 40px; /* Reduced from 60px */
+}
+
+.full-width-image-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.full-width-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e5e5;
+}
+
+.full-width-image-container .image-caption {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* Process Section - REDUCED MARGINS */
+.process-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1500px;
+  margin: 0 auto 40px; /* Reduced from 60px */
+}
+
+.process-intro-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.process-intro-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section-image-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e5e5;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.research-outcomes {
+  max-width: 1500px;
+  margin: 0 auto 60px; /* Reduced from 80px */
+  padding-top: 30px; /* Reduced from 40px */
+  border-top: 1px solid #e5e5e5;
+}
+
+.outcomes-text {
+  margin-bottom: 30px; /* Reduced from 40px */
+}
+
+.outcomes-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.outcomes-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 16px 0; /* Reduced from 32px */
+  color: #1a1a1a;
+}
+
+.outcomes-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.insights-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 24px 0; /* Reduced from 32px */
+}
+
+.insights-list li {
+  padding: 12px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #555;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.insights-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.insights-list li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.outcomes-visual {
+  width: 100%;
+}
+
+.outcomes-visual .section-image-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.outcomes-explanation {
+  margin-top: 30px; /* Reduced from 40px */
+}
+
+.outcomes-explanation h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.outcomes-explanation .insights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outcomes-explanation .insights-list li {
+  padding: 12px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #555;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.outcomes-explanation .insights-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.outcomes-explanation .insights-list li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 36px; /* Reduced from 48px */
+}
+
+.process-step {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  left: 32px;
+  background: #667eea;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.process-step h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  margin-top: 8px;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Framework Section */
+.framework-intro {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 36px; /* Reduced from 48px */
+  line-height: 1.7;
+}
+
+.dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 36px; /* Reduced from 48px */
+}
+
+.dimension-card {
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s ease;
+}
+
+.dimension-card:hover {
+  transform: translateY(-4px);
+}
+
+.dimension-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.dimension-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Mindset Profiles - REDUCED MARGINS */
+.mindset-profile {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 30px; /* Reduced from 40px */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-header h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.profile-tag {
+  background: #667eea;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-quote {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #667eea;
+  padding-left: 24px;
+  margin: 24px 0 32px;
+  line-height: 1.6;
+}
+
+.profile-description p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.profile-description h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.profile-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-description li {
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.profile-description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* Design Implications Section - REDUCED MARGINS + WHITE SPACE FIX */
+.design-solution {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 30px; /* Reduced from 40px */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Remove extra margin from first design solution */
+.design-solution:first-child {
+  margin-top: 0 !important;
+}
+
+/* Ensure Design Implications header has no extra margin */
+.impact-section h2:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.solution-header {
+  margin-bottom: 24px; /* Reduced from 32px */
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.solution-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.solution-header p {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+.solution-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.solution-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.solution-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.solution-text li {
+  padding: 12px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.solution-text li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.solution-text li strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.solution-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.visual-placeholder {
+  width: 100%;
+  text-align: center;
+}
+
+.visual-placeholder img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e5e5;
+}
+
+.visual-caption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 12px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.design-summary {
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  margin-top: 30px; /* Reduced from 40px */
+}
+
+.design-summary h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.design-summary p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* Learnings Section - REDUCED MARGINS */
+.learnings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 36px; /* Reduced from 48px */
+}
+
+.learning-item {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.learning-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.learning-item p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Next Steps */
+.next-steps .container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.next-steps p {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-image-section {
+    padding: 20px 0;
+  }
+  
+  .hero-image-container {
+    width: 85%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  
+  .hero-image-container img {
+    max-height: 250px;
+  }
+  
+  /* Mindsets mobile - larger for text readability */
+  .mindsets-hero {
+    padding: 40px 0 !important; /* More padding on mobile too */
+  }
+  
+  .mindsets-hero-container {
+    width: 95% !important; /* Take up more width on mobile */
+  }
+  
+  .mindsets-hero-container img {
+    max-height: 400px !important; /* Taller on mobile for text readability */
+  }
+  
+  .section-image-container {
+    max-width: 100%;
+  }
+  
+  .case-title {
+    font-size: 36px;
+  }
+  
+  .case-subtitle {
+    font-size: 20px;
+  }
+  
+  .case-description {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+  
+  .title-section {
+    padding: 30px 0; /* Reduced mobile padding */
+  }
+  
+  .problem-content,
+  .process-intro,
+  .research-outcomes {
+    grid-template-columns: 1fr;
+    gap: 30px; /* Reduced mobile gap */
+    max-width: 100%;
+  }
+  
+  .research-outcomes {
+    padding-top: 30px; /* Reduced mobile padding */
+  }
+  
+  .mindset-profile {
+    padding: 24px;
+  }
+  
+  .profile-image-container {
+    margin-bottom: 20px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .overview-grid,
+  .process-grid,
+  .dimensions-grid,
+  .solution-content {
+    grid-template-columns: 1fr;
+    gap: 24px; /* Reduced mobile gap */
+  }
+  
+  .design-solution {
+    padding: 24px;
+  }
+  
+  .design-summary {
+    padding: 24px;
+  }
+  .learnings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Reduced section padding on mobile */
+  .problem-section,
+  .process-section,
+  .framework-section,
+  .impact-section,
+  .learnings-section,
+  .next-steps {
+    padding: 40px 0; /* Reduced from 50px */
+  }
+  
+  .profiles-section {
+    padding: 20px 0 40px 0; /* Further reduced mobile padding */
+  }
+}
