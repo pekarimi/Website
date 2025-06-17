@@ -1625,3 +1625,224 @@ body {
     display: none !important;
   }
 }
+
+/* Add this CSS to the bottom of your App.css file */
+
+/* TEXTFLOW CASE STUDY MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+  /* MOBILE TIMELINE REDESIGN - More compact and efficient */
+  .process-timeline {
+    max-width: 100% !important;
+    margin: 0 !important;
+    position: relative !important;
+  }
+  
+  .process-timeline::before {
+    display: none !important; /* Hide the timeline line on mobile */
+  }
+  
+  .timeline-item {
+    padding-left: 0 !important; /* Remove left padding */
+    margin-bottom: 32px !important; /* Reduce bottom margin */
+    position: relative !important;
+  }
+  
+  .timeline-marker {
+    position: static !important; /* Make it part of the normal flow */
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 auto 16px auto !important; /* Center it and add bottom margin */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  
+  .timeline-number {
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+  }
+  
+  .timeline-content {
+    margin-top: 0 !important;
+    padding: 20px !important;
+    border-left: none !important;
+    border-top: 4px solid #667eea !important;
+  }
+  
+  .timeline-content h3 {
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .timeline-description p {
+    font-size: 15px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* MOBILE IMAGE OPTIMIZATION */
+  .study-image-container {
+    margin: 16px 0 !important;
+    background: #f8f9fa !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+  }
+  
+  .study-image {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    max-height: 300px !important; /* Limit max height on mobile */
+    object-fit: contain !important;
+    border-radius: 6px !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .gesture-controls-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 200px !important; /* Smaller for mobile */
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+    border-radius: 6px !important;
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .image-caption {
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: #666 !important;
+    font-style: italic !important;
+    text-align: center !important;
+    padding: 0 8px !important;
+  }
+  
+  /* MOBILE RESULTS SECTION OPTIMIZATION */
+  .timeline-results {
+    margin-top: 16px !important;
+    padding: 16px !important;
+    background: #f7fafc !important;
+    border-radius: 6px !important;
+    border-left: 3px solid #667eea !important;
+  }
+  
+  .timeline-results h4 {
+    color: #667eea !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .timeline-results li {
+    padding: 6px 0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .timeline-results strong {
+    color: #2d3748 !important;
+    font-weight: 600 !important;
+  }
+  
+  /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
+  
+  /* Step 1 - Topic frequency chart */
+  .timeline-item:nth-child(1) .study-image {
+    max-height: 350px !important; /* Allow more height for the chart */
+  }
+  
+  /* Step 2 - Message generation model */
+  .timeline-item:nth-child(2) .study-image {
+    max-height: 280px !important;
+  }
+  
+  /* Step 3 - System architecture */
+  .timeline-item:nth-child(3) .study-image {
+    max-height: 250px !important;
+  }
+  
+  /* Step 4 - Interaction flow and gesture controls */
+  .timeline-item:nth-child(4) .study-image {
+    max-height: 400px !important; /* Allow more height for interaction flow */
+  }
+  
+  /* Step 5 - Charts and tables */
+  .timeline-item:nth-child(5) .study-image {
+    max-height: 300px !important;
+  }
+  
+  /* MOBILE SECTION SPACING */
+  .process-section {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .section-title {
+    font-size: 28px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Additional TextFlow mobile fixes */
+  .hero-meta {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+  
+  .innovation-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  
+  .themes-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .theme-card {
+    padding: 20px !important;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .insight-card {
+    padding: 24px !important;
+  }
+  
+  .impact-highlights {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .highlight-item {
+    padding: 24px !important;
+  }
+  
+  .next-steps-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .next-step-card {
+    padding: 24px !important;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
