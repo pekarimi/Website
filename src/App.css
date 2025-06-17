@@ -1154,11 +1154,38 @@ body {
   .full-width-image-container img,
   .profile-image-container,
   .profile-image-container img {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
     height: auto !important;
     object-fit: contain !important;
     box-sizing: border-box !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Specifically target case study images */
+  .case-study img,
+  .design-solution img,
+  .solution-visual img,
+  .impact-section img {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Fix image containers to center and contain images */
+  .solution-visual,
+  .visual-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
   }
   
   /* Force all text to wrap */
