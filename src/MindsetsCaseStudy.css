@@ -924,3 +924,117 @@
     padding: 20px 0 40px 0; /* Further reduced mobile padding */
   }
 }
+
+/* ADD THIS TO THE BOTTOM OF YOUR MindsetsCaseStudy.css FILE */
+
+/* MOBILE FIXES FOR CASE STUDY CONTENT */
+@media (max-width: 768px) {
+  /* Fix overall container and content width issues */
+  .case-study {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .case-study .container {
+    padding: 0 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Fix all content sections to prevent overflow */
+  .impact-section,
+  .design-solution,
+  .design-summary,
+  .solution-content,
+  .solution-visual,
+  .visual-placeholder {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  
+  /* Ensure design solution cards don't overflow */
+  .design-solution {
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Fix solution content grid on mobile */
+  .solution-content {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  
+  .solution-text,
+  .solution-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Fix images and visual content */
+  .visual-placeholder img,
+  .section-image-container img,
+  .full-width-image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  
+  /* Ensure all text content wraps properly */
+  .solution-text h4,
+  .solution-text p,
+  .solution-text li,
+  .design-summary h3,
+  .design-summary p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+  
+  /* Fix lists and bullets */
+  .solution-text ul {
+    padding-left: 20px !important;
+    margin: 0 !important;
+  }
+  
+  .solution-text li {
+    padding-left: 20px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  /* Reduce section padding on mobile */
+  .impact-section {
+    padding: 30px 0 40px 0 !important;
+  }
+  
+  /* Fix any potential viewport width issues */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Ensure proper spacing and no horizontal scroll */
+  body {
+    overflow-x: hidden !important;
+  }
+  
+  /* Fix the purple mockup section specifically */
+  .solution-visual .visual-placeholder {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Make sure the mobile mockup images fit properly */
+  .solution-visual img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+}
