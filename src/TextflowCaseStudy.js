@@ -574,16 +574,165 @@ const TextflowCaseStudy = ({ onBack }) => {
             gap: 16px;
           }
           
-          .timeline-item {
-            padding-left: 80px;
+          /* MOBILE TIMELINE REDESIGN - More compact and efficient */
+          .process-timeline {
+            max-width: 100%;
+            margin: 0;
+            position: relative;
           }
           
           .process-timeline::before {
-            left: 32px;
+            display: none; /* Hide the timeline line on mobile */
+          }
+          
+          .timeline-item {
+            padding-left: 0; /* Remove left padding */
+            margin-bottom: 32px; /* Reduce bottom margin */
+            position: relative;
           }
           
           .timeline-marker {
-            left: 8px;
+            position: static; /* Make it part of the normal flow */
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 16px auto; /* Center it and add bottom margin */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+          }
+          
+          .timeline-number {
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+          }
+          
+          .timeline-content {
+            margin-top: 0;
+            padding: 20px;
+            border-left: none;
+            border-top: 4px solid #667eea;
+          }
+          
+          .timeline-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+          }
+          
+          .timeline-description p {
+            font-size: 15px;
+            margin-bottom: 16px;
+          }
+          
+          /* MOBILE IMAGE OPTIMIZATION */
+          .study-image-container {
+            margin: 16px 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+          }
+          
+          .study-image {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100% !important;
+            min-height: auto !important;
+            max-height: 300px !important; /* Limit max height on mobile */
+            object-fit: contain !important;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          }
+          
+          .gesture-controls-image {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 200px !important; /* Smaller for mobile */
+            object-fit: contain !important;
+            margin: 0 auto !important;
+            display: block !important;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          }
+          
+          .image-caption {
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            padding: 0 8px;
+          }
+          
+          /* MOBILE RESULTS SECTION OPTIMIZATION */
+          .timeline-results {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f7fafc;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+          }
+          
+          .timeline-results h4 {
+            color: #667eea;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+          }
+          
+          .timeline-results li {
+            padding: 6px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 14px;
+            line-height: 1.4;
+          }
+          
+          .timeline-results strong {
+            color: #2d3748;
+            font-weight: 600;
+          }
+          
+          /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
+          
+          /* Step 1 - Topic frequency chart */
+          .timeline-item:nth-child(1) .study-image {
+            max-height: 350px !important; /* Allow more height for the chart */
+          }
+          
+          /* Step 2 - Message generation model */
+          .timeline-item:nth-child(2) .study-image {
+            max-height: 280px !important;
+          }
+          
+          /* Step 3 - System architecture */
+          .timeline-item:nth-child(3) .study-image {
+            max-height: 250px !important;
+          }
+          
+          /* Step 4 - Interaction flow and gesture controls */
+          .timeline-item:nth-child(4) .study-image {
+            max-height: 400px !important; /* Allow more height for interaction flow */
+          }
+          
+          /* Step 5 - Charts and tables */
+          .timeline-item:nth-child(5) .study-image {
+            max-height: 300px !important;
+          }
+          
+          /* MOBILE SECTION SPACING */
+          .process-section {
+            padding: 60px 0 40px 0;
+          }
+          
+          .section-title {
+            font-size: 28px;
+            margin-bottom: 32px;
           }
         }
       `}</style>
