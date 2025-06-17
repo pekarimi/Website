@@ -1569,3 +1569,25 @@ body {
     gap: 10px !important;
   }
 }
+
+/* Add this to your App.css file to hide the "Start Catch-up Plan" button on mobile */
+
+@media (max-width: 768px) {
+  /* Hide the "Start Catch-up Plan" button inside the blue banner on mobile */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button {
+    display: none !important;
+  }
+  
+  /* Adjust the blue banner layout to single column when button is hidden */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] {
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  /* Make sure the content inside takes full width */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] > div {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
