@@ -1665,20 +1665,19 @@ body {
     margin-bottom: 16px !important;
   }
   
-  /* MOBILE IMAGE OPTIMIZATION - ACTUALLY BIGGER IMAGES */
+ /* MOBILE IMAGE OPTIMIZATION - BIGGER IMAGES WITHOUT EMPTY SPACE */
 .study-image-container {
   margin: 16px 0 !important;
   background: #f8f9fa !important;
   border-radius: 8px !important;
-  padding: 8px !important; /* Less padding for more space */
+  padding: 8px !important;
 }
 
 .study-image {
   width: 100% !important;
   height: auto !important;
   max-width: 100% !important;
-  min-height: 400px !important; /* FORCE larger images */
-  max-height: 600px !important; /* ALLOW much bigger images */
+  max-height: 600px !important; /* INCREASED - allow bigger images */
   object-fit: contain !important;
   border-radius: 6px !important;
   border: none !important;
@@ -1738,33 +1737,28 @@ body {
   
   /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
   
-  /* Step 1 - Topic frequency chart - MUCH BIGGER */
+  /* Step 1 - Topic frequency chart - BIGGER */
 .timeline-item:nth-child(1) .study-image {
-  min-height: 500px !important;
   max-height: 700px !important;
 }
 
-/* Step 2 - Message generation model - MUCH BIGGER */
+/* Step 2 - Message generation model - BIGGER */
 .timeline-item:nth-child(2) .study-image {
-  min-height: 450px !important;
   max-height: 650px !important;
 }
 
-/* Step 3 - System architecture - MUCH BIGGER */
+/* Step 3 - System architecture - BIGGER */
 .timeline-item:nth-child(3) .study-image {
-  min-height: 400px !important;
   max-height: 600px !important;
 }
 
-/* Step 4 - Interaction flow - MUCH BIGGER */
+/* Step 4 - Interaction flow and gesture controls - BIGGER */
 .timeline-item:nth-child(4) .study-image {
-  min-height: 450px !important;
   max-height: 650px !important;
 }
 
-/* Step 5 - All results images - MUCH BIGGER */
+/* Step 5 - Charts and tables - BIGGER */
 .timeline-item:nth-child(5) .study-image {
-  min-height: 400px !important;
   max-height: 600px !important;
 }
   
