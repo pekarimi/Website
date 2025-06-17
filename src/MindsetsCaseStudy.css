@@ -1115,14 +1115,3 @@
   }
 }
 
-/* STEP 18: Remove ALL conflicting rules */
-/* Make sure to REMOVE or COMMENT OUT any existing mobile rules that might conflict */
-/* Especially remove this if it exists: */
-/*
-@media (max-width: 768px) {
-  .design-solution img {
-    max-width: 280px !important;
-    width: 280px !important;
-  }
-}
-*/

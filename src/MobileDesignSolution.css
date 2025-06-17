@@ -1,4 +1,4 @@
-/* Mobile Design Solution Component Styles */
+/* Mobile Design Solution Component Styles - FIXED FOR MOBILE */
 .mobile-design-container {
   width: 100%;
   padding: 20px;
@@ -396,18 +396,242 @@
   51%, 100% { opacity: 0; }
 }
 
-/* Responsive Design */
+/* MOBILE RESPONSIVE FIXES - THIS IS THE KEY PART! */
 @media (max-width: 768px) {
-  .mobile-interfaces {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  /* Fix the main container that holds the interface components */
+  .mobile-design-container {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 12px !important;
   }
   
+  /* Convert to single column layout */
+  .mobile-interfaces {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* Make phone mockups fit mobile screens */
   .mobile-phone-mockup {
-    width: 280px;
+    width: calc(100vw - 60px) !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Adjust phone screen height for mobile */
+  .mobile-phone-screen {
+    height: 500px !important;
+  }
+  
+  /* Scale down content inside phone mockups */
+  .mobile-content {
+    padding: 12px !important;
+    font-size: 11px !important;
+  }
+  
+  /* Adjust phone labels */
+  .mobile-phone-label {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+  }
+  
+  /* Scale down card content */
+  .mobile-assessment-card,
+  .mobile-essay-container {
+    padding: 12px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .mobile-card-title,
+  .mobile-essay-title {
+    font-size: 13px !important;
+  }
+  
+  .mobile-card-subtitle {
+    font-size: 11px !important;
+  }
+  
+  /* Scale down buttons */
+  .mobile-btn {
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+  
+  .mobile-btn.mobile-small {
+    padding: 6px 8px !important;
+    font-size: 10px !important;
+  }
+  
+  /* Adjust status bar */
+  .mobile-status-bar {
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    height: 35px !important;
+  }
+  
+  /* Adjust app header */
+  .mobile-app-header {
+    padding: 10px 12px !important;
+  }
+  
+  .mobile-app-title {
+    font-size: 16px !important;
+  }
+  
+  /* Scale down voice interface elements */
+  .mobile-mic-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 16px !important;
+  }
+  
+  .mobile-voice-text,
+  .mobile-sync-text {
+    font-size: 11px !important;
+  }
+  
+  /* Make sure the container doesn't overflow the viewport */
+  .mobile-phone-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .mobile-phone-mockup {
+    width: calc(100vw - 40px) !important;
+    max-width: 280px !important;
   }
   
   .mobile-phone-screen {
-    height: 560px;
+    height: 450px !important;
+  }
+  
+  .mobile-content {
+    padding: 10px !important;
+    font-size: 10px !important;
+  }
+  
+  .mobile-phone-label {
+    font-size: 12px !important;
+  }
+}
+
+/* Add these styles to fix the SingleLearningInterface and LearningPortalInterface components */
+
+/* Single Learning Interface Mobile Fixes */
+@media (max-width: 768px) {
+  /* Fix the main container in SingleLearningInterface */
+  .single-learning-container {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Convert grid to single column */
+  .single-learning-container > div[style*="grid-template-columns"] {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  
+  /* Fix learning modules section */
+  .single-learning-container > div > div:first-child {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Fix audio learning section */
+  .single-learning-container > div > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Learning Portal Interface Mobile Fixes */
+@media (max-width: 768px) {
+  /* Fix the main portal container */
+  .learning-portal-container {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Convert main grid to single column */
+  .learning-portal-container > div[style*="grid-template-columns: 1fr 2fr"] {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 20px !important;
+  }
+  
+  /* Adjust course list */
+  .learning-portal-container > div > div:first-child {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Adjust course detail */
+  .learning-portal-container > div > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* General Interface Component Fixes */
+@media (max-width: 768px) {
+  /* Any div with inline styles containing grid layouts */
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 2fr"],
+  div[style*="display: grid"] {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  
+  /* Fix containers with max-width set inline */
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+  }
+  
+  /* Fix any padding that might cause overflow */
+  div[style*="padding: 32px"] {
+    padding: 16px !important;
+  }
+  
+  div[style*="padding: 24px"] {
+    padding: 12px !important;
+  }
+  
+  div[style*="padding: 20px"] {
+    padding: 10px !important;
+  }
+  
+  /* Fix gap values */
+  div[style*="gap: 40px"] {
+    gap: 20px !important;
+  }
+  
+  div[style*="gap: 24px"] {
+    gap: 12px !important;
+  }
+}
+
+/* Additional Mobile Interface Fixes */
+@media (max-width: 480px) {
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 8px !important;
+  }
+  
+  div[style*="padding: 16px"] {
+    padding: 12px !important;
+  }
+  
+  div[style*="gap: 20px"] {
+    gap: 10px !important;
   }
 }
