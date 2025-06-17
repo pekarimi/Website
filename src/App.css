@@ -1456,3 +1456,116 @@ body {
     font-size: 14px !important;
   }
 }
+
+/* Add these styles to fix the SingleLearningInterface and LearningPortalInterface components */
+
+/* Single Learning Interface Mobile Fixes */
+@media (max-width: 768px) {
+  /* Fix the main container in SingleLearningInterface */
+  .single-learning-container {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Convert grid to single column */
+  .single-learning-container > div[style*="grid-template-columns"] {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  
+  /* Fix learning modules section */
+  .single-learning-container > div > div:first-child {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Fix audio learning section */
+  .single-learning-container > div > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Learning Portal Interface Mobile Fixes */
+@media (max-width: 768px) {
+  /* Fix the main portal container */
+  .learning-portal-container {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Convert main grid to single column */
+  .learning-portal-container > div[style*="grid-template-columns: 1fr 2fr"] {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 20px !important;
+  }
+  
+  /* Adjust course list */
+  .learning-portal-container > div > div:first-child {
+    margin-bottom: 20px !important;
+  }
+  
+  /* Adjust course detail */
+  .learning-portal-container > div > div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* General Interface Component Fixes */
+@media (max-width: 768px) {
+  /* Any div with inline styles containing grid layouts */
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 2fr"],
+  div[style*="display: grid"] {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  
+  /* Fix containers with max-width set inline */
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+  }
+  
+  /* Fix any padding that might cause overflow */
+  div[style*="padding: 32px"] {
+    padding: 16px !important;
+  }
+  
+  div[style*="padding: 24px"] {
+    padding: 12px !important;
+  }
+  
+  div[style*="padding: 20px"] {
+    padding: 10px !important;
+  }
+  
+  /* Fix gap values */
+  div[style*="gap: 40px"] {
+    gap: 20px !important;
+  }
+  
+  div[style*="gap: 24px"] {
+    gap: 12px !important;
+  }
+}
+
+/* Additional Mobile Interface Fixes */
+@media (max-width: 480px) {
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 8px !important;
+  }
+  
+  div[style*="padding: 16px"] {
+    padding: 12px !important;
+  }
+  
+  div[style*="gap: 20px"] {
+    gap: 10px !important;
+  }
+}

@@ -359,16 +359,6 @@ const SingleLearningInterface = () => {
           </button>
         </div>
         
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px'
-        }}>
-          <Clock size={14} />
-          <span style={{ fontSize: '12px' }}>
-            Study time today: 23 min
-          </span>
-        </div>
         
         <button style={{
           background: 'rgba(255,255,255,0.2)',
