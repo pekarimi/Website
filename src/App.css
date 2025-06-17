@@ -1846,3 +1846,85 @@ body {
     gap: 16px !important;
   }
 }
+
+/* Add this CSS to the very bottom of your App.css file */
+
+/* MOBILE LINKEDIN CONTACT FIX */
+@media (max-width: 768px) {
+  /* Override the hiding of contact info specifically for the portfolio contact override */
+  .header .container .header-content .contact-info.portfolio-contact-override {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    background: rgba(224, 247, 255, 0.95) !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    margin: 8px auto !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    max-width: 280px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Make sure all links and text are visible and clickable */
+  .header .container .header-content .contact-info.portfolio-contact-override *,
+  .header .container .header-content .contact-info.portfolio-contact-override span,
+  .header .container .header-content .contact-info.portfolio-contact-override a,
+  .header .container .header-content .contact-info.portfolio-contact-override div {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    align-items: center !important;
+    gap: 4px !important;
+    font-size: 12px !important;
+    padding: 2px 0 !important;
+  }
+  
+  /* Ensure LinkedIn link is clickable */
+  .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+  }
+  
+  .header .container .header-content .contact-info.portfolio-contact-override a:hover {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  /* Make sure SVG icons are visible */
+  .header .container .header-content .contact-info.portfolio-contact-override svg {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 14px !important;
+    height: 14px !important;
+    color: #1a1a1a !important;
+  }
+  
+  /* Override any general hiding rules that might interfere */
+  .portfolio-contact-override {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  .portfolio-contact-override a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+} 
