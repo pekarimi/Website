@@ -149,6 +149,7 @@ const Portfolio = ({ onProjectClick }) => {
   return (
     <>
       
+
 {/* Header */}
 <header className="header">
   <div className="container">
@@ -166,7 +167,7 @@ const Portfolio = ({ onProjectClick }) => {
         flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
         gap: window.innerWidth <= 768 ? '20px' : '60px',
         alignItems: window.innerWidth <= 768 ? 'center' : 'flex-start',
-        marginBottom: '40px',
+        marginBottom: window.innerWidth <= 768 ? '15px' : '40px',
         width: '100%'
       }}>
         <div className="profile-image" style={{
