@@ -1145,7 +1145,7 @@ body {
     margin-bottom: 16px !important;
   }
   
-  /* Fix images and visual content aggressively */
+  /* Fix images and visual content aggressively - MAXIMUM WIDTH */
   .visual-placeholder,
   .visual-placeholder img,
   .section-image-container,
@@ -1154,8 +1154,8 @@ body {
   .full-width-image-container img,
   .profile-image-container,
   .profile-image-container img {
-    width: calc(100vw - 32px) !important;
-    max-width: calc(100vw - 32px) !important;
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
     height: auto !important;
     object-fit: contain !important;
     box-sizing: border-box !important;
@@ -1163,13 +1163,13 @@ body {
     display: block !important;
   }
   
-  /* Specifically target case study images */
+  /* Specifically target case study images - FULL VIEWPORT */
   .case-study img,
   .design-solution img,
   .solution-visual img,
   .impact-section img {
-    width: calc(100vw - 32px) !important;
-    max-width: calc(100vw - 32px) !important;
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
     height: auto !important;
     object-fit: contain !important;
     box-sizing: border-box !important;
@@ -1177,15 +1177,28 @@ body {
     display: block !important;
   }
   
-  /* Fix image containers to center and contain images */
+  /* Nuclear option for image containers */
   .solution-visual,
   .visual-placeholder {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
     text-align: center !important;
     padding: 0 !important;
     margin: 0 !important;
-    overflow: hidden !important;
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+    overflow: visible !important;
+  }
+  
+  /* Force design solution containers to give images more space */
+  .design-solution {
+    width: calc(100% - 8px) !important;
+    max-width: calc(100% - 8px) !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
   }
   
   /* Force all text to wrap */
