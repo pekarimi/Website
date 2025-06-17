@@ -1338,3 +1338,47 @@ body {
 }
 
 /* MOBILE SPACING FIXES - REMOVED - These changes affected desktop */
+
+/* Add this to the bottom of your App.css file to fix React component inline styles */
+
+/* Force React components with inline styles to be mobile responsive */
+@media (max-width: 768px) {
+  /* Target the main containers created by your React components */
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 40px) !important;
+    margin: 0 20px !important;
+  }
+  
+  /* Convert grid layouts to single column */
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 2fr"] {
+    display: block !important;
+  }
+  
+  /* Fix padding that might cause overflow */
+  div[style*="padding: 32px"] {
+    padding: 16px !important;
+  }
+  
+  div[style*="padding: 24px"] {
+    padding: 12px !important;
+  }
+  
+  /* Fix gap values */
+  div[style*="gap: 40px"] {
+    gap: 20px !important;
+  }
+  
+  div[style*="gap: 24px"] {
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 1200px"] {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+  }
+}
