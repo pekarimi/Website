@@ -2342,3 +2342,100 @@ body {
     max-height: 350px !important;
   }
 }
+
+/* EMERGENCY TEXTFLOW OVERRIDE - Add this to the VERY BOTTOM of App.css */
+
+/* FORCE REMOVE RED BORDER FROM ALL IMAGES */
+* {
+  border: none !important;
+}
+
+.hero-image-container img,
+.case-study-container img,
+img[src*="textflow"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* FORCE MOBILE RESPONSIVE IMAGES */
+@media (max-width: 768px) {
+  /* Force hero image sizing */
+  .hero-image-container {
+    width: 98% !important;
+    max-width: 98% !important;
+  }
+  
+  .hero-image-container img {
+    max-height: 400px !important;
+    min-height: 300px !important;
+    border: none !important;
+  }
+  
+  /* Force title sizing */
+  .content-section h1 {
+    font-size: 28px !important;
+    padding: 0 8px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .content-section p {
+    font-size: 18px !important;
+    padding: 0 8px !important;
+  }
+  
+  /* Force step 2 image sizing */
+  img[src*="message-generation-model"] {
+    max-height: 400px !important;
+    min-height: 350px !important;
+  }
+  
+  /* Force step 3 image sizing */
+  img[src*="system-architecture"] {
+    max-height: 350px !important;
+    min-height: 300px !important;
+  }
+  
+  /* Force step 5 image sizing */
+  img[src*="task-success-scenarios"] {
+    max-height: 350px !important;
+    min-height: 300px !important;
+  }
+  
+  img[src*="error-rate-comparison"] {
+    max-height: 250px !important;
+    min-height: 200px !important;
+  }
+  
+  img[src*="learnability-analysis"] {
+    max-height: 350px !important;
+    min-height: 300px !important;
+  }
+  
+  img[src*="interaction-behavior-table"] {
+    max-height: 380px !important;
+    min-height: 320px !important;
+  }
+  
+  /* Force all study images to be responsive */
+  .study-image {
+    max-height: 400px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border: none !important;
+  }
+}
+
+/* Remove red border globally */
+img {
+  border: none !important;
+}
+
+/* Target any remaining red border sources */
+[style*="border: 5px solid red"],
+[style*="border:5px solid red"],
+.red-border,
+*[class*="red"] {
+  border: none !important;
+}
