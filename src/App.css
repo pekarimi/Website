@@ -835,56 +835,13 @@ body {
   
   .header-content {
     max-width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
   }
   
-  /* AGGRESSIVELY hide ALL decorative elements around image */
-  .header *:not(img):not(.name):not(.title):not(.description):not(.container):not(.header-content) {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-  
-  .header svg,
-  .header circle,
-  .header ellipse,
-  .header path,
-  .header rect,
-  .header polygon,
-  .header-content svg,
-  .header-content circle,
-  .header-content ellipse,
-  .header-content path,
-  .header-content rect,
-  .header-content polygon,
-  .header *[class*="circle"],
-  .header *[class*="ring"],
-  .header *[class*="border"],
-  .header *[class*="frame"],
-  .header-content *[class*="circle"],
-  .header-content *[class*="ring"],
-  .header-content *[class*="border"],
-  .header-content *[class*="frame"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-  }
-  
-  /* Force remove any pseudo-elements that might be creating circles */
-  .header *::before,
-  .header *::after,
-  .header-content *::before,
-  .header-content *::after {
-    display: none !important;
-    content: none !important;
-  }
-  
-  /* Make profile image smaller on mobile - override everything */
+  /* Make profile image smaller on mobile */
   .header img,
   .header-content img {
     width: 100px !important;
@@ -893,19 +850,6 @@ body {
     object-fit: cover !important;
     margin: 0 auto 15px auto !important;
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    z-index: 10 !important;
-    border: 3px solid rgba(255, 255, 255, 0.3) !important;
-    background: none !important;
-    box-shadow: none !important;
-  }
-  
-  /* Override the ::after we're adding for contact info */
-  .title::after {
-    display: block !important;
-    visibility: visible !important;
   }
   
   /* Header text */
@@ -930,14 +874,12 @@ body {
   }
   
   .title::after {
-    content: "📍 SF Bay Area\A✉️ pekarimi67@gmail.com\A💼 LinkedIn";
-    white-space: pre-line;
+    content: "📍 SF Bay Area • ✉️ pekarimi67@gmail.com • 💼 LinkedIn";
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     margin-top: 8px;
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.4;
-    text-align: center;
+    line-height: 1.3;
   }
   
   .description {
@@ -1146,5 +1088,26 @@ body {
   .project-arrow {
     bottom: 48px;
     right: 48px;
+  }
+}
+
+/* MOBILE SPACING FIXES - Only affects mobile */
+@media (max-width: 768px) {
+  /* Only fix the spacing issue on mobile */
+  .header-main {
+    margin-bottom: 15px !important;
+  }
+  
+  /* Only target the description paragraph spacing */
+  .header .description {
+    margin-top: 8px !important;
+  }
+  
+  /* Make contact info shorter on mobile only */
+  .title::after {
+    content: "📍 SF • ✉️ pekarimi67@gmail.com • 💼 LinkedIn" !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    margin-top: 5px !important;
   }
 }

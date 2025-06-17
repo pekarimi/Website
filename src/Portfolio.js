@@ -153,31 +153,20 @@ const Portfolio = ({ onProjectClick }) => {
 {/* Header */}
 <header className="header">
   <div className="container">
-    <div className="header-content" style={{ 
-      maxWidth: '1200px', 
-      margin: '0 auto',
-      display: 'flex',
-      flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
-      alignItems: window.innerWidth <= 768 ? 'center' : 'flex-start',
-      gap: window.innerWidth <= 768 ? '20px' : '60px',
-      textAlign: window.innerWidth <= 768 ? 'center' : 'left'
-    }}>
+    <div className="header-content" style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <div className="header-main" style={{ 
         display: 'flex', 
-        flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
-        gap: window.innerWidth <= 768 ? '20px' : '60px',
-        alignItems: window.innerWidth <= 768 ? 'center' : 'flex-start',
-        marginBottom: window.innerWidth <= 768 ? '15px' : '40px',
-        width: '100%'
+        gap: '60px', 
+        alignItems: 'flex-start',
+        marginBottom: '40px'
       }}>
         <div className="profile-image" style={{
-          width: window.innerWidth <= 768 ? '100px' : '200px',
-          height: window.innerWidth <= 768 ? '100px' : '200px',
+          width: '200px',
+          height: '200px',
           borderRadius: '50%',
           overflow: 'hidden',
           flexShrink: 0,
-          border: '3px solid rgba(255, 255, 255, 0.3)',
-          order: window.innerWidth <= 768 ? -1 : 0
+          border: '3px solid rgba(255, 255, 255, 0.3)'
         }}>
           <img 
             src="/images/profile.jpg" 
@@ -190,73 +179,47 @@ const Portfolio = ({ onProjectClick }) => {
           />
         </div>
         
-        <div className="header-text" style={{ 
-          flex: 1,
-          textAlign: window.innerWidth <= 768 ? 'center' : 'left',
-          width: window.innerWidth <= 768 ? '100%' : 'auto'
-        }}>
-          <h1 className="name" style={{
-            fontSize: window.innerWidth <= 768 ? '28px' : '56px',
-            marginBottom: window.innerWidth <= 768 ? '8px' : '20px'
-          }}>Pegah Karimi</h1>
-          <p className="title" style={{ 
-            marginBottom: '10px',
-            fontSize: window.innerWidth <= 768 ? '16px' : '28px'
-          }}>Senior UX Researcher</p>
-          
-          {/* Hide complex contact info on mobile, show simple version */}
-          {window.innerWidth > 768 ? (
-            <div 
-              className="contact-info portfolio-contact-override" 
-              style={{ 
-                display: 'flex', 
-                gap: '20px', 
-                alignItems: 'center',
-                fontSize: '16px'
-              }}
-            >
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px'
-              }}>
-                <MapPin size={16} />
-                <span>{contactInfo.location}</span>
-              </div>
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px'
-              }}>
-                <Mail size={16} />
-                <a href={`mailto:${contactInfo.email}`}>
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px'
-              }}>
-                <Linkedin size={16} />
-                <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-          ) : (
-            // Simple mobile contact info
-            <div style={{
-              fontSize: '11px',
-              color: 'rgba(255, 255, 255, 0.9)',
-              lineHeight: '1.4',
-              marginTop: '8px'
+        <div className="header-text" style={{ flex: 1 }}>
+          <h1 className="name">Pegah Karimi</h1>
+          <p className="title" style={{ marginBottom: '10px' }}>Senior UX Researcher</p>
+          <div 
+            className="contact-info portfolio-contact-override" 
+            style={{ 
+              display: 'flex', 
+              gap: '20px', 
+              alignItems: 'center',
+              fontSize: '16px'
+            }}
+          >
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '6px'
             }}>
-              📍 SF Bay Area<br/>
-              ✉️ pekarimi67@gmail.com<br/>
-              💼 LinkedIn
+              <MapPin size={16} />
+              <span>{contactInfo.location}</span>
             </div>
-          )}
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '6px'
+            }}>
+              <Mail size={16} />
+              <a href={`mailto:${contactInfo.email}`}>
+                {contactInfo.email}
+              </a>
+            </div>
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '6px'
+            }}>
+              <Linkedin size={16} />
+              <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -264,9 +227,8 @@ const Portfolio = ({ onProjectClick }) => {
         maxWidth: '100%', 
         width: '100%', 
         lineHeight: '1.7', 
-        fontSize: window.innerWidth <= 768 ? '14px' : '20px',
-        margin: '0',
-        textAlign: window.innerWidth <= 768 ? 'center' : 'left'
+        fontSize: '20px',
+        margin: '0'
       }}>
         I am a Human-Computer Interaction researcher with 8+ years of experience in qualitative and quantitative research, specializing in the convergence of AI systems and user experience, with a focus on creating intuitive, intelligent interfaces that adapt to human needs. I employ user-centered methodologies to design AI-augmented experiences that solve complex challenges. I leverage mixed-methods approaches—combining ethnographic research, behavioral analytics, and participatory design—to develop systems that are aligned with users' needs.
       </p>
@@ -274,82 +236,75 @@ const Portfolio = ({ onProjectClick }) => {
   </div>
 </header>
 
-      {/* Work Section */}
-      <section className="work-section">
-        <div className="container">
-          <h2 className="section-title">Selected Work</h2>
-          
-          <div className="projects-grid" style={{
-            display: 'grid',
-            gridTemplateColumns: '500px 500px',
-            justifyContent: 'center',
-            gap: '30px',
-            margin: '40px auto',
-            maxWidth: '1100px'
-          }}>
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className={`project-card ${hoveredCard === project.id ? 'hovered' : ''} ${project.hasDetailPage ? 'clickable' : ''}`}
-                onMouseEnter={() => setHoveredCard(project.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => handleCardClick(project)}
-              >
-                <div className="project-image-container">
-                  <div className="project-image">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="project-img"
-                    />
-                  </div>
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      {project.hasDetailPage ? (
-                        <span className="project-link view-case-study">
-                          <Eye size={20} />
-                          <span>View Case Study</span>
-                        </span>
-                      ) : (
-                        <>
-                          <a href={project.link} className="project-link" onClick={(e) => e.stopPropagation()}>
-                            <ExternalLink size={20} />
-                          </a>
-                          <a href={project.github} className="project-link" onClick={(e) => e.stopPropagation()}>
-                            <Github size={20} />
-                          </a>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="project-content">
-                  <div className="project-header">
-                    <div className="project-title-section">
-                      <h3 className="project-title">{project.title}</h3>
-                      <p className="project-subtitle">{project.subtitle}</p>
-                    </div>
-                    <div className="project-year">{project.year}</div>
-                  </div>
-                  
-                  <p className="project-description">{project.description}</p>
-                  
-                  <div className="project-tags">
-                    {project.tags.map((tag, index) => (
-                      <span key={index} className="tag">{tag}</span>
-                    ))}
-                  </div>
-                  
-                  <div className="project-arrow">
-                    <ArrowUpRight size={24} />
-                  </div>
-                </div>
+{/* Work Section */}
+<section className="work-section">
+  <div className="container">
+    <h2 className="section-title">Selected Work</h2>
+    
+    <div className="projects-grid">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className={`project-card ${hoveredCard === project.id ? 'hovered' : ''} ${project.hasDetailPage ? 'clickable' : ''}`}
+          onMouseEnter={() => setHoveredCard(project.id)}
+          onMouseLeave={() => setHoveredCard(null)}
+          onClick={() => handleCardClick(project)}
+        >
+          <div className="project-image-container">
+            <div className="project-image">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="project-img"
+              />
+            </div>
+            <div className="project-overlay">
+              <div className="project-links">
+                {project.hasDetailPage ? (
+                  <span className="project-link view-case-study">
+                    <Eye size={20} />
+                    <span>View Case Study</span>
+                  </span>
+                ) : (
+                  <>
+                    <a href={project.link} className="project-link" onClick={(e) => e.stopPropagation()}>
+                      <ExternalLink size={20} />
+                    </a>
+                    <a href={project.github} className="project-link" onClick={(e) => e.stopPropagation()}>
+                      <Github size={20} />
+                    </a>
+                  </>
+                )}
               </div>
-            ))}
+            </div>
+          </div>
+          
+          <div className="project-content">
+            <div className="project-header">
+              <div className="project-title-section">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-subtitle">{project.subtitle}</p>
+              </div>
+              <div className="project-year">{project.year}</div>
+            </div>
+            
+            <p className="project-description">{project.description}</p>
+            
+            <div className="project-tags">
+              {project.tags.map((tag, index) => (
+                <span key={index} className="tag">{tag}</span>
+              ))}
+            </div>
+            
+            <div className="project-arrow">
+              <ArrowUpRight size={24} />
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section className="contact-section">
