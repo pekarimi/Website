@@ -824,7 +824,7 @@ body {
 /* AGGRESSIVE MOBILE FIXES - Only affects screens 768px and below */
 @media (max-width: 768px) {
   .container {
-    padding: 0 12px !important;
+    padding: 0 16px !important;
   }
   
   /* Force hide ALL decorative elements and large containers on mobile */
@@ -970,7 +970,8 @@ body {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
     margin-top: 20px !important;
-    padding: 0 8px !important;
+    padding: 0 !important;
+    max-width: 100% !important;
   }
   
   /* Project Cards Mobile - Simple fix for cutting */
