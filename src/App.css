@@ -2163,3 +2163,180 @@ body {
     padding: 0 12px !important;
   }
 }
+
+/* Add this CSS to the very bottom of your App.css file - TextFlow specific mobile fixes */
+
+/* TEXTFLOW CASE STUDY SPECIFIC MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  
+  /* 1. LARGER HERO IMAGE ON MOBILE */
+  .hero-image-container {
+    width: 98% !important; /* Increased from 95% to 98% */
+    max-width: 98% !important;
+    border-radius: 8px !important;
+  }
+  
+  .hero-image-container img {
+    max-height: 400px !important; /* Increased from 300px to 400px */
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  
+  /* 2. SMALLER TITLE TEXT ON MOBILE */
+  .content-section h1 {
+    font-size: 28px !important; /* Much smaller than the default 48px */
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+    color: #1a1a1a !important;
+    padding: 0 8px !important; /* Add padding to prevent text cutting */
+  }
+  
+  .content-section p[style*="font-size: 24px"] {
+    font-size: 18px !important; /* Smaller subtitle */
+    margin-bottom: 24px !important;
+    text-align: center !important;
+    color: #666 !important;
+    padding: 0 8px !important;
+  }
+  
+  /* 3. LARGER IMAGES FOR STEP 2 AND STEP 3 */
+  
+  /* Step 2 - Message generation model - LARGER */
+  .timeline-item:nth-child(2) .study-image {
+    max-height: 400px !important; /* Increased from 280px to 400px */
+  }
+  
+  .timeline-item:nth-child(2) .study-image-container {
+    padding: 8px !important; /* Less padding for more space */
+  }
+  
+  /* Step 3 - System architecture - LARGER */
+  .timeline-item:nth-child(3) .study-image {
+    max-height: 350px !important; /* Increased from 250px to 350px */
+  }
+  
+  .timeline-item:nth-child(3) .study-image-container {
+    padding: 8px !important; /* Less padding for more space */
+  }
+  
+  /* 4. STEP 5 SPECIFIC IMAGE ADJUSTMENTS */
+  
+  /* Step 5 - First image (Task success chart) - BIGGER */
+  .timeline-item:nth-child(5) .study-image-container:nth-of-type(1) .study-image {
+    max-height: 350px !important; /* Increased for better chart readability */
+  }
+  
+  /* Step 5 - Second image (Error rate comparison) - SMALLER */
+  .timeline-item:nth-child(5) .study-image-container:nth-of-type(2) .study-image {
+    max-height: 250px !important; /* Decreased to make it smaller */
+  }
+  
+  /* Step 5 - Third image (Learnability analysis) - BIGGER */
+  .timeline-item:nth-child(5) .study-image-container:nth-of-type(3) .study-image {
+    max-height: 350px !important; /* Increased for better visibility */
+  }
+  
+  /* Step 5 - Last image (Interaction behavior table) - BIGGER */
+  .timeline-item:nth-child(5) .study-image-container:last-of-type .study-image {
+    max-height: 380px !important; /* Increased for table readability */
+  }
+  
+  /* Alternative targeting for Step 5 images using more specific selectors */
+  .timeline-item:nth-child(5) div[style*="padding: 8px"] .study-image {
+    /* First three images in Step 5 */
+  }
+  
+  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(1) .study-image {
+    max-height: 350px !important; /* Task success chart - BIGGER */
+  }
+  
+  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(2) .study-image {
+    max-height: 250px !important; /* Error rate comparison - SMALLER */
+  }
+  
+  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(3) .study-image {
+    max-height: 350px !important; /* Learnability analysis - BIGGER */
+  }
+  
+  /* Step 5 - Interaction behavior table (last image) - BIGGER */
+  .timeline-item:nth-child(5) div[style*="padding: 8px; margin: 16px 0"] .study-image {
+    max-height: 380px !important; /* Table - BIGGER */
+  }
+  
+  /* More specific targeting for the table image at the end of Step 5 */
+  .timeline-item:nth-child(5) .timeline-results + .study-image-container .study-image {
+    max-height: 380px !important; /* Last table image - BIGGER */
+  }
+  
+  /* Even more specific - target images by their alt text patterns */
+  img[alt*="Table showing percentage of tasks"],
+  img[alt*="interaction-behavior-table"] {
+    max-height: 380px !important; /* Interaction behavior table - BIGGER */
+  }
+  
+  img[alt*="Comparison of error rates"] {
+    max-height: 250px !important; /* Error rate comparison - SMALLER */
+  }
+  
+  img[alt*="Task success rates"] {
+    max-height: 350px !important; /* Task success chart - BIGGER */
+  }
+  
+  img[alt*="Learnability analysis"] {
+    max-height: 350px !important; /* Learnability analysis - BIGGER */
+  }
+  
+  /* 5. GENERAL MOBILE IMPROVEMENTS FOR TEXTFLOW */
+  
+  /* Better spacing for TextFlow mobile layout */
+  .case-study-container .container {
+    padding: 0 12px !important; /* Consistent padding */
+  }
+  
+  /* Better section spacing */
+  .content-section {
+    padding: 60px 0 40px 0 !important; /* Reduced top/bottom padding */
+  }
+  
+  .process-section {
+    padding: 50px 0 40px 0 !important; /* Reduced padding */
+  }
+  
+  /* Better meta items spacing */
+  .hero-meta {
+    margin-bottom: 32px !important; /* Reduced margin */
+    gap: 12px !important; /* Smaller gap between items */
+  }
+  
+  .meta-item {
+    font-size: 14px !important; /* Smaller text */
+    padding: 8px 12px !important;
+    background: rgba(102, 126, 234, 0.1) !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  /* Even smaller title for very small screens */
+  .content-section h1 {
+    font-size: 24px !important;
+    padding: 0 12px !important;
+  }
+  
+  .content-section p[style*="font-size: 24px"] {
+    font-size: 16px !important;
+    padding: 0 12px !important;
+  }
+  
+  /* Adjust hero image for very small screens */
+  .hero-image-container {
+    width: 99% !important;
+  }
+  
+  .hero-image-container img {
+    max-height: 350px !important;
+  }
+}
