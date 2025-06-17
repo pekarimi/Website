@@ -96,69 +96,74 @@ const LearningPortalInterface = () => {
 
       {/* Welcome Back Banner */}
       <div style={{
-        background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-        margin: '24px 24px 0 24px',
-        borderRadius: '12px',
-        padding: '20px',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+  background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+  margin: '24px 24px 0 24px',
+  borderRadius: '12px',
+  padding: '20px',
+  color: 'white',
+  display: window.innerWidth <= 768 ? 'block' : 'flex',
+  justifyContent: window.innerWidth <= 768 ? 'center' : 'space-between',
+  alignItems: window.innerWidth <= 768 ? 'flex-start' : 'center',
+  textAlign: window.innerWidth <= 768 ? 'center' : 'left'
+}}>
+  <div>
+    <h2 style={{
+      margin: '0 0 4px 0',
+      fontSize: '22px',
+      fontWeight: '600'
+    }}>
+      Welcome back, Lian! 🎯
+    </h2>
+    <p style={{
+      margin: '0 0 8px 0',
+      fontSize: '14px',
+      opacity: 0.9
+    }}>
+      You've been away for 2 weeks. We've prepared a personalized catch-up plan.
+    </p>
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: window.innerWidth <= 768 ? 'center' : 'flex-start',
+      gap: '12px',
+      fontSize: '12px',
+      flexWrap: 'wrap'
+    }}>
+      <div style={{
+        background: 'rgba(255,255,255,0.2)',
+        padding: '4px 8px',
+        borderRadius: '12px'
       }}>
-        <div>
-          <h2 style={{
-            margin: '0 0 4px 0',
-            fontSize: '22px',
-            fontWeight: '600'
-          }}>
-            Welcome back, Lian! 🎯
-          </h2>
-          <p style={{
-            margin: '0 0 8px 0',
-            fontSize: '14px',
-            opacity: 0.9
-          }}>
-            You've been away for 2 weeks. We've prepared a personalized catch-up plan.
-          </p>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            fontSize: '12px'
-          }}>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '4px 8px',
-              borderRadius: '12px'
-            }}>
-              📅 Deadlines extended by 1 week
-            </div>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '4px 8px',
-              borderRadius: '12px'
-            }}>
-              ⏱️ 3 assignments pending
-            </div>
-          </div>
-        </div>
-        <button style={{
-          background: 'rgba(255,255,255,0.2)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          borderRadius: '8px',
-          color: 'white',
-          padding: '10px 16px',
-          fontSize: '14px',
-          cursor: 'pointer',
-          fontWeight: '500',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px'
-        }}>
-          Start Catch-up Plan
-          <ArrowRight size={14} />
-        </button>
+        📅 Deadlines extended by 1 week
       </div>
+      <div style={{
+        background: 'rgba(255,255,255,0.2)',
+        padding: '4px 8px',
+        borderRadius: '12px'
+      }}>
+        ⏱️ 3 assignments pending
+      </div>
+    </div>
+  </div>
+  {window.innerWidth > 768 && (
+    <button style={{
+      background: 'rgba(255,255,255,0.2)',
+      border: '1px solid rgba(255,255,255,0.3)',
+      borderRadius: '8px',
+      color: 'white',
+      padding: '10px 16px',
+      fontSize: '14px',
+      cursor: 'pointer',
+      fontWeight: '500',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '6px'
+    }}>
+      Start Catch-up Plan
+      <ArrowRight size={14} />
+    </button>
+  )}
+</div>
 
       {/* Main Content */}
       <div style={{
