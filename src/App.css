@@ -850,6 +850,8 @@ body {
     object-fit: cover !important;
     margin: 0 auto 15px auto !important;
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   /* Header text */
@@ -874,7 +876,7 @@ body {
   }
   
   .title::after {
-    content: "📍 San Francisco • ✉️ pekarimi67@gmail.com";
+    content: "📍 San Francisco • ✉️ pekarimi67@gmail.com • 💼 LinkedIn";
     display: block;
     font-size: 13px;
     margin-top: 8px;
