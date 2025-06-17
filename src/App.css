@@ -1572,22 +1572,56 @@ body {
 
 /* Add this to your App.css file to hide the "Start Catch-up Plan" button on mobile */
 
+/* Replace the existing button hiding rule in your App.css with this more specific one */
+
 @media (max-width: 768px) {
-  /* Hide the "Start Catch-up Plan" button inside the blue banner on mobile */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button {
+  /* More specific targeting for the Start Catch-up Plan button */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button,
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] > div > button,
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button[style*="Start Catch-up Plan"],
+  button[style*="Start Catch-up Plan"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Also target any button containing "Start", "Catch", or "Plan" text */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Start"),
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Catch"),
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Plan") {
     display: none !important;
   }
   
-  /* Adjust the blue banner layout to single column when button is hidden */
+  /* Adjust the blue banner layout to center content when button is hidden */
   div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] {
     display: block !important;
-    text-align: center !important;
+    text-align: left !important;
+    padding: 16px !important;
+    margin: 12px 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   
-  /* Make sure the content inside takes full width */
+  /* Ensure the content inside the blue banner takes full width and doesn't expect space for button */
   div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] > div {
     display: block !important;
     width: 100% !important;
-    text-align: center !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+  
+  /* Target the container that has the flexbox layout causing the cutting */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"][style*="display: flex"] {
+    display: block !important;
+    flex-direction: column !important;
+  }
+  
+  /* Hide any element that might be the button based on position or content */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] *:last-child {
+    display: none !important;
   }
 }
