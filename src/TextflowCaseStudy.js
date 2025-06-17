@@ -15,7 +15,6 @@ const TextflowCaseStudy = ({ onBack }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-const TextflowCaseStudy = ({ onBack }) => {
   return (
     <div className="case-study-container">
       <style jsx>{`
@@ -815,9 +814,8 @@ const TextflowCaseStudy = ({ onBack }) => {
               width: '100%',
               height: 'auto',
               objectFit: 'contain',
-              border: 'none !important',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-              borderRadius: '12px'
+              borderRadius: '12px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
             }}
           />
         </div>
