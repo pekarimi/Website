@@ -841,19 +841,50 @@ body {
     gap: 15px;
   }
   
-  /* Hide any decorative circles/backgrounds and show only the actual image */
-  .header svg,
-  .header circle,
-  .header .image-background,
-  .header [class*="circle"],
-  .header-content svg,
-  .header-content circle,
-  .header-content .image-background,
-  .header-content [class*="circle"] {
-    display: none !important;
+  /* AGGRESSIVELY hide ALL decorative elements around image */
+  .header *:not(img):not(.name):not(.title):not(.description):not(.container):not(.header-content) {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
   }
   
-  /* Make profile image smaller on mobile */
+  .header svg,
+  .header circle,
+  .header ellipse,
+  .header path,
+  .header rect,
+  .header polygon,
+  .header-content svg,
+  .header-content circle,
+  .header-content ellipse,
+  .header-content path,
+  .header-content rect,
+  .header-content polygon,
+  .header *[class*="circle"],
+  .header *[class*="ring"],
+  .header *[class*="border"],
+  .header *[class*="frame"],
+  .header-content *[class*="circle"],
+  .header-content *[class*="ring"],
+  .header-content *[class*="border"],
+  .header-content *[class*="frame"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  /* Force remove any pseudo-elements that might be creating circles */
+  .header *::before,
+  .header *::after,
+  .header-content *::before,
+  .header-content *::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  /* Make profile image smaller on mobile - override everything */
   .header img,
   .header-content img {
     width: 100px !important;
@@ -867,6 +898,14 @@ body {
     position: relative !important;
     z-index: 10 !important;
     border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Override the ::after we're adding for contact info */
+  .title::after {
+    display: block !important;
+    visibility: visible !important;
   }
   
   /* Header text */
