@@ -1847,12 +1847,14 @@ body {
   }
 }
 
-/* Add this CSS to the very bottom of your App.css file */
+/* Add this CSS to the very bottom of your App.css file - STRONGER OVERRIDE */
 
-/* MOBILE LINKEDIN CONTACT FIX */
+/* MOBILE LINKEDIN CONTACT FIX - MAXIMUM SPECIFICITY */
 @media (max-width: 768px) {
-  /* Override the hiding of contact info specifically for the portfolio contact override */
-  .header .container .header-content .contact-info.portfolio-contact-override {
+  /* Use the most specific selectors possible to override hiding rules */
+  body .header .container .header-content .contact-info.portfolio-contact-override,
+  body .portfolio-contact-override,
+  html body .header .container .header-content .contact-info.portfolio-contact-override {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -1869,13 +1871,17 @@ body {
     gap: 6px !important;
     max-width: 280px !important;
     font-size: 12px !important;
+    position: relative !important;
+    z-index: 9999 !important;
   }
   
-  /* Make sure all links and text are visible and clickable */
-  .header .container .header-content .contact-info.portfolio-contact-override *,
-  .header .container .header-content .contact-info.portfolio-contact-override span,
-  .header .container .header-content .contact-info.portfolio-contact-override a,
-  .header .container .header-content .contact-info.portfolio-contact-override div {
+  /* Make sure all elements inside are visible and functional */
+  body .header .container .header-content .contact-info.portfolio-contact-override *,
+  body .header .container .header-content .contact-info.portfolio-contact-override span,
+  body .header .container .header-content .contact-info.portfolio-contact-override a,
+  body .header .container .header-content .contact-info.portfolio-contact-override div,
+  html body .portfolio-contact-override *,
+  html body .portfolio-contact-override a {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -1888,33 +1894,72 @@ body {
     gap: 4px !important;
     font-size: 12px !important;
     padding: 2px 0 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10000 !important;
   }
   
-  /* Ensure LinkedIn link is clickable */
-  .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin"] {
+  /* Specifically target LinkedIn link with maximum specificity */
+  body .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin"],
+  html body .portfolio-contact-override a[href*="linkedin"],
+  body .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin.com"] {
     pointer-events: auto !important;
     cursor: pointer !important;
     color: #1a1a1a !important;
     text-decoration: none !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10001 !important;
   }
   
-  .header .container .header-content .contact-info.portfolio-contact-override a:hover {
+  /* Hover states */
+  body .header .container .header-content .contact-info.portfolio-contact-override a:hover,
+  html body .portfolio-contact-override a:hover {
     color: #0066cc !important;
     text-decoration: underline !important;
     transition: all 0.2s ease !important;
   }
   
-  /* Make sure SVG icons are visible */
-  .header .container .header-content .contact-info.portfolio-contact-override svg {
+  /* Make sure SVG icons are visible with maximum specificity */
+  body .header .container .header-content .contact-info.portfolio-contact-override svg,
+  html body .portfolio-contact-override svg {
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
     width: 14px !important;
     height: 14px !important;
     color: #1a1a1a !important;
+    position: relative !important;
+    z-index: 10000 !important;
   }
   
-  /* Override any general hiding rules that might interfere */
+  /* Override the ::after pseudo-element that might be interfering */
+  .title::after {
+    content: "📍 SF Bay Area • ✉️ pekarimi67@gmail.com" !important;
+    display: block !important;
+    font-size: 10px !important;
+    margin: 5px 0 0 0 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove any conflicting rules */
+  .header svg:not(.portfolio-contact-override svg),
+  .header circle:not(.portfolio-contact-override circle),
+  .header ellipse:not(.portfolio-contact-override ellipse),
+  .header path:not(.portfolio-contact-override path),
+  .header rect:not(.portfolio-contact-override rect) {
+    display: none !important;
+  }
+  
+  /* Ensure the contact info container is not affected by general hiding rules */
+  .header .contact-info.portfolio-contact-override,
   .portfolio-contact-override {
     display: flex !important;
     visibility: visible !important;
@@ -1922,9 +1967,4 @@ body {
     width: auto !important;
     height: auto !important;
   }
-  
-  .portfolio-contact-override a {
-    pointer-events: auto !important;
-    cursor: pointer !important;
-  }
-} 
+}
