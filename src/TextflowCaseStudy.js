@@ -563,6 +563,17 @@ const TextflowCaseStudy = ({ onBack }) => {
             padding: 0 16px;
           }
           
+          /* LARGER HERO IMAGE ON MOBILE */
+          .hero-image-container {
+            width: 98%;
+            max-width: 98%;
+            border-radius: 8px;
+          }
+          
+          .hero-image-container img {
+            max-height: 400px;
+          }
+          
           .innovation-grid {
             grid-template-columns: 1fr;
             gap: 32px;
@@ -572,6 +583,18 @@ const TextflowCaseStudy = ({ onBack }) => {
             flex-direction: column;
             align-items: center;
             gap: 16px;
+          }
+          
+          /* SMALLER TITLE TEXT ON MOBILE */
+          .content-section h1 {
+            font-size: 28px !important;
+            line-height: 1.3 !important;
+            padding: 0 8px !important;
+          }
+          
+          .content-section p {
+            font-size: 16px !important;
+            padding: 0 8px !important;
           }
           
           /* MOBILE TIMELINE REDESIGN - More compact and efficient */
@@ -705,14 +728,14 @@ const TextflowCaseStudy = ({ onBack }) => {
             max-height: 350px !important; /* Allow more height for the chart */
           }
           
-          /* Step 2 - Message generation model */
+          /* Step 2 - Message generation model - LARGER */
           .timeline-item:nth-child(2) .study-image {
-            max-height: 280px !important;
+            max-height: 400px !important; /* INCREASED from 280px */
           }
           
-          /* Step 3 - System architecture */
+          /* Step 3 - System architecture - LARGER */
           .timeline-item:nth-child(3) .study-image {
-            max-height: 250px !important;
+            max-height: 350px !important; /* INCREASED from 250px */
           }
           
           /* Step 4 - Interaction flow and gesture controls */
@@ -720,9 +743,26 @@ const TextflowCaseStudy = ({ onBack }) => {
             max-height: 400px !important; /* Allow more height for interaction flow */
           }
           
-          /* Step 5 - Charts and tables */
+          /* Step 5 - Charts and tables with specific sizing */
           .timeline-item:nth-child(5) .study-image {
-            max-height: 300px !important;
+            max-height: 300px !important; /* Default for step 5 */
+          }
+          
+          /* Step 5 specific image adjustments */
+          .timeline-item:nth-child(5) .study-image-container:first-of-type .study-image {
+            max-height: 350px !important; /* First image - Task success - BIGGER */
+          }
+          
+          .timeline-item:nth-child(5) .study-image-container:nth-of-type(2) .study-image {
+            max-height: 250px !important; /* Second image - Error rate - SMALLER */
+          }
+          
+          .timeline-item:nth-child(5) .study-image-container:nth-of-type(3) .study-image {
+            max-height: 350px !important; /* Third image - Learnability - BIGGER */
+          }
+          
+          .timeline-item:nth-child(5) .study-image-container:last-of-type .study-image {
+            max-height: 380px !important; /* Last image - Table - BIGGER */
           }
           
           /* MOBILE SECTION SPACING */
