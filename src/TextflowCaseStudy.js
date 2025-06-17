@@ -1,5 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Users, Clock, Target, Brain, Eye, ChevronRight } from 'lucide-react';
+
+const TextflowCaseStudy = ({ onBack }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
 const TextflowCaseStudy = ({ onBack }) => {
   return (
@@ -790,17 +804,18 @@ const TextflowCaseStudy = ({ onBack }) => {
       {/* Hero Image Section */}
       <section className="hero-image-section">
         <div className="hero-image-container" style={{ 
-          maxWidth: window.innerWidth <= 768 ? '98%' : '1000px',
-          width: window.innerWidth <= 768 ? '98%' : '85%'
+          maxWidth: isMobile ? '98%' : '1000px',
+          width: isMobile ? '98%' : '85%'
         }}>
           <img 
             src="/images/textflow.jpg" 
             alt="TextFlow system showing hand gestures and interface flow"
             style={{
-              maxHeight: window.innerWidth <= 768 ? '400px' : '350px',
+              maxHeight: isMobile ? '400px' : '350px',
               width: '100%',
               height: 'auto',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              border: 'none'
             }}
           />
         </div>
@@ -810,20 +825,20 @@ const TextflowCaseStudy = ({ onBack }) => {
       <section className="content-section">
         <div className="container">
           <h1 style={{ 
-            fontSize: window.innerWidth <= 768 ? '28px' : '48px', 
+            fontSize: isMobile ? '28px' : '48px', 
             fontWeight: '700', 
             marginBottom: '16px', 
             textAlign: 'center', 
             color: '#1a1a1a',
-            padding: window.innerWidth <= 768 ? '0 8px' : '0',
-            lineHeight: window.innerWidth <= 768 ? '1.3' : 'normal'
+            padding: isMobile ? '0 8px' : '0',
+            lineHeight: isMobile ? '1.3' : 'normal'
           }}>TextFlow: Screenless Access to Non-Visual Smart Messaging</h1>
           <p style={{ 
-            fontSize: window.innerWidth <= 768 ? '18px' : '24px', 
+            fontSize: isMobile ? '18px' : '24px', 
             marginBottom: '32px', 
             textAlign: 'center', 
             color: '#666',
-            padding: window.innerWidth <= 768 ? '0 8px' : '0'
+            padding: isMobile ? '0 8px' : '0'
           }}>A Mixed-Initiative Context-Aware System for Accessible Mobile Communication</p>
           
           <div className="hero-meta">
@@ -929,7 +944,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                       alt="Conceptual model showing the three-stage process for generating message samples for BVI users, from defining candidate message types through augmenting samples to generating final values"
                       className="study-image"
                       style={{
-                        maxHeight: window.innerWidth <= 768 ? '400px' : '400px',
+                        maxHeight: isMobile ? '400px' : '400px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -976,7 +991,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                       alt="TextFlow system architecture showing the three integrated components: Task Model with user interaction, User Model with context and situation, and Reasoning Model with rules and critical situations"
                       className="study-image"
                       style={{
-                        maxHeight: window.innerWidth <= 768 ? '350px' : '400px',
+                        maxHeight: isMobile ? '350px' : '400px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -1087,7 +1102,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: window.innerWidth <= 768 ? '350px' : 'none',
+                        maxHeight: isMobile ? '350px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1107,7 +1122,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: window.innerWidth <= 768 ? '250px' : 'none',
+                        maxHeight: isMobile ? '250px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1127,7 +1142,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: window.innerWidth <= 768 ? '350px' : 'none',
+                        maxHeight: isMobile ? '350px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1166,7 +1181,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                           width: '100%',
                           height: 'auto',
                           maxWidth: '100%',
-                          maxHeight: window.innerWidth <= 768 ? '380px' : 'none',
+                          maxHeight: isMobile ? '380px' : 'none',
                           objectFit: 'contain'
                         }}
                       />
