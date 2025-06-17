@@ -2427,15 +2427,3 @@ img[src*="textflow"] {
   }
 }
 
-/* Remove red border globally */
-img {
-  border: none !important;
-}
-
-/* Target any remaining red border sources */
-[style*="border: 5px solid red"],
-[style*="border:5px solid red"],
-.red-border,
-*[class*="red"] {
-  border: none !important;
-}
