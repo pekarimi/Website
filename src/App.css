@@ -1382,3 +1382,77 @@ body {
     margin: 0 10px !important;
   }
 }
+
+/* Add this to the bottom of your App.css file to fix the purple gradient interfaces */
+
+/* Target the specific React components that are getting cut off */
+@media (max-width: 768px) {
+  /* Fix the main containers with purple gradients (SingleLearningInterface and LearningPortalInterface) */
+  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"],
+  div[style*="background: linear-gradient(135deg, #1e293b 0%, #334155 100%)"],
+  div[style*="background: #f8fafc"] {
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 10px !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Convert any grid layouts inside these components to single column */
+  div[style*="background: linear-gradient"] div[style*="grid-template-columns"],
+  div[style*="background: #f8fafc"] div[style*="grid-template-columns"] {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 16px !important;
+  }
+  
+  /* Fix any child containers with max-width inside these components */
+  div[style*="background: linear-gradient"] div[style*="max-width"],
+  div[style*="background: #f8fafc"] div[style*="max-width"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 12px !important;
+  }
+  
+  /* Specifically target elements with inline padding that might cause overflow */
+  div[style*="background: linear-gradient"] div[style*="padding: 32px"],
+  div[style*="background: linear-gradient"] div[style*="padding: 24px"],
+  div[style*="background: linear-gradient"] div[style*="padding: 20px"] {
+    padding: 12px !important;
+  }
+  
+  /* Fix the welcome back banner and other internal cards */
+  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"],
+  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"] div {
+    max-width: 100% !important;
+    padding: 12px !important;
+    margin: 8px 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Force any text content to wrap properly */
+  div[style*="background: linear-gradient"] *,
+  div[style*="background: #f8fafc"] * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Even more aggressive fix for very small screens */
+@media (max-width: 480px) {
+  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"],
+  div[style*="background: linear-gradient(135deg, #1e293b 0%, #334155 100%)"],
+  div[style*="background: #f8fafc"] {
+    max-width: calc(100vw - 16px) !important;
+    margin: 0 8px !important;
+    padding: 12px !important;
+  }
+  
+  /* Scale down any internal content even more */
+  div[style*="background: linear-gradient"] div {
+    padding: 8px !important;
+    margin: 4px 0 !important;
+    font-size: 14px !important;
+  }
+}
