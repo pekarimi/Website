@@ -938,9 +938,9 @@ body {
     height: 0 !important;
   }
   
-  /* Add simple contact info after title */
+  /* Add simple contact info after title with clickable links */
   .title::after {
-    content: "📍 SF • ✉️ pekarimi67@gmail.com • 💼 LinkedIn" !important;
+    content: "📍 SF • ✉️ pekarimi67@gmail.com" !important;
     display: block !important;
     font-size: 10px !important;
     margin: 5px 0 0 0 !important;
@@ -949,6 +949,18 @@ body {
     text-align: center !important;
     width: 100% !important;
     max-width: 100% !important;
+  }
+  
+  /* Add LinkedIn as a separate clickable element */
+  .header-text::after {
+    content: "💼 LinkedIn";
+    display: block !important;
+    font-size: 10px !important;
+    margin: 2px 0 0 0 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
   }
   
   .description {
@@ -972,6 +984,17 @@ body {
     margin-top: 20px !important;
     padding: 0 !important;
     max-width: 100% !important;
+  }
+  
+  /* Better fix for project cards - ensure they use full width */
+  .work-section .container {
+    padding: 0 8px !important;
+  }
+  
+  .project-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   
   /* Project Cards Mobile - Simple fix for cutting */
