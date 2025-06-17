@@ -815,206 +815,314 @@
   opacity: 0.9;
 }
 
-/* MOBILE FIXES - Clean solution for image cutting issue */
+/* AGGRESSIVE MOBILE FIX - Replace your entire mobile section with this */
+
 @media (max-width: 768px) {
-  /* Container fixes - ensure no overflow */
+  /* STEP 1: Force body and html to not overflow */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative !important;
+  }
+  
+  /* STEP 2: Create wrapper to control all content */
   .case-study {
     width: 100vw !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
+    position: relative !important;
   }
   
-  .case-study .container {
+  /* STEP 3: Force ALL containers to respect viewport width */
+  .case-study .container,
+  .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
     padding: 0 12px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix all design solution containers */
-  .design-solution {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 0 20px 0 !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix solution content layout */
-  .solution-content {
-    display: block !important;
-    grid-template-columns: none !important;
-  }
-  
-  .solution-text,
-  .solution-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 16px !important;
-  }
-  
-  /* MAIN FIX: Image containers and images */
-  .visual-placeholder,
-  .solution-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
     margin: 0 !important;
-    overflow: hidden !important;
-    text-align: center !important;
-  }
-  
-  /* Force all images to fit properly */
-  .visual-placeholder img,
-  .solution-visual img,
-  .design-solution img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    display: block !important;
     box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
   
-  /* Ensure image captions don't cause overflow */
-  .visual-caption,
-  .image-caption {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 8px !important;
+  /* STEP 4: Force ALL section containers */
+  .impact-section,
+  .problem-section,
+  .process-section,
+  .framework-section,
+  .profiles-section,
+  .learnings-section,
+  .next-steps,
+  .title-section,
+  .project-overview {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
     box-sizing: border-box !important;
-    word-wrap: break-word !important;
+    margin: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
   
-  /* Fix other potentially problematic sections */
+  /* STEP 5: Force ALL card containers to fit */
+  .design-solution,
   .mindset-profile,
   .learning-item,
-  .design-summary {
-    width: 100% !important;
-    max-width: 100% !important;
+  .design-summary,
+  .problem-highlights,
+  .method-card,
+  .creativity-type-card {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
     margin: 0 0 20px 0 !important;
-    padding: 16px !important;
+    padding: 12px !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
   
-  /* Fix profile images and other content images */
-  .profile-image-container img,
-  .section-image-container img,
-  .full-width-image-container img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    display: block !important;
-  }
-  
-  /* Fix text content to prevent overflow */
-  .solution-text h4,
-  .solution-text p,
-  .solution-text li,
-  .design-summary h3,
-  .design-summary p {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
-  }
-  
-  /* Fix lists */
-  .solution-text ul {
-    padding-left: 16px !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  .solution-text li {
-    padding-left: 16px !important;
-    margin-bottom: 8px !important;
-    max-width: 100% !important;
-  }
-  
-  /* Remove any transform or scaling that might cause issues */
-  .design-solution *,
-  .solution-visual *,
-  .visual-placeholder * {
-    transform: none !important;
-  }
-  
-  /* Ensure proper spacing */
-  .impact-section {
-    padding: 30px 0 50px 0 !important;
-  }
-  
-  .profiles-section {
-    padding: 20px 0 30px 0 !important;
-  }
-  
-  /* Grid layouts to single column */
+  /* STEP 6: Convert ALL grids to single column */
+  .solution-content,
   .problem-content,
   .process-intro,
   .research-outcomes,
   .overview-grid,
   .process-grid,
-  .dimensions-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
+  .dimensions-grid,
+  .learnings-grid,
+  .methodology-grid,
+  .creativity-types-grid {
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
-  /* Typography adjustments */
+  /* STEP 7: Force ALL content areas to single column */
+  .solution-text,
+  .solution-visual,
+  .problem-text,
+  .problem-highlights,
+  .process-intro-text,
+  .process-intro-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+    float: none !important;
+    display: block !important;
+  }
+  
+  /* STEP 8: NUCLEAR OPTION - Force ALL image containers */
+  .visual-placeholder,
+  .solution-visual,
+  .profile-image-container,
+  .section-image-container,
+  .full-width-image-container,
+  .hero-image-container,
+  .prototype-image {
+    width: calc(100vw - 48px) !important;
+    max-width: calc(100vw - 48px) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* STEP 9: NUCLEAR OPTION - Force ALL images to scale down */
+  .visual-placeholder img,
+  .solution-visual img,
+  .design-solution img,
+  .profile-image-container img,
+  .section-image-container img,
+  .full-width-image-container img,
+  .hero-image-container img,
+  .prototype-image img,
+  .mindset-profile img,
+  img {
+    width: 100% !important;
+    max-width: calc(100vw - 48px) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    scale: 1 !important;
+  }
+  
+  /* STEP 10: Ensure text wraps properly */
+  .solution-text h4,
+  .solution-text p,
+  .solution-text li,
+  .design-summary h3,
+  .design-summary p,
+  .case-study h1,
+  .case-study h2,
+  .case-study h3,
+  .case-study h4,
+  .case-study p,
+  .case-study li {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: calc(100vw - 48px) !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* STEP 11: Fix lists specifically */
+  .solution-text ul,
+  .problem-highlights ul,
+  .insights-list,
+  ul {
+    width: 100% !important;
+    max-width: calc(100vw - 64px) !important;
+    padding-left: 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  .solution-text li,
+  .problem-highlights li,
+  .insights-list li,
+  li {
+    width: 100% !important;
+    max-width: calc(100vw - 80px) !important;
+    padding-left: 16px !important;
+    margin-bottom: 8px !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* STEP 12: Typography adjustments */
   .case-title {
     font-size: 28px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
   }
   
   .case-subtitle {
     font-size: 18px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
   }
   
   .case-description {
     font-size: 16px !important;
+    line-height: 1.4 !important;
     padding: 0 !important;
   }
   
-  /* Section headers */
   .case-study h2 {
     font-size: 24px !important;
     margin-bottom: 20px !important;
+    line-height: 1.2 !important;
   }
   
-  /* Hero image adjustments */
+  .case-study h3 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .case-study h4 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* STEP 13: Hero image specific fix */
   .hero-image-section {
+    padding: 20px 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+  
+  .mindsets-hero-container,
+  .hero-image-container {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    margin: 0 auto !important;
+  }
+  
+  .mindsets-hero-container img,
+  .hero-image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 250px !important;
+    object-fit: contain !important;
+  }
+  
+  /* STEP 14: Section padding adjustments */
+  .problem-section,
+  .process-section,
+  .framework-section,
+  .impact-section,
+  .learnings-section,
+  .next-steps {
+    padding: 30px 0 !important;
+  }
+  
+  .profiles-section {
     padding: 20px 0 !important;
   }
   
-  .mindsets-hero-container {
-    width: 95% !important;
+  .title-section {
+    padding: 20px 0 !important;
   }
   
-  .mindsets-hero-container img {
-    max-height: 300px !important;
+  /* STEP 15: Remove all transforms, scaling, and positioning that could cause overflow */
+  .case-study *,
+  .design-solution *,
+  .solution-visual *,
+  .visual-placeholder * {
+    transform: none !important;
+    scale: 1 !important;
+    position: relative !important;
+  }
+  
+  /* STEP 16: Ensure captions don't overflow */
+  .visual-caption,
+  .image-caption {
+    width: 100% !important;
+    max-width: calc(100vw - 48px) !important;
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    margin-top: 8px !important;
   }
 }
 
-/* Additional fix for very small screens */
+/* STEP 17: Even more aggressive fix for very small screens */
 @media (max-width: 480px) {
-  .case-study .container {
-    padding: 0 8px !important;
-  }
-  
-  .design-solution {
-    padding: 12px !important;
-  }
-  
   .visual-placeholder img,
   .solution-visual img,
   .design-solution img {
-    max-width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 32px) !important;
+    width: calc(100vw - 32px) !important;
+  }
+  
+  .visual-placeholder,
+  .solution-visual {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+  
+  .design-solution {
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    padding: 8px !important;
   }
 }
 
-/* Remove conflicting emergency fixes */
-.design-solution img {
-  /* Remove the emergency fix that was forcing 280px width */
-  max-width: 100% !important;
-  width: 100% !important;
+/* STEP 18: Remove ALL conflicting rules */
+/* Make sure to REMOVE or COMMENT OUT any existing mobile rules that might conflict */
+/* Especially remove this if it exists: */
+/*
+@media (max-width: 768px) {
+  .design-solution img {
+    max-width: 280px !important;
+    width: 280px !important;
+  }
 }
+*/
