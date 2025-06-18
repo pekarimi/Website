@@ -18,10 +18,10 @@
   box-sizing: border-box;
 }
 
-/* Specifically target Figure 5a image to prevent overflow */
+/* Specifically target Figure 5a image to make it MUCH smaller */
 .behavior-scatter-fixed img {
-  width: 85% !important;
-  max-width: 100% !important;
+  width: 50% !important;
+  max-width: 50% !important;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -69,8 +69,8 @@
   
   .behavior-scatter-fixed img,
   .behavior-table-fixed img {
-    width: 95% !important;
-    max-width: 100% !important;
+    width: 60% !important;
+    max-width: 60% !important;
     height: auto;
   }
   
