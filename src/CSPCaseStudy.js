@@ -197,12 +197,14 @@ const CSPCaseStudy = ({ onBack }) => {
                 <div className="behavior-intro">
                   <p>Through K-means clustering analysis of user interaction patterns, we identified three distinct designer personalities in their collaboration with AI.</p>
                 </div>
-                <div className="behavior-images-grid">
-                  <div className="behavior-scatter">
+                
+                {/* FIXED BEHAVIOR IMAGES GRID */}
+                <div className="behavior-images-grid-fixed">
+                  <div className="behavior-scatter-fixed">
                     <img src="/images/CSP/behavior-clusters.png" alt="Scatter plot showing three distinct clusters of user behavior based on drawing time vs inspiration-seeking time" />
                     <p className="image-caption">Figure 5a: Three interaction behavior clusters identified through K-means analysis of drawing and inspiration-seeking patterns</p>
                   </div>
-                  <div className="behavior-table">
+                  <div className="behavior-table-fixed">
                     <img src="/images/CSP/behavior-correlation.png" alt="Table showing correlation between interaction clusters and creativity types with percentages for combinatorial, exploratory, and transformational creativity" />
                     <p className="image-caption">Figure 5b: Correlation between interaction behavior clusters and creativity types showing statistical distribution across C (Combinatorial), E (Exploratory), and T (Transformational) creativity</p>
                   </div>
