@@ -145,7 +145,7 @@ const CSPCaseStudy = ({ onBack }) => {
               <div className="creativity-analysis-section">
                 <h3>Types of Design Creativity</h3>
                 <div className="creativity-intro">
-                  <p>We analyzed participants' creative responses using Boden's three-part creativity framework, revealing distinct patterns in how AI similarity influenced different types of creative output.</p>
+                  <p>I analyzed participants' creative responses using Boden's three-part creativity framework, revealing distinct patterns in how AI similarity influenced different types of creative output.</p>
                 </div>
                 <div className="prototype-image">
                   <img src="/images/CSP/creativity-examples.png" alt="Examples of three creativity types: combinatorial showing fence added to bridge, exploratory showing bridge parameter changes, transformational showing lamp posts added as new function" />
@@ -195,7 +195,7 @@ const CSPCaseStudy = ({ onBack }) => {
               <div className="interaction-behavior-section">
                 <h3>Interaction Behavior Clusters</h3>
                 <div className="behavior-intro">
-                  <p>Through K-means clustering analysis of user interaction patterns, we identified three distinct designer personalities in their collaboration with AI.</p>
+                  <p>Through K-means clustering analysis of user interaction patterns, I identified three distinct designer personalities in their collaboration with AI.</p>
                 </div>
                 
                 {/* FIXED BEHAVIOR IMAGES GRID */}
