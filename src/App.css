@@ -1,5 +1,3 @@
-
-
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -823,7 +821,305 @@ body {
   border-bottom: none;
 }
 
-/* AGGRESSIVE MOBILE FIXES - Only affects screens 768px and below */
+/* FIX FOR FIGURE 5A - BEHAVIOR IMAGES GRID */
+.behavior-images-grid-fixed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 0;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.behavior-scatter-fixed {
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.behavior-scatter-fixed img {
+  width: 90% !important;
+  max-width: 90% !important;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.behavior-table-fixed {
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.behavior-table-fixed img {
+  width: 80%;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.behavior-scatter-fixed .image-caption,
+.behavior-table-fixed .image-caption {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+  padding: 0 8px;
+}
+
+/* Cluster Analysis */
+.cluster-analysis {
+  margin-top: 32px;
+}
+
+.cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.cluster-card {
+  background: #f8f9ff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.cluster-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.cluster-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Theme Cards */
+.theme-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.theme-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.theme-icon {
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.theme-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.theme-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.theme-card p:last-child {
+  font-style: normal;
+  margin: 0;
+}
+
+/* Educational Impact */
+.education-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.application-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.application-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.application-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.application-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.education-quote {
+  background: #f0f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 32px 0;
+  border-left: 4px solid #3b82f6;
+}
+
+.education-quote blockquote {
+  font-size: 18px;
+  font-style: italic;
+  color: #1e40af;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.education-quote cite {
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Impact Metrics */
+.impact-metrics {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.metric-card-accessible {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+
+.metric-card-accessible h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.metric-card-accessible p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Research Contributions */
+.research-contributions {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contribution-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 24px;
+}
+
+.contribution-card:last-child {
+  margin-bottom: 0;
+}
+
+.contribution-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.contribution-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Future Directions */
+.future-directions {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.future-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.future-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.future-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* MOBILE RESPONSIVE STYLES */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px !important;
@@ -940,9 +1236,6 @@ body {
     height: 0 !important;
   }
   
-  /* Add simple contact info after title with clickable links */
-  
-  
   .description {
     font-size: 12px !important;
     line-height: 1.4 !important;
@@ -1056,159 +1349,6 @@ body {
     font-size: 16px !important;
   }
   
-  /* AGGRESSIVE fixes for case study containers */
-  .case-study,
-  .case-study-container {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-  }
-  
-  .case-study .container,
-  .case-study-container .container {
-    padding: 0 8px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix ALL sections in case studies */
-  .impact-section,
-  .problem-section,
-  .process-section,
-  .framework-section,
-  .profiles-section,
-  .learnings-section,
-  .next-steps,
-  .title-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
-  
-  /* Fix design solutions and content cards */
-  .design-solution,
-  .mindset-profile,
-  .learning-item,
-  .design-summary {
-    width: calc(100% - 16px) !important;
-    max-width: calc(100% - 16px) !important;
-    margin-left: 8px !important;
-    margin-right: 8px !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix grid layouts */
-  .solution-content,
-  .problem-content,
-  .process-intro,
-  .research-outcomes {
-    display: block !important;
-    grid-template-columns: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  .solution-text,
-  .solution-visual,
-  .problem-text,
-  .problem-highlights,
-  .process-intro-text,
-  .process-intro-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 16px !important;
-  }
-  
-  /* Fix images and visual content - CONSERVATIVE approach */
-  .visual-placeholder,
-  .visual-placeholder img,
-  .section-image-container,
-  .section-image-container img,
-  .full-width-image-container,
-  .full-width-image-container img,
-  .profile-image-container,
-  .profile-image-container img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    box-sizing: border-box !important;
-    margin: 0 auto !important;
-    display: block !important;
-  }
-  
-  /* Only target images inside solution-visual sections that were cutting */
-  .solution-visual img {
-    width: calc(100% + 16px) !important;
-    max-width: calc(100% + 16px) !important;
-    margin-left: -8px !important;
-    margin-right: -8px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    box-sizing: border-box !important;
-    display: block !important;
-  }
-  
-  /* Keep solution-visual containers normal */
-  .solution-visual,
-  .visual-placeholder {
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: visible !important;
-  }
-  
-  /* Keep design solution containers normal */
-  .design-solution {
-    width: calc(100% - 16px) !important;
-    max-width: calc(100% - 16px) !important;
-    margin-left: 8px !important;
-    margin-right: 8px !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Force all text to wrap */
-  .case-study *,
-  .case-study-container * {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Fix lists specifically */
-  .solution-text ul,
-  .problem-highlights ul,
-  .insights-list {
-    padding-left: 16px !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  .solution-text li,
-  .problem-highlights li,
-  .insights-list li {
-    padding-left: 16px !important;
-    margin-bottom: 8px !important;
-    max-width: 100% !important;
-  }
-  
-  /* Ensure no horizontal overflow anywhere */
-  body,
-  html {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-  
   .project-details-row {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1251,6 +1391,31 @@ body {
   .technical-contribution-section {
     padding: 20px;
     margin: 24px 0;
+  }
+  
+  /* Fixed behavior images grid for mobile */
+  .behavior-images-grid-fixed {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin: 16px 0 !important;
+  }
+  
+  .behavior-scatter-fixed img {
+    width: 90% !important;
+    max-width: 90% !important;
+    height: auto;
+  }
+  
+  .behavior-table-fixed img {
+    width: 80% !important;
+    max-width: 80% !important;
+    height: auto;
+  }
+  
+  .behavior-scatter-fixed .image-caption,
+  .behavior-table-fixed .image-caption {
+    font-size: 14px !important;
+    padding: 0 4px !important;
   }
 }
 
@@ -1316,527 +1481,6 @@ body {
     right: 48px;
   }
 }
-
-/* MOBILE SPACING FIXES - REMOVED - These changes affected desktop */
-
-/* Add this to the bottom of your App.css file to fix React component inline styles */
-
-/* Force React components with inline styles to be mobile responsive */
-@media (max-width: 768px) {
-  /* Target the main containers created by your React components */
-  div[style*="max-width: 900px"],
-  div[style*="max-width: 1200px"] {
-    max-width: calc(100vw - 40px) !important;
-    margin: 0 20px !important;
-  }
-  
-  /* Convert grid layouts to single column */
-  div[style*="grid-template-columns: 1fr 1fr"],
-  div[style*="grid-template-columns: 1fr 2fr"] {
-    display: block !important;
-  }
-  
-  /* Fix padding that might cause overflow */
-  div[style*="padding: 32px"] {
-    padding: 16px !important;
-  }
-  
-  div[style*="padding: 24px"] {
-    padding: 12px !important;
-  }
-  
-  /* Fix gap values */
-  div[style*="gap: 40px"] {
-    gap: 20px !important;
-  }
-  
-  div[style*="gap: 24px"] {
-    gap: 16px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  div[style*="max-width: 900px"],
-  div[style*="max-width: 1200px"] {
-    max-width: calc(100vw - 20px) !important;
-    margin: 0 10px !important;
-  }
-}
-
-/* Add this to the bottom of your App.css file to fix the purple gradient interfaces */
-
-/* Target the specific React components that are getting cut off */
-@media (max-width: 768px) {
-  /* Fix the main containers with purple gradients (SingleLearningInterface and LearningPortalInterface) */
-  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"],
-  div[style*="background: linear-gradient(135deg, #1e293b 0%, #334155 100%)"],
-  div[style*="background: #f8fafc"] {
-    max-width: calc(100vw - 20px) !important;
-    margin: 0 10px !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Convert any grid layouts inside these components to single column */
-  div[style*="background: linear-gradient"] div[style*="grid-template-columns"],
-  div[style*="background: #f8fafc"] div[style*="grid-template-columns"] {
-    display: block !important;
-    grid-template-columns: none !important;
-    gap: 16px !important;
-  }
-  
-  /* Fix any child containers with max-width inside these components */
-  div[style*="background: linear-gradient"] div[style*="max-width"],
-  div[style*="background: #f8fafc"] div[style*="max-width"] {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 12px !important;
-  }
-  
-  /* Specifically target elements with inline padding that might cause overflow */
-  div[style*="background: linear-gradient"] div[style*="padding: 32px"],
-  div[style*="background: linear-gradient"] div[style*="padding: 24px"],
-  div[style*="background: linear-gradient"] div[style*="padding: 20px"] {
-    padding: 12px !important;
-  }
-  
-  /* Fix the welcome back banner and other internal cards */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"],
-  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"] div {
-    max-width: 100% !important;
-    padding: 12px !important;
-    margin: 8px 0 !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Force any text content to wrap properly */
-  div[style*="background: linear-gradient"] *,
-  div[style*="background: #f8fafc"] * {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    max-width: 100% !important;
-  }
-}
-
-/* Even more aggressive fix for very small screens */
-@media (max-width: 480px) {
-  div[style*="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"],
-  div[style*="background: linear-gradient(135deg, #1e293b 0%, #334155 100%)"],
-  div[style*="background: #f8fafc"] {
-    max-width: calc(100vw - 16px) !important;
-    margin: 0 8px !important;
-    padding: 12px !important;
-  }
-  
-  /* Scale down any internal content even more */
-  div[style*="background: linear-gradient"] div {
-    padding: 8px !important;
-    margin: 4px 0 !important;
-    font-size: 14px !important;
-  }
-}
-
-/* Add these styles to fix the SingleLearningInterface and LearningPortalInterface components */
-
-/* Single Learning Interface Mobile Fixes */
-@media (max-width: 768px) {
-  /* Fix the main container in SingleLearningInterface */
-  .single-learning-container {
-    max-width: calc(100vw - 20px) !important;
-    margin: 0 10px !important;
-    padding: 16px !important;
-    border-radius: 12px !important;
-  }
-  
-  /* Convert grid to single column */
-  .single-learning-container > div[style*="grid-template-columns"] {
-    display: block !important;
-    grid-template-columns: none !important;
-  }
-  
-  /* Fix learning modules section */
-  .single-learning-container > div > div:first-child {
-    margin-bottom: 20px !important;
-  }
-  
-  /* Fix audio learning section */
-  .single-learning-container > div > div:last-child {
-    margin-bottom: 0 !important;
-  }
-}
-
-/* Learning Portal Interface Mobile Fixes */
-@media (max-width: 768px) {
-  /* Fix the main portal container */
-  .learning-portal-container {
-    max-width: calc(100vw - 20px) !important;
-    margin: 0 10px !important;
-    border-radius: 12px !important;
-  }
-  
-  /* Convert main grid to single column */
-  .learning-portal-container > div[style*="grid-template-columns: 1fr 2fr"] {
-    display: block !important;
-    grid-template-columns: none !important;
-    gap: 20px !important;
-  }
-  
-  /* Adjust course list */
-  .learning-portal-container > div > div:first-child {
-    margin-bottom: 20px !important;
-  }
-  
-  /* Adjust course detail */
-  .learning-portal-container > div > div:last-child {
-    margin-bottom: 0 !important;
-  }
-}
-
-/* General Interface Component Fixes */
-@media (max-width: 768px) {
-  /* Any div with inline styles containing grid layouts */
-  div[style*="grid-template-columns: 1fr 1fr"],
-  div[style*="grid-template-columns: 1fr 2fr"],
-  div[style*="display: grid"] {
-    display: block !important;
-    grid-template-columns: none !important;
-  }
-  
-  /* Fix containers with max-width set inline */
-  div[style*="max-width: 900px"],
-  div[style*="max-width: 1200px"] {
-    max-width: calc(100vw - 20px) !important;
-    margin: 0 10px !important;
-  }
-  
-  /* Fix any padding that might cause overflow */
-  div[style*="padding: 32px"] {
-    padding: 16px !important;
-  }
-  
-  div[style*="padding: 24px"] {
-    padding: 12px !important;
-  }
-  
-  div[style*="padding: 20px"] {
-    padding: 10px !important;
-  }
-  
-  /* Fix gap values */
-  div[style*="gap: 40px"] {
-    gap: 20px !important;
-  }
-  
-  div[style*="gap: 24px"] {
-    gap: 12px !important;
-  }
-}
-
-/* Additional Mobile Interface Fixes */
-@media (max-width: 480px) {
-  div[style*="max-width: 900px"],
-  div[style*="max-width: 1200px"] {
-    max-width: calc(100vw - 16px) !important;
-    margin: 0 8px !important;
-  }
-  
-  div[style*="padding: 16px"] {
-    padding: 12px !important;
-  }
-  
-  div[style*="gap: 20px"] {
-    gap: 10px !important;
-  }
-}
-
-/* Add this to your App.css file to hide the "Start Catch-up Plan" button on mobile */
-
-/* Replace the existing button hiding rule in your App.css with this more specific one */
-
-@media (max-width: 768px) {
-  /* More specific targeting for the Start Catch-up Plan button */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button,
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] > div > button,
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button[style*="Start Catch-up Plan"],
-  button[style*="Start Catch-up Plan"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  /* Also target any button containing "Start", "Catch", or "Plan" text */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Start"),
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Catch"),
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] button:contains("Plan") {
-    display: none !important;
-  }
-  
-  /* Adjust the blue banner layout to center content when button is hidden */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] {
-    display: block !important;
-    text-align: left !important;
-    padding: 16px !important;
-    margin: 12px 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Ensure the content inside the blue banner takes full width and doesn't expect space for button */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] > div {
-    display: block !important;
-    width: 100% !important;
-    text-align: left !important;
-    justify-content: flex-start !important;
-  }
-  
-  /* Target the container that has the flexbox layout causing the cutting */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"][style*="display: flex"] {
-    display: block !important;
-    flex-direction: column !important;
-  }
-  
-  /* Hide any element that might be the button based on position or content */
-  div[style*="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"] *:last-child {
-    display: none !important;
-  }
-}
-
-/* Add this CSS to the bottom of your App.css file */
-
-/* TEXTFLOW CASE STUDY MOBILE OPTIMIZATIONS */
-@media (max-width: 768px) {
-  /* MOBILE TIMELINE REDESIGN - More compact and efficient */
-  .process-timeline {
-    max-width: 100% !important;
-    margin: 0 !important;
-    position: relative !important;
-  }
-  
-  .process-timeline::before {
-    display: none !important; /* Hide the timeline line on mobile */
-  }
-  
-  .timeline-item {
-    padding-left: 0 !important; /* Remove left padding */
-    margin-bottom: 32px !important; /* Reduce bottom margin */
-    position: relative !important;
-  }
-  
-  .timeline-marker {
-    position: static !important; /* Make it part of the normal flow */
-    width: 40px !important;
-    height: 40px !important;
-    margin: 0 auto 16px auto !important; /* Center it and add bottom margin */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 50% !important;
-    background: linear-gradient(135deg, #667eea, #764ba2) !important;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
-    left: auto !important;
-    top: auto !important;
-  }
-  
-  .timeline-number {
-    color: white !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-  }
-  
-  .timeline-content {
-    margin-top: 0 !important;
-    padding: 20px !important;
-    border-left: none !important;
-    border-top: 4px solid #667eea !important;
-  }
-  
-  .timeline-content h3 {
-    font-size: 20px !important;
-    margin-bottom: 12px !important;
-  }
-  
-  .timeline-description p {
-    font-size: 15px !important;
-    margin-bottom: 16px !important;
-  }
-  
- /* MOBILE IMAGE OPTIMIZATION - BIGGER IMAGES WITHOUT EMPTY SPACE */
-.study-image-container {
-  margin: 16px 0 !important;
-  background: #f8f9fa !important;
-  border-radius: 8px !important;
-  padding: 8px !important;
-}
-
-.study-image {
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 600px !important; /* INCREASED - allow bigger images */
-  object-fit: contain !important;
-  border-radius: 6px !important;
-  border: none !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-}
-  
-  .gesture-controls-image {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 200px !important; /* Smaller for mobile */
-    object-fit: contain !important;
-    margin: 0 auto !important;
-    display: block !important;
-    border-radius: 6px !important;
-    border: 1px solid #e0e0e0 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .image-caption {
-    margin-top: 8px !important;
-    margin-bottom: 0 !important;
-    font-size: 13px !important;
-    line-height: 1.4 !important;
-    color: #666 !important;
-    font-style: italic !important;
-    text-align: center !important;
-    padding: 0 8px !important;
-  }
-  
-  /* MOBILE RESULTS SECTION OPTIMIZATION */
-  .timeline-results {
-    margin-top: 16px !important;
-    padding: 16px !important;
-    background: #f7fafc !important;
-    border-radius: 6px !important;
-    border-left: 3px solid #667eea !important;
-  }
-  
-  .timeline-results h4 {
-    color: #667eea !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    margin-bottom: 10px !important;
-  }
-  
-  .timeline-results li {
-    padding: 6px 0 !important;
-    border-bottom: 1px solid #e2e8f0 !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-  }
-  
-  .timeline-results strong {
-    color: #2d3748 !important;
-    font-weight: 600 !important;
-  }
-  
-  /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
-  
-  /* Step 1 - Topic frequency chart - BIGGER */
-.timeline-item:nth-child(1) .study-image {
-  max-height: 700px !important;
-}
-
-/* Step 2 - Message generation model - BIGGER */
-.timeline-item:nth-child(2) .study-image {
-  max-height: 650px !important;
-}
-
-/* Step 3 - System architecture - BIGGER */
-.timeline-item:nth-child(3) .study-image {
-  max-height: 600px !important;
-}
-
-/* Step 4 - Interaction flow and gesture controls - BIGGER */
-.timeline-item:nth-child(4) .study-image {
-  max-height: 650px !important;
-}
-
-/* Step 5 - Charts and tables - BIGGER */
-.timeline-item:nth-child(5) .study-image {
-  max-height: 600px !important;
-}
-  
-  /* Step 4 - Interaction flow and gesture controls */
-  .timeline-item:nth-child(4) .study-image {
-    max-height: 400px !important; /* Allow more height for interaction flow */
-  }
-  
-  /* Step 5 - Charts and tables */
-  .timeline-item:nth-child(5) .study-image {
-    max-height: 300px !important;
-  }
-  
-  /* MOBILE SECTION SPACING */
-  .process-section {
-    padding: 60px 0 40px 0 !important;
-  }
-  
-  .section-title {
-    font-size: 28px !important;
-    margin-bottom: 32px !important;
-  }
-
-  /* Additional TextFlow mobile fixes */
-  .hero-meta {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 16px !important;
-  }
-  
-  .innovation-grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-  
-  .themes-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  
-  .theme-card {
-    padding: 20px !important;
-  }
-  
-  .insights-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  
-  .insight-card {
-    padding: 24px !important;
-  }
-  
-  .impact-highlights {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  
-  .highlight-item {
-    padding: 24px !important;
-  }
-  
-  .next-steps-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  
-  .next-step-card {
-    padding: 24px !important;
-  }
-  
-  .metrics-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-  }
-}
-
-/* Add this CSS to the very bottom of your App.css file - STRONGER OVERRIDE */
 
 /* MOBILE LINKEDIN CONTACT FIX - MAXIMUM SPECIFICITY */
 @media (max-width: 768px) {
@@ -1955,484 +1599,3 @@ body {
     height: auto !important;
   }
 }
-
-/* Add this CSS to the very bottom of your App.css file */
-
-/* MOBILE PROJECT CARDS FIX - Better spacing and image sizing */
-/* Add this CSS to the very bottom of your App.css file */
-
-/* MOBILE PROJECT CARDS FIX - Better spacing and FULL image visibility */
-@media (max-width: 768px) {
-  /* Better spacing between project cards */
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important; /* Increased gap between cards */
-    margin-top: 30px !important;
-    padding: 0 16px !important; /* Add side padding */
-    max-width: 100% !important;
-  }
-  
-  /* Make project cards more prominent on mobile */
-  .project-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    margin-bottom: 20px !important; /* Extra bottom margin */
-    border-radius: 16px !important; /* Slightly smaller radius for mobile */
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12) !important; /* Better shadow */
-  }
-  
-  /* Fix project image container to show COMPLETE images */
-  .project-image-container {
-    position: relative !important;
-    height: 240px !important; /* Increased height for better image visibility */
-    width: 100% !important;
-    overflow: hidden !important;
-    background: #f8f9fa !important; /* Light background in case image doesn't fill */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
-  .project-image {
-    width: 100% !important;
-    height: 100% !important;
-    position: relative !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
-  .project-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* CHANGED: Show complete image without cropping */
-    object-position: center !important; /* Center the image */
-    transition: transform 0.3s ease !important;
-    background: white !important; /* White background for images */
-  }
-  
-  /* Alternative: If images still look small, use this instead */
-  .project-card:nth-child(odd) .project-img {
-    object-fit: cover !important;
-    object-position: center top !important;
-  }
-  
-  .project-card:nth-child(even) .project-img {
-    object-fit: contain !important;
-    object-position: center !important;
-  }
-  
-  /* Ensure overlay works properly on mobile */
-  .project-overlay {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(0, 0, 0, 0.7) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
-  }
-  
-  .project-card:hover .project-overlay {
-    opacity: 1 !important;
-  }
-  
-  /* Better mobile project content spacing */
-  .project-content {
-    padding: 24px !important;
-    position: relative !important;
-  }
-  
-  .project-header {
-    flex-direction: column !important;
-    gap: 8px !important;
-    margin-bottom: 16px !important;
-  }
-  
-  .project-title {
-    font-size: 22px !important; /* Slightly larger for better readability */
-    line-height: 1.3 !important;
-    margin-bottom: 6px !important;
-  }
-  
-  .project-subtitle {
-    font-size: 16px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 0 !important;
-  }
-  
-  .project-year {
-    margin-left: 0 !important;
-    margin-top: 4px !important;
-    font-size: 14px !important;
-    align-self: flex-start !important;
-  }
-  
-  .project-description {
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 20px !important;
-    color: #555 !important;
-  }
-  
-  /* Better tag spacing on mobile */
-  .project-tags {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    margin-bottom: 20px !important;
-  }
-  
-  .tag {
-    padding: 6px 12px !important;
-    background: #f5f5f5 !important;
-    border-radius: 16px !important;
-    font-size: 13px !important;
-    color: #666 !important;
-    font-weight: 500 !important;
-  }
-  
-  .project-arrow {
-    bottom: 20px !important;
-    right: 20px !important;
-  }
-  
-  /* Better work section container on mobile */
-  .work-section {
-    padding: 50px 0 !important;
-  }
-  
-  .work-section .container {
-    padding: 0 16px !important; /* Consistent padding */
-  }
-  
-  /* Add clear visual separation between sections */
-  .work-section::before {
-    content: '' !important;
-    display: block !important;
-    height: 1px !important;
-    background: linear-gradient(90deg, transparent, #e5e7eb, transparent) !important;
-    margin: 0 auto 40px auto !important;
-    width: 80% !important;
-  }
-  
-  /* Better section title on mobile */
-  .section-title {
-    font-size: 32px !important;
-    margin-bottom: 30px !important;
-    text-align: center !important;
-    padding: 0 16px !important;
-  }
-  
-  /* Improve hover effects for mobile (touch) */
-  .project-card:active {
-    transform: translateY(-8px) !important;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18) !important;
-  }
-  
-  /* Make "View Case Study" button more prominent on mobile */
-  .view-case-study {
-    width: auto !important;
-    padding: 14px 24px !important;
-    border-radius: 10px !important;
-    gap: 10px !important;
-    font-weight: 600 !important;
-    font-size: 15px !important;
-    background: white !important;
-    color: #1a1a1a !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-}
-
-/* Additional fix for very small mobile screens */
-@media (max-width: 480px) {
-  .projects-grid {
-    padding: 0 12px !important;
-    gap: 32px !important;
-  }
-  
-  .project-card {
-    margin-bottom: 16px !important;
-  }
-  
-  .project-image-container {
-    height: 220px !important; /* Adequate height for small screens */
-  }
-  
-  .project-content {
-    padding: 20px !important;
-  }
-  
-  .section-title {
-    font-size: 28px !important;
-    padding: 0 12px !important;
-  }
-}
-
-/* Add this CSS to the very bottom of your App.css file - TextFlow specific mobile fixes */
-
-/* TEXTFLOW CASE STUDY SPECIFIC MOBILE ADJUSTMENTS */
-@media (max-width: 768px) {
-  
-  /* 1. LARGER HERO IMAGE ON MOBILE */
-  .hero-image-container {
-    width: 98% !important; /* Increased from 95% to 98% */
-    max-width: 98% !important;
-    border-radius: 8px !important;
-  }
-  
-  .hero-image-container img {
-    max-height: 400px !important; /* Increased from 300px to 400px */
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-  
-  /* 2. SMALLER TITLE TEXT ON MOBILE */
-  .content-section h1 {
-    font-size: 28px !important; /* Much smaller than the default 48px */
-    line-height: 1.3 !important;
-    margin-bottom: 12px !important;
-    text-align: center !important;
-    color: #1a1a1a !important;
-    padding: 0 8px !important; /* Add padding to prevent text cutting */
-  }
-  
-  .content-section p[style*="font-size: 24px"] {
-    font-size: 18px !important; /* Smaller subtitle */
-    margin-bottom: 24px !important;
-    text-align: center !important;
-    color: #666 !important;
-    padding: 0 8px !important;
-  }
-  
-  /* 3. LARGER IMAGES FOR STEP 2 AND STEP 3 */
-  
-  /* Step 2 - Message generation model - LARGER */
-  .timeline-item:nth-child(2) .study-image {
-    max-height: 400px !important; /* Increased from 280px to 400px */
-  }
-  
-  .timeline-item:nth-child(2) .study-image-container {
-    padding: 8px !important; /* Less padding for more space */
-  }
-  
-  /* Step 3 - System architecture - LARGER */
-  .timeline-item:nth-child(3) .study-image {
-    max-height: 350px !important; /* Increased from 250px to 350px */
-  }
-  
-  .timeline-item:nth-child(3) .study-image-container {
-    padding: 8px !important; /* Less padding for more space */
-  }
-  
-  /* 4. STEP 5 SPECIFIC IMAGE ADJUSTMENTS */
-  
-  /* Step 5 - First image (Task success chart) - BIGGER */
-  .timeline-item:nth-child(5) .study-image-container:nth-of-type(1) .study-image {
-    max-height: 350px !important; /* Increased for better chart readability */
-  }
-  
-  /* Step 5 - Second image (Error rate comparison) - SMALLER */
-  .timeline-item:nth-child(5) .study-image-container:nth-of-type(2) .study-image {
-    max-height: 250px !important; /* Decreased to make it smaller */
-  }
-  
-  /* Step 5 - Third image (Learnability analysis) - BIGGER */
-  .timeline-item:nth-child(5) .study-image-container:nth-of-type(3) .study-image {
-    max-height: 350px !important; /* Increased for better visibility */
-  }
-  
-  /* Step 5 - Last image (Interaction behavior table) - BIGGER */
-  .timeline-item:nth-child(5) .study-image-container:last-of-type .study-image {
-    max-height: 380px !important; /* Increased for table readability */
-  }
-  
-  /* Alternative targeting for Step 5 images using more specific selectors */
-  .timeline-item:nth-child(5) div[style*="padding: 8px"] .study-image {
-    /* First three images in Step 5 */
-  }
-  
-  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(1) .study-image {
-    max-height: 350px !important; /* Task success chart - BIGGER */
-  }
-  
-  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(2) .study-image {
-    max-height: 250px !important; /* Error rate comparison - SMALLER */
-  }
-  
-  .timeline-item:nth-child(5) div[style*="padding: 8px"]:nth-of-type(3) .study-image {
-    max-height: 350px !important; /* Learnability analysis - BIGGER */
-  }
-  
-  /* Step 5 - Interaction behavior table (last image) - BIGGER */
-  .timeline-item:nth-child(5) div[style*="padding: 8px; margin: 16px 0"] .study-image {
-    max-height: 380px !important; /* Table - BIGGER */
-  }
-  
-  /* More specific targeting for the table image at the end of Step 5 */
-  .timeline-item:nth-child(5) .timeline-results + .study-image-container .study-image {
-    max-height: 380px !important; /* Last table image - BIGGER */
-  }
-  
-  /* Even more specific - target images by their alt text patterns */
-  img[alt*="Table showing percentage of tasks"],
-  img[alt*="interaction-behavior-table"] {
-    max-height: 380px !important; /* Interaction behavior table - BIGGER */
-  }
-  
-  img[alt*="Comparison of error rates"] {
-    max-height: 250px !important; /* Error rate comparison - SMALLER */
-  }
-  
-  img[alt*="Task success rates"] {
-    max-height: 350px !important; /* Task success chart - BIGGER */
-  }
-  
-  img[alt*="Learnability analysis"] {
-    max-height: 350px !important; /* Learnability analysis - BIGGER */
-  }
-  
-  /* 5. GENERAL MOBILE IMPROVEMENTS FOR TEXTFLOW */
-  
-  /* Better spacing for TextFlow mobile layout */
-  .case-study-container .container {
-    padding: 0 12px !important; /* Consistent padding */
-  }
-  
-  /* Better section spacing */
-  .content-section {
-    padding: 60px 0 40px 0 !important; /* Reduced top/bottom padding */
-  }
-  
-  .process-section {
-    padding: 50px 0 40px 0 !important; /* Reduced padding */
-  }
-  
-  /* Better meta items spacing */
-  .hero-meta {
-    margin-bottom: 32px !important; /* Reduced margin */
-    gap: 12px !important; /* Smaller gap between items */
-  }
-  
-  .meta-item {
-    font-size: 14px !important; /* Smaller text */
-    padding: 8px 12px !important;
-    background: rgba(102, 126, 234, 0.1) !important;
-    border-radius: 16px !important;
-  }
-}
-
-/* Additional adjustments for very small screens */
-@media (max-width: 480px) {
-  /* Even smaller title for very small screens */
-  .content-section h1 {
-    font-size: 24px !important;
-    padding: 0 12px !important;
-  }
-  
-  .content-section p[style*="font-size: 24px"] {
-    font-size: 16px !important;
-    padding: 0 12px !important;
-  }
-  
-  /* Adjust hero image for very small screens */
-  .hero-image-container {
-    width: 99% !important;
-  }
-  
-  .hero-image-container img {
-    max-height: 350px !important;
-  }
-}
-
-/* EMERGENCY TEXTFLOW OVERRIDE - Add this to the VERY BOTTOM of App.css */
-
-/* FORCE REMOVE RED BORDER FROM ALL IMAGES */
-* {
-  border: none !important;
-}
-
-.hero-image-container img,
-.case-study-container img,
-img[src*="textflow"] {
-  border: none !important;
-  outline: none !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* FORCE MOBILE RESPONSIVE IMAGES */
-@media (max-width: 768px) {
-  /* Force hero image sizing */
-  .hero-image-container {
-    width: 98% !important;
-    max-width: 98% !important;
-  }
-  
-  .hero-image-container img {
-    max-height: 400px !important;
-    min-height: 300px !important;
-    border: none !important;
-  }
-  
-  /* Force title sizing */
-  .content-section h1 {
-    font-size: 28px !important;
-    padding: 0 8px !important;
-    line-height: 1.3 !important;
-  }
-  
-  .content-section p {
-    font-size: 18px !important;
-    padding: 0 8px !important;
-  }
-  
-  /* Force step 2 image sizing */
-  img[src*="message-generation-model"] {
-    max-height: 400px !important;
-    min-height: 350px !important;
-  }
-  
-  /* Force step 3 image sizing */
-  img[src*="system-architecture"] {
-    max-height: 350px !important;
-    min-height: 300px !important;
-  }
-  
-  /* Force step 5 image sizing */
-  img[src*="task-success-scenarios"] {
-    max-height: 350px !important;
-    min-height: 300px !important;
-  }
-  
-  img[src*="error-rate-comparison"] {
-    max-height: 250px !important;
-    min-height: 200px !important;
-  }
-  
-  img[src*="learnability-analysis"] {
-    max-height: 350px !important;
-    min-height: 300px !important;
-  }
-  
-  img[src*="interaction-behavior-table"] {
-    max-height: 380px !important;
-    min-height: 320px !important;
-  }
-  
-  /* Force all study images to be responsive */
-  .study-image {
-    max-height: 400px !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    border: none !important;
-  }
-}
-
