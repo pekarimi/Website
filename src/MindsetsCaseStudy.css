@@ -808,7 +808,7 @@
   opacity: 0.9;
 }
 
-/* SIMPLE MOBILE-ONLY FIX FOR DESIGN SOLUTION COMPONENTS */
+/* MOBILE FIXES FOR DESIGN SOLUTION COMPONENTS */
 @media (max-width: 768px) {
   /* Basic mobile layout fixes */
   .container {
@@ -880,5 +880,45 @@
     transform-origin: top left !important;
     width: 125% !important;
     margin-bottom: -40px !important;
+  }
+  
+  /* AGGRESSIVE SCALING FOR ALL REACT COMPONENTS */
+  .solution-visual > div[style*="fontFamily"],
+  .solution-visual > div[style*="maxWidth"] {
+    transform: scale(0.7) !important;
+    transform-origin: top left !important;
+    width: 142.8% !important; /* 100% / 0.7 to compensate for scale */
+    margin-bottom: -80px !important; /* Negative margin to reduce white space */
+    overflow: hidden !important;
+  }
+  
+  /* Ensure all text inside scaled components stays readable */
+  .solution-visual > div[style*="fontFamily"] * {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Special handling for multi-line text in scaled components */
+  .solution-visual > div[style*="fontFamily"] p,
+  .solution-visual > div[style*="fontFamily"] div[style*="lineHeight"] {
+    white-space: normal !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Prevent horizontal overflow on the page */
+  .design-solution {
+    overflow-x: hidden !important;
+  }
+  
+  .solution-content {
+    overflow-x: hidden !important;
+  }
+  
+  /* Additional scaling for specific interface types */
+  .solution-visual > div[style*="background: linear-gradient"] {
+    transform: scale(0.65) !important;
+    margin-bottom: -100px !important;
   }
 }

@@ -21,28 +21,31 @@ const SingleLearningInterface = () => {
     margin: '0 auto',
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    borderRadius: '20px',
-    padding: isMobile ? '16px' : '32px',
+    borderRadius: isMobile ? '12px' : '20px',
+    padding: isMobile ? '12px' : '32px',
     color: 'white',
     boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
     width: isMobile ? 'calc(100vw - 32px)' : 'auto',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    transform: isMobile ? 'scale(0.85)' : 'scale(1)',
+    transformOrigin: 'top center',
+    marginBottom: isMobile ? '-20px' : '0'
   };
 
   const headerStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: isMobile ? 'flex-start' : 'center',
-    marginBottom: '24px',
+    marginBottom: isMobile ? '12px' : '24px',
     flexDirection: isMobile ? 'column' : 'row',
-    gap: isMobile ? '12px' : '0'
+    gap: isMobile ? '8px' : '0'
   };
 
   const mainContentStyle = {
     display: 'grid',
     gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-    gap: '24px',
-    marginBottom: '24px'
+    gap: isMobile ? '12px' : '24px',
+    marginBottom: isMobile ? '12px' : '24px'
   };
 
   const actionBarStyle = {
@@ -50,11 +53,11 @@ const SingleLearningInterface = () => {
     justifyContent: 'space-between',
     alignItems: 'center',
     background: 'rgba(255,255,255,0.1)',
-    borderRadius: '12px',
-    padding: '16px',
+    borderRadius: isMobile ? '8px' : '12px',
+    padding: isMobile ? '8px' : '16px',
     border: '1px solid rgba(255,255,255,0.15)',
     flexDirection: isMobile ? 'column' : 'row',
-    gap: isMobile ? '12px' : '0'
+    gap: isMobile ? '8px' : '0'
   };
 
   return (
@@ -65,7 +68,7 @@ const SingleLearningInterface = () => {
         <div style={{ width: '100%' }}>
           <h1 style={{
             margin: '0 0 4px 0',
-            fontSize: isMobile ? '20px' : '24px',
+            fontSize: isMobile ? '14px' : '24px',
             fontWeight: '600'
           }}>
             Database Design Fundamentals
@@ -73,16 +76,16 @@ const SingleLearningInterface = () => {
           <p style={{
             margin: 0,
             opacity: 0.8,
-            fontSize: isMobile ? '12px' : '14px'
+            fontSize: isMobile ? '9px' : '14px'
           }}>
             Chapter 4: Entity Relationships • Last accessed 2 hours ago
           </p>
         </div>
         <div style={{
           background: 'rgba(255,255,255,0.2)',
-          padding: '8px 16px',
-          borderRadius: '20px',
-          fontSize: isMobile ? '12px' : '14px',
+          padding: isMobile ? '4px 8px' : '8px 16px',
+          borderRadius: isMobile ? '12px' : '20px',
+          fontSize: isMobile ? '9px' : '14px',
           fontWeight: '500',
           alignSelf: isMobile ? 'flex-start' : 'auto'
         }}>
@@ -93,9 +96,9 @@ const SingleLearningInterface = () => {
       {/* Quick Resume Banner */}
       <div style={{
         background: 'rgba(255,255,255,0.15)',
-        borderRadius: '12px',
-        padding: '16px',
-        marginBottom: '24px',
+        borderRadius: isMobile ? '8px' : '12px',
+        padding: isMobile ? '8px' : '16px',
+        marginBottom: isMobile ? '12px' : '24px',
         border: '1px solid rgba(255,255,255,0.2)',
         backdropFilter: 'blur(10px)'
       }}>
@@ -104,18 +107,18 @@ const SingleLearningInterface = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           flexDirection: isMobile ? 'column' : 'row',
-          gap: isMobile ? '12px' : '0'
+          gap: isMobile ? '8px' : '0'
         }}>
           <div style={{ width: '100%' }}>
             <div style={{
-              fontSize: isMobile ? '12px' : '14px',
+              fontSize: isMobile ? '9px' : '14px',
               fontWeight: '500',
               marginBottom: '4px'
             }}>
               👋 Welcome back! Resume where you left off
             </div>
             <div style={{
-              fontSize: isMobile ? '11px' : '12px',
+              fontSize: isMobile ? '8px' : '12px',
               opacity: 0.8
             }}>
               You were reading about "Entity-relationship diagrams" on page 23
@@ -124,19 +127,19 @@ const SingleLearningInterface = () => {
           <button style={{
             background: 'rgba(255,255,255,0.2)',
             border: '1px solid rgba(255,255,255,0.3)',
-            borderRadius: '8px',
+            borderRadius: isMobile ? '6px' : '8px',
             color: 'white',
-            padding: '8px 16px',
-            fontSize: isMobile ? '12px' : '13px',
+            padding: isMobile ? '4px 8px' : '8px 16px',
+            fontSize: isMobile ? '8px' : '13px',
             cursor: 'pointer',
             fontWeight: '500',
             display: 'flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: isMobile ? '3px' : '6px',
             width: isMobile ? '100%' : 'auto',
             justifyContent: 'center'
           }}>
-            <Play size={14} />
+            <Play size={isMobile ? 10 : 14} />
             Continue Reading
           </button>
         </div>
@@ -146,20 +149,20 @@ const SingleLearningInterface = () => {
       <div style={mainContentStyle}>
         
         {/* Learning Modules */}
-        <div style={{ marginBottom: isMobile ? '24px' : '0' }}>
+        <div style={{ marginBottom: isMobile ? '12px' : '0' }}>
           <h3 style={{
             margin: '0 0 16px 0',
-            fontSize: isMobile ? '14px' : '16px',
+            fontSize: isMobile ? '11px' : '16px',
             fontWeight: '500'
           }}>
             Quick Learning Sessions (5-10 min)
           </h3>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '4px' : '8px' }}>
             <div style={{
               background: 'rgba(255,255,255,0.15)',
-              borderRadius: '10px',
-              padding: '12px',
+              borderRadius: isMobile ? '6px' : '10px',
+              padding: isMobile ? '6px' : '12px',
               border: '1px solid rgba(255,255,255,0.2)'
             }}>
               <div style={{
@@ -168,14 +171,14 @@ const SingleLearningInterface = () => {
                 justifyContent: 'space-between',
                 marginBottom: '4px'
               }}>
-                <span style={{ fontSize: isMobile ? '12px' : '14px', fontWeight: '500' }}>
+                <span style={{ fontSize: isMobile ? '9px' : '14px', fontWeight: '500' }}>
                   ER Diagram Basics
                 </span>
-                <span style={{ fontSize: isMobile ? '10px' : '12px', opacity: 0.8 }}>7 min</span>
+                <span style={{ fontSize: isMobile ? '7px' : '12px', opacity: 0.8 }}>7 min</span>
               </div>
               <div style={{
                 background: 'rgba(255,255,255,0.2)',
-                height: '3px',
+                height: isMobile ? '2px' : '3px',
                 borderRadius: '2px',
                 overflow: 'hidden'
               }}>
@@ -192,15 +195,15 @@ const SingleLearningInterface = () => {
                 gap: '4px',
                 marginTop: '4px'
               }}>
-                <CheckCircle size={10} style={{ color: '#4ade80' }} />
-                <span style={{ fontSize: isMobile ? '9px' : '11px' }}>Completed</span>
+                <CheckCircle size={isMobile ? 7 : 10} style={{ color: '#4ade80' }} />
+                <span style={{ fontSize: isMobile ? '7px' : '11px' }}>Completed</span>
               </div>
             </div>
 
             <div style={{
               background: 'rgba(255,255,255,0.15)',
-              borderRadius: '10px',
-              padding: '12px',
+              borderRadius: isMobile ? '6px' : '10px',
+              padding: isMobile ? '6px' : '12px',
               border: '2px solid rgba(255,255,255,0.4)'
             }}>
               <div style={{
@@ -209,14 +212,14 @@ const SingleLearningInterface = () => {
                 justifyContent: 'space-between',
                 marginBottom: '4px'
               }}>
-                <span style={{ fontSize: isMobile ? '12px' : '14px', fontWeight: '500' }}>
+                <span style={{ fontSize: isMobile ? '9px' : '14px', fontWeight: '500' }}>
                   Relationship Types
                 </span>
-                <span style={{ fontSize: isMobile ? '10px' : '12px', opacity: 0.8 }}>6 min</span>
+                <span style={{ fontSize: isMobile ? '7px' : '12px', opacity: 0.8 }}>6 min</span>
               </div>
               <div style={{
                 background: 'rgba(255,255,255,0.2)',
-                height: '3px',
+                height: isMobile ? '2px' : '3px',
                 borderRadius: '2px',
                 overflow: 'hidden'
               }}>
@@ -227,15 +230,15 @@ const SingleLearningInterface = () => {
                   borderRadius: '2px'
                 }} />
               </div>
-              <div style={{ fontSize: isMobile ? '9px' : '11px', marginTop: '4px' }}>
+              <div style={{ fontSize: isMobile ? '7px' : '11px', marginTop: '4px' }}>
                 65% complete • Currently viewing
               </div>
             </div>
 
             <div style={{
               background: 'rgba(255,255,255,0.1)',
-              borderRadius: '10px',
-              padding: '12px',
+              borderRadius: isMobile ? '6px' : '10px',
+              padding: isMobile ? '6px' : '12px',
               border: '1px solid rgba(255,255,255,0.15)',
               opacity: 0.7
             }}>
@@ -245,17 +248,17 @@ const SingleLearningInterface = () => {
                 justifyContent: 'space-between',
                 marginBottom: '4px'
               }}>
-                <span style={{ fontSize: isMobile ? '12px' : '14px', fontWeight: '500' }}>
+                <span style={{ fontSize: isMobile ? '9px' : '14px', fontWeight: '500' }}>
                   Normalization Rules
                 </span>
-                <span style={{ fontSize: isMobile ? '10px' : '12px', opacity: 0.8 }}>8 min</span>
+                <span style={{ fontSize: isMobile ? '7px' : '12px', opacity: 0.8 }}>8 min</span>
               </div>
               <div style={{
                 background: 'rgba(255,255,255,0.2)',
-                height: '3px',
+                height: isMobile ? '2px' : '3px',
                 borderRadius: '2px'
               }} />
-              <div style={{ fontSize: isMobile ? '9px' : '11px', marginTop: '4px' }}>
+              <div style={{ fontSize: isMobile ? '7px' : '11px', marginTop: '4px' }}>
                 Up next
               </div>
             </div>
@@ -266,7 +269,7 @@ const SingleLearningInterface = () => {
         <div>
           <h3 style={{
             margin: '0 0 16px 0',
-            fontSize: isMobile ? '14px' : '16px',
+            fontSize: isMobile ? '11px' : '16px',
             fontWeight: '500'
           }}>
             Audio Learning (Perfect for multitasking)
@@ -274,14 +277,14 @@ const SingleLearningInterface = () => {
           
           <div style={{
             background: 'rgba(0,0,0,0.3)',
-            borderRadius: '12px',
-            padding: '16px'
+            borderRadius: isMobile ? '8px' : '12px',
+            padding: isMobile ? '8px' : '16px'
           }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '12px',
-              marginBottom: '12px'
+              gap: isMobile ? '6px' : '12px',
+              marginBottom: isMobile ? '6px' : '12px'
             }}>
               <button 
                 onClick={() => setIsPlaying(!isPlaying)}
@@ -289,8 +292,8 @@ const SingleLearningInterface = () => {
                   background: '#3b82f6',
                   border: 'none',
                   borderRadius: '50%',
-                  width: isMobile ? '36px' : '40px',
-                  height: isMobile ? '36px' : '40px',
+                  width: isMobile ? '24px' : '40px',
+                  height: isMobile ? '24px' : '40px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -298,12 +301,12 @@ const SingleLearningInterface = () => {
                   color: 'white'
                 }}
               >
-                {isPlaying ? <Pause size={isMobile ? 14 : 16} /> : <Play size={isMobile ? 14 : 16} />}
+                {isPlaying ? <Pause size={isMobile ? 10 : 16} /> : <Play size={isMobile ? 10 : 16} />}
               </button>
               <div style={{ flex: 1 }}>
                 <div style={{
                   background: 'rgba(255,255,255,0.2)',
-                  height: '4px',
+                  height: isMobile ? '2px' : '4px',
                   borderRadius: '2px',
                   marginBottom: '6px',
                   overflow: 'hidden'
@@ -318,7 +321,7 @@ const SingleLearningInterface = () => {
                 <div style={{
                   display: 'flex',
                   justifyContent: 'space-between',
-                  fontSize: isMobile ? '9px' : '11px',
+                  fontSize: isMobile ? '7px' : '11px',
                   opacity: 0.8
                 }}>
                   <span>4:12</span>
@@ -330,14 +333,14 @@ const SingleLearningInterface = () => {
             
             <h4 style={{
               margin: '0 0 4px 0',
-              fontSize: isMobile ? '12px' : '14px',
+              fontSize: isMobile ? '9px' : '14px',
               fontWeight: '500'
             }}>
               Database Relationships Explained
             </h4>
             <p style={{
               margin: '0 0 8px 0',
-              fontSize: isMobile ? '10px' : '12px',
+              fontSize: isMobile ? '8px' : '12px',
               opacity: 0.8
             }}>
               Listen while commuting or doing chores
@@ -346,14 +349,14 @@ const SingleLearningInterface = () => {
             {/* Bookmarked moment */}
             <div style={{
               background: 'rgba(255,193,7,0.2)',
-              borderRadius: '6px',
-              padding: '8px',
-              fontSize: isMobile ? '9px' : '11px',
+              borderRadius: isMobile ? '4px' : '6px',
+              padding: isMobile ? '4px' : '8px',
+              fontSize: isMobile ? '7px' : '11px',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px'
+              gap: isMobile ? '3px' : '6px'
             }}>
-              <Bookmark size={10} style={{ color: '#ffc107' }} />
+              <Bookmark size={isMobile ? 7 : 10} style={{ color: '#ffc107' }} />
               <span>"Primary keys are crucial for..." - Bookmarked at 3:45</span>
             </div>
           </div>
@@ -364,17 +367,17 @@ const SingleLearningInterface = () => {
       <div style={actionBarStyle}>
         <div style={{ 
           display: 'flex', 
-          gap: '12px',
+          gap: isMobile ? '6px' : '12px',
           width: isMobile ? '100%' : 'auto',
           flexDirection: isMobile ? 'column' : 'row'
         }}>
           <button style={{
             background: 'rgba(255,255,255,0.2)',
             border: '1px solid rgba(255,255,255,0.3)',
-            borderRadius: '8px',
+            borderRadius: isMobile ? '6px' : '8px',
             color: 'white',
-            padding: '8px 12px',
-            fontSize: isMobile ? '11px' : '12px',
+            padding: isMobile ? '4px 6px' : '8px 12px',
+            fontSize: isMobile ? '8px' : '12px',
             cursor: 'pointer',
             fontWeight: '500',
             flex: isMobile ? '1' : 'none'
@@ -384,10 +387,10 @@ const SingleLearningInterface = () => {
           <button style={{
             background: 'rgba(255,255,255,0.2)',
             border: '1px solid rgba(255,255,255,0.3)',
-            borderRadius: '8px',
+            borderRadius: isMobile ? '6px' : '8px',
             color: 'white',
-            padding: '8px 12px',
-            fontSize: isMobile ? '11px' : '12px',
+            padding: isMobile ? '4px 6px' : '8px 12px',
+            fontSize: isMobile ? '8px' : '12px',
             cursor: 'pointer',
             fontWeight: '500',
             flex: isMobile ? '1' : 'none'
@@ -399,33 +402,33 @@ const SingleLearningInterface = () => {
         <button style={{
           background: 'rgba(255,255,255,0.2)',
           border: '1px solid rgba(255,255,255,0.3)',
-          borderRadius: '8px',
+          borderRadius: isMobile ? '6px' : '8px',
           color: 'white',
-          padding: '8px 16px',
-          fontSize: isMobile ? '11px' : '12px',
+          padding: isMobile ? '4px 8px' : '8px 16px',
+          fontSize: isMobile ? '8px' : '12px',
           cursor: 'pointer',
           fontWeight: '500',
           display: 'flex',
           alignItems: 'center',
-          gap: '6px',
+          gap: isMobile ? '3px' : '6px',
           width: isMobile ? '100%' : 'auto',
           justifyContent: 'center'
         }}>
           Next Chapter
-          <ArrowRight size={10} />
+          <ArrowRight size={isMobile ? 7 : 10} />
         </button>
       </div>
 
       {/* Study Tip */}
       <div style={{
-        marginTop: '16px',
-        padding: '12px',
+        marginTop: isMobile ? '8px' : '16px',
+        padding: isMobile ? '6px' : '12px',
         background: 'rgba(255,255,255,0.1)',
-        borderRadius: '8px',
+        borderRadius: isMobile ? '6px' : '8px',
         border: '1px solid rgba(255,255,255,0.15)'
       }}>
         <div style={{
-          fontSize: isMobile ? '10px' : '12px',
+          fontSize: isMobile ? '8px' : '12px',
           fontWeight: '500',
           marginBottom: '4px',
           opacity: 0.9
@@ -433,7 +436,7 @@ const SingleLearningInterface = () => {
           💡 Perfect for fragmented learning
         </div>
         <div style={{
-          fontSize: isMobile ? '9px' : '11px',
+          fontSize: isMobile ? '7px' : '11px',
           opacity: 0.8,
           lineHeight: 1.3
         }}>

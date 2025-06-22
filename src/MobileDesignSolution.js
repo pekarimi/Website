@@ -41,12 +41,12 @@ const MobileDesignSolution = () => {
   const StatusBar = () => (
     <div style={{
       background: '#f8f9fa',
-      height: isMobile ? '32px' : '40px',
+      height: isMobile ? '24px' : '40px',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      padding: '0 16px',
-      fontSize: isMobile ? '11px' : '14px',
+      padding: isMobile ? '0 8px' : '0 16px',
+      fontSize: isMobile ? '8px' : '14px',
       fontWeight: '600'
     }}>
       <span>9:41</span>
@@ -62,8 +62,8 @@ const MobileDesignSolution = () => {
           <div style={{ width: '2px', height: '6px', background: '#333', borderRadius: '1px' }}></div>
         </div>
         <div style={{
-          width: '16px',
-          height: '8px',
+          width: isMobile ? '12px' : '16px',
+          height: isMobile ? '6px' : '8px',
           border: '1px solid #333',
           borderRadius: '2px',
           position: 'relative',
@@ -84,27 +84,27 @@ const MobileDesignSolution = () => {
     <div style={{
       background: '#667eea',
       color: 'white',
-      padding: isMobile ? '10px 16px' : '15px 20px',
+      padding: isMobile ? '6px 8px' : '15px 20px',
       display: 'flex',
       alignItems: 'center',
-      gap: '10px'
+      gap: isMobile ? '6px' : '10px'
     }}>
       <div style={{
-        width: isMobile ? '20px' : '24px',
-        height: isMobile ? '20px' : '24px',
+        width: isMobile ? '16px' : '24px',
+        height: isMobile ? '16px' : '24px',
         borderRadius: '50%',
         background: 'rgba(255, 255, 255, 0.2)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: 'white',
-        fontSize: isMobile ? '12px' : '16px',
+        fontSize: isMobile ? '10px' : '16px',
         cursor: 'pointer'
       }}>
         ←
       </div>
       <div style={{
-        fontSize: isMobile ? '14px' : '18px',
+        fontSize: isMobile ? '11px' : '18px',
         fontWeight: '600'
       }}>
         {title}
@@ -114,46 +114,48 @@ const MobileDesignSolution = () => {
 
   const containerStyle = {
     width: '100%',
-    padding: isMobile ? '12px' : '20px',
+    padding: isMobile ? '8px' : '20px',
     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    borderRadius: '16px',
-    margin: '20px 0',
+    borderRadius: isMobile ? '12px' : '16px',
+    margin: isMobile ? '12px 0' : '20px 0',
     maxWidth: '100%',
     boxSizing: 'border-box',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    transform: isMobile ? 'scale(0.85)' : 'scale(1)',
+    transformOrigin: 'top center'
   };
 
   const interfacesStyle = {
     display: 'grid',
     gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-    gap: isMobile ? '20px' : '24px',
+    gap: isMobile ? '12px' : '24px',
     maxWidth: '100%',
     margin: '0 auto'
   };
 
   const phoneStyle = {
     background: '#1a1a1a',
-    borderRadius: isMobile ? '20px' : '24px',
-    padding: isMobile ? '4px' : '6px',
+    borderRadius: isMobile ? '12px' : '24px',
+    padding: isMobile ? '2px' : '6px',
     boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
     width: isMobile ? '100%' : '280px',
-    maxWidth: isMobile ? '300px' : '320px',
+    maxWidth: isMobile ? '200px' : '320px',
     margin: '0 auto'
   };
 
   const screenStyle = {
     background: 'white',
-    borderRadius: isMobile ? '16px' : '18px',
+    borderRadius: isMobile ? '10px' : '18px',
     overflow: 'hidden',
-    height: isMobile ? '400px' : '500px',
+    height: isMobile ? '280px' : '500px',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column'
   };
 
   const contentStyle = {
-    padding: isMobile ? '12px' : '16px',
-    fontSize: isMobile ? '10px' : '12px',
+    padding: isMobile ? '6px' : '16px',
+    fontSize: isMobile ? '7px' : '12px',
     flex: 1,
     overflow: 'auto'
   };
@@ -169,9 +171,9 @@ const MobileDesignSolution = () => {
         }}>
           <div style={{
             color: 'white',
-            fontSize: isMobile ? '12px' : '16px',
+            fontSize: isMobile ? '10px' : '16px',
             fontWeight: '600',
-            marginBottom: isMobile ? '8px' : '15px',
+            marginBottom: isMobile ? '6px' : '15px',
             textAlign: 'center'
           }}>
             Assessment Submission Interface
@@ -184,47 +186,47 @@ const MobileDesignSolution = () => {
                 <div style={{
                   background: '#d4edda',
                   border: '1px solid #c3e6cb',
-                  borderRadius: '6px',
-                  padding: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '3px' : '6px',
+                  padding: isMobile ? '4px' : '12px',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '6px',
-                  marginBottom: isMobile ? '12px' : '20px'
+                  gap: isMobile ? '3px' : '6px',
+                  marginBottom: isMobile ? '6px' : '20px'
                 }}>
                   <div style={{
-                    width: '12px',
-                    height: '12px',
+                    width: isMobile ? '8px' : '12px',
+                    height: isMobile ? '8px' : '12px',
                     background: '#28a745',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
-                    fontSize: '8px'
+                    fontSize: isMobile ? '6px' : '8px'
                   }}>
                     ✓
                   </div>
-                  <div style={{ fontSize: isMobile ? '9px' : '12px', color: '#155724' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '12px', color: '#155724' }}>
                     Synced with desktop • Auto-save enabled
                   </div>
                 </div>
                 
                 <div style={{
                   background: '#f8f9fa',
-                  borderRadius: '8px',
-                  padding: isMobile ? '8px' : '12px',
-                  marginBottom: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '4px' : '8px',
+                  padding: isMobile ? '4px' : '12px',
+                  marginBottom: isMobile ? '4px' : '12px',
                   borderLeft: '3px solid #667eea'
                 }}>
-                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
+                  <div style={{ fontSize: isMobile ? '7px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
                     IT Security Assessment
                   </div>
-                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#666', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '11px', color: '#666', marginBottom: '6px' }}>
                     Due: Tomorrow, 11:59 PM
                   </div>
                   <div style={{
                     background: '#e9ecef',
-                    height: '4px',
+                    height: isMobile ? '2px' : '4px',
                     borderRadius: '2px',
                     overflow: 'hidden',
                     marginBottom: '4px'
@@ -236,17 +238,17 @@ const MobileDesignSolution = () => {
                       borderRadius: '2px'
                     }} />
                   </div>
-                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '10px', color: '#666', marginBottom: '6px' }}>
                     65% Complete • 8 of 12 questions
                   </div>
-                  <div style={{ display: 'flex', gap: '6px' }}>
+                  <div style={{ display: 'flex', gap: isMobile ? '3px' : '6px' }}>
                     <button style={{
                       background: '#667eea',
                       color: 'white',
                       border: 'none',
                       borderRadius: '4px',
-                      padding: isMobile ? '4px 8px' : '6px 10px',
-                      fontSize: isMobile ? '8px' : '10px',
+                      padding: isMobile ? '2px 4px' : '6px 10px',
+                      fontSize: isMobile ? '6px' : '10px',
                       cursor: 'pointer',
                       flex: 1
                     }}>
@@ -257,8 +259,8 @@ const MobileDesignSolution = () => {
                       color: '#667eea',
                       border: '1px solid #667eea',
                       borderRadius: '4px',
-                      padding: isMobile ? '4px 8px' : '6px 10px',
-                      fontSize: isMobile ? '8px' : '10px',
+                      padding: isMobile ? '2px 4px' : '6px 10px',
+                      fontSize: isMobile ? '6px' : '10px',
                       cursor: 'pointer',
                       flex: 1
                     }}>
@@ -269,20 +271,20 @@ const MobileDesignSolution = () => {
                 
                 <div style={{
                   background: '#f8f9fa',
-                  borderRadius: '8px',
-                  padding: isMobile ? '8px' : '12px',
-                  marginBottom: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '4px' : '8px',
+                  padding: isMobile ? '4px' : '12px',
+                  marginBottom: isMobile ? '4px' : '12px',
                   borderLeft: '3px solid #667eea'
                 }}>
-                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
+                  <div style={{ fontSize: isMobile ? '7px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
                     Database Management Quiz
                   </div>
-                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#666', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '11px', color: '#666', marginBottom: '6px' }}>
                     Due: Next Week
                   </div>
                   <div style={{
                     background: '#e9ecef',
-                    height: '4px',
+                    height: isMobile ? '2px' : '4px',
                     borderRadius: '2px',
                     overflow: 'hidden',
                     marginBottom: '4px'
@@ -294,17 +296,17 @@ const MobileDesignSolution = () => {
                       borderRadius: '2px'
                     }} />
                   </div>
-                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '10px', color: '#666', marginBottom: '6px' }}>
                     30% Complete • 3 of 10 questions
                   </div>
-                  <div style={{ display: 'flex', gap: '6px' }}>
+                  <div style={{ display: 'flex', gap: isMobile ? '3px' : '6px' }}>
                     <button style={{
                       background: '#667eea',
                       color: 'white',
                       border: 'none',
                       borderRadius: '4px',
-                      padding: isMobile ? '4px 8px' : '6px 10px',
-                      fontSize: isMobile ? '8px' : '10px',
+                      padding: isMobile ? '2px 4px' : '6px 10px',
+                      fontSize: isMobile ? '6px' : '10px',
                       cursor: 'pointer',
                       flex: 1
                     }}>
@@ -315,8 +317,8 @@ const MobileDesignSolution = () => {
                       color: '#667eea',
                       border: '1px solid #667eea',
                       borderRadius: '4px',
-                      padding: isMobile ? '4px 8px' : '6px 10px',
-                      fontSize: isMobile ? '8px' : '10px',
+                      padding: isMobile ? '2px 4px' : '6px 10px',
+                      fontSize: isMobile ? '6px' : '10px',
                       cursor: 'pointer',
                       flex: 1
                     }}>
@@ -328,11 +330,11 @@ const MobileDesignSolution = () => {
                 <div style={{
                   background: '#fff3cd',
                   border: '1px solid #ffeaa7',
-                  borderRadius: '6px',
-                  padding: isMobile ? '6px' : '8px',
+                  borderRadius: isMobile ? '3px' : '6px',
+                  padding: isMobile ? '3px' : '8px',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#856404' }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '10px', color: '#856404' }}>
                     📱 All assessments available offline
                   </div>
                 </div>
@@ -349,9 +351,9 @@ const MobileDesignSolution = () => {
         }}>
           <div style={{
             color: 'white',
-            fontSize: isMobile ? '12px' : '16px',
+            fontSize: isMobile ? '10px' : '16px',
             fontWeight: '600',
-            marginBottom: isMobile ? '8px' : '15px',
+            marginBottom: isMobile ? '6px' : '15px',
             textAlign: 'center'
           }}>
             Voice Input & Dictation Features
@@ -364,55 +366,55 @@ const MobileDesignSolution = () => {
                 <div style={{
                   background: '#e8f5e8',
                   border: '1px solid #28a745',
-                  borderRadius: '6px',
-                  padding: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '3px' : '6px',
+                  padding: isMobile ? '4px' : '12px',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '6px',
-                  marginBottom: isMobile ? '12px' : '20px'
+                  gap: isMobile ? '3px' : '6px',
+                  marginBottom: isMobile ? '6px' : '20px'
                 }}>
-                  <div style={{ fontSize: isMobile ? '10px' : '12px' }}>🎤</div>
-                  <div style={{ fontSize: isMobile ? '9px' : '12px', color: '#155724' }}>
+                  <div style={{ fontSize: isMobile ? '7px' : '12px' }}>🎤</div>
+                  <div style={{ fontSize: isMobile ? '6px' : '12px', color: '#155724' }}>
                     Voice recording active • Transcribing...
                   </div>
                 </div>
                 
                 <div style={{
                   background: '#f8f9fa',
-                  borderRadius: '8px',
-                  padding: isMobile ? '8px' : '12px',
-                  marginBottom: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '4px' : '8px',
+                  padding: isMobile ? '4px' : '12px',
+                  marginBottom: isMobile ? '4px' : '12px',
                   borderLeft: '3px solid #667eea'
                 }}>
-                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '7px' : '13px', fontWeight: '600', marginBottom: '6px' }}>
                     Essay Response
                   </div>
                   <div style={{
                     background: 'white',
-                    borderRadius: '6px',
-                    padding: isMobile ? '6px' : '10px',
-                    minHeight: isMobile ? '50px' : '80px',
+                    borderRadius: isMobile ? '3px' : '6px',
+                    padding: isMobile ? '3px' : '10px',
+                    minHeight: isMobile ? '30px' : '80px',
                     border: '2px dashed #e9ecef',
                     marginBottom: '6px'
                   }}>
                     <div style={{
-                      fontSize: isMobile ? '8px' : '11px',
+                      fontSize: isMobile ? '6px' : '11px',
                       lineHeight: 1.3,
                       color: '#333',
                       position: 'relative'
                     }}>
-                      {transcriptText.substring(0, 120)}...
+                      {transcriptText.substring(0, isMobile ? 60 : 120)}...
                       <span style={{
                         display: 'inline-block',
                         width: '1px',
-                        height: '12px',
+                        height: isMobile ? '8px' : '12px',
                         background: '#667eea',
                         marginLeft: '2px',
                         animation: 'blink 1s infinite'
                       }} />
                     </div>
                   </div>
-                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666' }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '10px', color: '#666' }}>
                     Word count: {transcriptText.split(' ').length} • Voice transcribed
                   </div>
                 </div>
@@ -420,14 +422,14 @@ const MobileDesignSolution = () => {
                 <div style={{
                   background: '#e8f5e8',
                   border: '2px dashed #28a745',
-                  borderRadius: '8px',
-                  padding: isMobile ? '8px' : '12px',
+                  borderRadius: isMobile ? '4px' : '8px',
+                  padding: isMobile ? '4px' : '12px',
                   textAlign: 'center',
-                  marginBottom: isMobile ? '8px' : '12px'
+                  marginBottom: isMobile ? '4px' : '12px'
                 }}>
                   <div style={{
-                    width: isMobile ? '24px' : '32px',
-                    height: isMobile ? '24px' : '32px',
+                    width: isMobile ? '16px' : '32px',
+                    height: isMobile ? '16px' : '32px',
                     background: '#28a745',
                     borderRadius: '50%',
                     display: 'flex',
@@ -435,12 +437,12 @@ const MobileDesignSolution = () => {
                     justifyContent: 'center',
                     margin: '0 auto 6px',
                     color: 'white',
-                    fontSize: isMobile ? '10px' : '16px',
+                    fontSize: isMobile ? '8px' : '16px',
                     animation: 'pulse 2s infinite'
                   }}>
                     🎤
                   </div>
-                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#155724', fontWeight: '500' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '11px', color: '#155724', fontWeight: '500' }}>
                     Recording... Tap to stop
                   </div>
                 </div>
@@ -448,8 +450,8 @@ const MobileDesignSolution = () => {
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: '1fr 1fr',
-                  gap: '6px',
-                  marginBottom: isMobile ? '8px' : '12px'
+                  gap: isMobile ? '3px' : '6px',
+                  marginBottom: isMobile ? '4px' : '12px'
                 }}>
                   <button 
                     onClick={() => setIsRecording(!isRecording)}
@@ -458,8 +460,8 @@ const MobileDesignSolution = () => {
                       color: '#667eea',
                       border: '1px solid #667eea',
                       borderRadius: '4px',
-                      padding: isMobile ? '4px 6px' : '6px 8px',
-                      fontSize: isMobile ? '7px' : '10px',
+                      padding: isMobile ? '2px 3px' : '6px 8px',
+                      fontSize: isMobile ? '5px' : '10px',
                       cursor: 'pointer'
                     }}
                   >
@@ -470,8 +472,8 @@ const MobileDesignSolution = () => {
                     color: '#667eea',
                     border: '1px solid #667eea',
                     borderRadius: '4px',
-                    padding: isMobile ? '4px 6px' : '6px 8px',
-                    fontSize: isMobile ? '7px' : '10px',
+                    padding: isMobile ? '2px 3px' : '6px 8px',
+                    fontSize: isMobile ? '5px' : '10px',
                     cursor: 'pointer'
                   }}>
                     🔄 Restart
@@ -480,13 +482,13 @@ const MobileDesignSolution = () => {
                 
                 <div style={{
                   background: '#e3f2fd',
-                  borderRadius: '6px',
-                  padding: isMobile ? '6px' : '10px'
+                  borderRadius: isMobile ? '3px' : '6px',
+                  padding: isMobile ? '3px' : '10px'
                 }}>
-                  <div style={{ fontSize: isMobile ? '8px' : '11px', fontWeight: '600', marginBottom: '4px', color: '#1976d2' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '11px', fontWeight: '600', marginBottom: '4px', color: '#1976d2' }}>
                     💡 Voice Tips
                   </div>
-                  <div style={{ fontSize: isMobile ? '7px' : '9px', color: '#1976d2', lineHeight: 1.3 }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '9px', color: '#1976d2', lineHeight: 1.3 }}>
                     • Speak clearly and pause between sentences<br/>
                     • Automatic punctuation enabled<br/>
                     • Edit text after transcription
