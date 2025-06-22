@@ -1624,63 +1624,60 @@ body {
 
 /* CASE STUDY SPECIFIC MOBILE OVERRIDES - ADD TO END OF APP.CSS */
 @media (max-width: 768px) {
-  /* FIXED: Target the right elements for text consistency */
-  .case-study .design-solution h3,
-  .case-study .solution-header h3 {
+  /* MATCH KEY INSIGHTS FONT SIZE - targeting all design recommendation text */
+  .case-study .design-solution,
+  .case-study .design-solution * {
     font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+  
+  .case-study .design-solution h3 {
+    font-size: 20px !important;
     line-height: 1.3 !important;
   }
   
-  .case-study .design-solution h4,
-  .case-study .solution-text h4 {
-    font-size: 16px !important;
-    line-height: 1.3 !important;
-  }
-  
-  .case-study .design-solution p,
-  .case-study .solution-text p,
-  .case-study .solution-header p {
-    font-size: 14px !important;
+  .case-study .design-solution h4 {
+    font-size: 18px !important;
     line-height: 1.4 !important;
   }
   
-  .case-study .design-solution li,
-  .case-study .solution-text li {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-  }
-  
-  /* FIXED: Center-aligned scaling for React components */
-  .case-study .solution-visual > div[style*="fontFamily"],
-  .case-study .solution-visual > div[style*="maxWidth"],
-  .case-study .solution-visual > div[style*="background: linear-gradient"] {
-    transform: scale(0.85) !important;
-    transform-origin: top center !important; /* Changed to center */
-    width: 100% !important; /* Reset width to prevent right shift */
-    margin: 0 auto -100px auto !important; /* Center with negative bottom margin */
-    overflow: hidden !important;
-    display: block !important;
-  }
-  
-  /* FIXED: Remove extra white space aggressively */
-  .case-study .design-solution:nth-last-child(-n+3) .solution-visual > div {
-    margin-bottom: -120px !important;
-  }
-  
-  .case-study .design-solution:last-child {
-    margin-bottom: -60px !important;
-    padding-bottom: 0 !important;
-  }
-  
-  /* FIXED: Ensure components stay centered */
+  /* FIXED CENTERING - Force absolute center positioning */
   .case-study .solution-visual {
     display: flex !important;
     justify-content: center !important;
-    align-items: flex-start !important;
-    overflow: visible !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
   }
   
-  /* Keep text inside components small but readable */
+  .case-study .solution-visual > div {
+    transform: scale(0.85) !important;
+    transform-origin: center center !important;
+    margin: 0 auto -100px auto !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  /* Specific targeting for React components to ensure centering */
+  .case-study .solution-visual > div[style*="fontFamily"],
+  .case-study .solution-visual > div[style*="maxWidth"],
+  .case-study .solution-visual > div[style*="background: linear-gradient"],
+  .case-study .solution-visual > div[style*="display: grid"] {
+    transform: scale(0.85) !important;
+    transform-origin: center center !important;
+    margin: 0 auto -100px auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.85) !important;
+  }
+  
+  /* Keep internal component text small */
+  .case-study .solution-visual > div[style*="fontFamily"] *,
   .case-study .solution-visual > div[style*="fontFamily"] div,
   .case-study .solution-visual > div[style*="fontFamily"] span,
   .case-study .solution-visual > div[style*="fontFamily"] p {
@@ -1699,17 +1696,32 @@ body {
   .case-study .solution-visual > div[style*="fontFamily"] h4 {
     font-size: 9px !important;
     line-height: 1.2 !important;
-    margin-bottom: 3px !important;
   }
   
-  /* Override any App.css container rules */
+  /* AGGRESSIVE white space removal for last sections */
+  .case-study .design-solution:nth-last-child(1),
+  .case-study .design-solution:nth-last-child(2),
+  .case-study .design-solution:nth-last-child(3) {
+    margin-bottom: -80px !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .case-study .impact-section {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .case-study .impact-section .design-solution:last-child {
+    margin-bottom: -100px !important;
+  }
+  
+  /* Container and layout fixes */
   .case-study .container {
     padding: 0 16px !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
   }
   
-  /* Case study section spacing */
   .case-study .design-solution {
     padding: 20px 16px !important;
     margin-bottom: 20px !important;
@@ -1722,16 +1734,7 @@ body {
     overflow-x: hidden !important;
   }
   
-  /* Target the impact section specifically to remove trailing space */
-  .case-study .impact-section {
-    padding-bottom: 20px !important;
-  }
-  
-  .case-study .impact-section .design-solution:last-child {
-    margin-bottom: -40px !important;
-  }
-  
-  /* Force all images to be properly contained */
+  /* Force all images to be contained */
   .case-study img {
     max-width: 100% !important;
     height: auto !important;
