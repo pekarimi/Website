@@ -46,38 +46,19 @@ const LearningPortalInterface = () => {
 
   const currentCourse = courses[selectedCourse];
 
-  const containerStyle = {
-    maxWidth: isMobile ? '100%' : '1200px',
-    margin: '0 auto',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    background: '#f8fafc',
-    minHeight: '500px',
-    borderRadius: '16px',
-    overflow: 'hidden',
-    boxShadow: '0 4px 25px rgba(0,0,0,0.08)',
-    width: isMobile ? 'calc(100vw - 32px)' : 'auto',
-    boxSizing: 'border-box'
-  };
-
-  const mainContentStyle = {
-    display: 'grid',
-    gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr',
-    gap: '24px',
-    padding: isMobile ? '16px' : '24px'
-  };
-
-  const welcomeBannerStyle = {
-    background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-    margin: isMobile ? '16px 16px 0 16px' : '24px 24px 0 24px',
-    borderRadius: '12px',
-    padding: isMobile ? '16px' : '20px',
-    color: 'white',
-    display: 'block',
-    textAlign: isMobile ? 'center' : 'left'
-  };
-
   return (
-    <div style={containerStyle}>
+    <div style={{
+      maxWidth: isMobile ? '100%' : '1200px',
+      margin: '0 auto',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      background: '#f8fafc',
+      minHeight: '500px',
+      borderRadius: '16px',
+      overflow: 'hidden',
+      boxShadow: '0 4px 25px rgba(0,0,0,0.08)',
+      width: isMobile ? 'calc(100vw - 32px)' : 'auto',
+      boxSizing: 'border-box'
+    }}>
       
       {/* Header Navigation */}
       <div style={{
@@ -141,7 +122,15 @@ const LearningPortalInterface = () => {
       </div>
 
       {/* Welcome Back Banner */}
-      <div style={welcomeBannerStyle}>
+      <div style={{
+        background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+        margin: isMobile ? '16px 16px 0 16px' : '24px 24px 0 24px',
+        borderRadius: '12px',
+        padding: isMobile ? '16px' : '20px',
+        color: 'white',
+        display: 'block',
+        textAlign: isMobile ? 'center' : 'left'
+      }}>
         <div>
           <h2 style={{
             margin: '0 0 4px 0',
@@ -224,7 +213,12 @@ const LearningPortalInterface = () => {
       </div>
 
       {/* Main Content */}
-      <div style={mainContentStyle}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr',
+        gap: '24px',
+        padding: isMobile ? '16px' : '24px'
+      }}>
         
         {/* Course List */}
         <div style={{ marginBottom: isMobile ? '24px' : '0' }}>
@@ -297,7 +291,40 @@ const LearningPortalInterface = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  cursor: 'pointer',
+                  fontSize: isMobile ? '10px' : '12px',
+                  color: '#64748b'
+                }}>
+                  <span>{course.progress}% complete</span>
+                  <span>Due: {course.nextDeadline}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Actions */}
+          <div style={{
+            marginTop: '20px',
+            background: 'white',
+            borderRadius: '12px',
+            padding: isMobile ? '12px' : '16px',
+            border: '1px solid #e2e8f0'
+          }}>
+            <h4 style={{
+              margin: '0 0 12px 0',
+              fontSize: isMobile ? '12px' : '14px',
+              fontWeight: '600',
+              color: '#1e293b'
+            }}>
+              Quick Actions
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <button style={{
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                padding: '8px 12px',
+                fontSize: isMobile ? '10px' : '12px',
+                cursor: 'pointer',
                 textAlign: 'left',
                 display: 'flex',
                 alignItems: 'center',
@@ -492,35 +519,3 @@ const LearningPortalInterface = () => {
 };
 
 export default LearningPortalInterface;
-                  color: '#64748b'
-                }}>
-                  <span>{course.progress}% complete</span>
-                  <span>Due: {course.nextDeadline}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quick Actions */}
-          <div style={{
-            marginTop: '20px',
-            background: 'white',
-            borderRadius: '12px',
-            padding: isMobile ? '12px' : '16px',
-            border: '1px solid #e2e8f0'
-          }}>
-            <h4 style={{
-              margin: '0 0 12px 0',
-              fontSize: isMobile ? '12px' : '14px',
-              fontWeight: '600',
-              color: '#1e293b'
-            }}>
-              Quick Actions
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <button style={{
-                background: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                padding: '8px 12px',
-                fontSize: isMobile ? '10px' : '12px',
