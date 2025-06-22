@@ -1098,99 +1098,126 @@
   }
 }
 
-/* MOBILE HEIGHT FIX - Add this to the end of your existing mobile section */
-/* Replace the height constraint rules with these updated ones */
+/* REACT COMPONENT HEIGHT FIX - Replace the height section with this */
 
 @media (max-width: 768px) {
   
-  /* REMOVE THE RESTRICTIVE HEIGHT CONSTRAINTS AND REPLACE WITH FLEXIBLE ONES */
+  /* FORCE OVERRIDE ALL HEIGHT CONSTRAINTS IN REACT COMPONENTS */
   
-  /* VISUAL CONTAINER - ALLOW NATURAL HEIGHT BUT PREVENT OVERFLOW */
+  /* TARGET THE VISUAL CONTAINER */
   .case-study .solution-visual {
-    max-height: none !important; /* Remove the 160px constraint */
+    max-height: none !important;
     height: auto !important;
-    overflow: visible !important; /* Allow content to show fully */
-    margin-bottom: 0 !important;
+    overflow: visible !important;
+    margin-bottom: 8px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: flex-start !important;
   }
   
+  /* TARGET THE MAIN REACT COMPONENT CONTAINER */
   .case-study .solution-visual > div {
-    max-height: none !important; /* Remove the 160px constraint */
+    max-height: none !important;
     height: auto !important;
-    overflow: visible !important; /* Allow content to show fully */
-    margin-bottom: 0 !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    margin-bottom: 8px !important;
     width: 90% !important;
     max-width: 280px !important;
-    margin: 0 auto !important;
+    margin: 0 auto 8px auto !important;
     padding: 4px !important;
     box-sizing: border-box !important;
     display: block !important;
   }
   
-  /* SPECIFIC ADJUSTMENTS FOR DIFFERENT COMPONENT TYPES */
+  /* FORCE HEIGHT AUTO ON ALL NESTED DIVS IN REACT COMPONENTS */
+  .case-study .solution-visual div,
+  .case-study .solution-visual div[style*="height"],
+  .case-study .solution-visual div[style*="minHeight"],
+  .case-study .solution-visual div[style*="maxHeight"] {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* SPECIFICALLY TARGET PHONE MOCKUP CONTAINERS */
+  .case-study .solution-visual div[style*="borderRadius"],
+  .case-study .solution-visual div[style*="background: #1a1a1a"] {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* TARGET SCREEN-LIKE CONTAINERS */
+  .case-study .solution-visual div[style*="background: white"],
+  .case-study .solution-visual div[style*="display: flex"],
+  .case-study .solution-visual div[style*="flexDirection: column"] {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* FORCE ALL STYLED DIVS TO RESPECT AUTO HEIGHT */
+  .case-study .solution-visual div[style] {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* OVERRIDE FLEX CONTAINERS THAT MIGHT BE CONSTRAINING HEIGHT */
+  .case-study .solution-visual div[style*="flex: 1"],
+  .case-study .solution-visual div[style*="flex:1"] {
+    flex: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* SPECIAL HANDLING FOR GRADIENT BACKGROUND COMPONENTS */
   .case-study .solution-visual > div[style*="background: linear-gradient"] {
     width: 85% !important;
     max-width: 260px !important;
-    margin: 0 auto !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-  
-  /* ENSURE PHONE MOCKUPS SHOW FULLY */
-  .case-study .solution-visual div[style*="borderRadius"] {
-    margin: 0 auto !important;
-    display: block !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-  
-  /* ALLOW NATURAL HEIGHT FOR COMPLEX COMPONENTS */
-  .case-study .solution-visual div[style*="fontFamily"] {
+    margin: 0 auto 8px auto !important;
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
   }
   
-  /* PREVENT EXCESSIVE SPACING WHILE ALLOWING FULL CONTENT */
-  .case-study .solution-visual,
-  .case-study .solution-visual > div {
-    margin-bottom: 8px !important; /* Small margin instead of 0 */
-    padding-bottom: 0 !important;
+  /* ENSURE CONTENT CONTAINERS DON'T RESTRICT HEIGHT */
+  .case-study .solution-visual div[style*="padding"],
+  .case-study .solution-visual div[style*="margin"] {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
   
-  /* ADJUST DESIGN SOLUTION SPACING */
-  .case-study .impact-section .design-solution,
-  .case-study .design-solution {
-    padding: 12px 8px !important;
-    margin-bottom: 12px !important; /* Slightly more space between sections */
-    overflow: hidden !important;
-  }
-  
-  /* DESIGN SUMMARY SPACING */
-  .case-study .impact-section .design-summary,
-  .case-study .design-summary {
-    margin-top: 8px !important;
-    padding: 8px !important;
-    margin-bottom: 0 !important;
-  }
-  
-  /* FINAL SECTION SPACING */
-  .case-study .impact-section .design-solution:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 8px !important;
-  }
-  
-  .case-study .impact-section {
-    padding-bottom: 16px !important;
-    margin-bottom: 0 !important;
-  }
-  
-  /* ENSURE CONTENT FLOWS NATURALLY */
+  /* FINAL OVERRIDE - CATCH ALL STYLED ELEMENTS */
   .case-study .solution-visual * {
     max-width: 100% !important;
     box-sizing: border-box !important;
-    /* Remove any height restrictions */
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* ADJUST SECTION SPACING TO ACCOMMODATE FULL IMAGES */
+  .case-study .impact-section .design-solution,
+  .case-study .design-solution {
+    padding: 12px 8px !important;
+    margin-bottom: 16px !important;
+    overflow: hidden !important;
+  }
+  
+  /* MAINTAIN PROPER SPACING BETWEEN SECTIONS */
+  .case-study .impact-section .design-solution:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 12px !important;
+  }
+  
+  .case-study .impact-section {
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
   }
 }
