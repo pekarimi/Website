@@ -1296,3 +1296,150 @@
     font-size: 12px !important;
   }
 }
+
+/* ADD THIS TO THE BOTTOM OF YOUR MindsetsCaseStudy.css FILE */
+
+/* ========================================
+   DESIGN SOLUTIONS IMAGES MOBILE FIX
+   Target only the last three images in Design Implications section
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Design implications section container */
+  .impact-section .container {
+    max-width: 100vw !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Design solution cards - smaller */
+  .design-solution {
+    padding: 16px !important;
+    margin-bottom: 16px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    overflow: hidden !important;
+    max-width: calc(100vw - 16px) !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Solution content layout */
+  .solution-content {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Solution visual container - SMALLER */
+  .solution-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Target the React components inside solution-visual */
+  .solution-visual > div {
+    max-width: calc(100vw - 32px) !important;
+    width: calc(100vw - 32px) !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transform: scale(0.8) !important; /* SCALE DOWN THE COMPONENTS */
+    transform-origin: top center !important;
+  }
+  
+  /* Mobile design container - SMALLER */
+  .mobile-design-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px !important;
+    margin: 8px 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    transform: scale(0.85) !important; /* SCALE DOWN */
+    transform-origin: top center !important;
+  }
+  
+  /* Mobile interfaces grid */
+  .mobile-interfaces {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  /* Mobile phone sections */
+  .mobile-phone-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+    transform: scale(0.9) !important; /* SCALE DOWN PHONE MOCKUPS */
+    transform-origin: top center !important;
+  }
+  
+  /* Phone labels */
+  .mobile-phone-label {
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+    padding: 0 4px !important;
+    text-align: center !important;
+  }
+  
+  /* Specific targeting for the three design solution components */
+  
+  /* 1. Mobile Design Solution (Learning On-the-go) */
+  .design-solution:nth-child(1) .solution-visual > div,
+  .design-solution:first-of-type .solution-visual > div {
+    transform: scale(0.75) !important;
+    max-height: 400px !important;
+    overflow: hidden !important;
+  }
+  
+  /* 2. Single Learning Interface (Divided Attention) */
+  .design-solution:nth-child(2) .solution-visual > div,
+  .design-solution:nth-of-type(2) .solution-visual > div {
+    transform: scale(0.8) !important;
+    max-height: 350px !important;
+    overflow: hidden !important;
+  }
+  
+  /* 3. Learning Portal Interface (Getting Back on Track) */
+  .design-solution:nth-child(3) .solution-visual > div,
+  .design-solution:last-of-type .solution-visual > div {
+    transform: scale(0.75) !important;
+    max-height: 400px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+  .solution-visual > div {
+    transform: scale(0.7) !important;
+  }
+  
+  .mobile-design-container {
+    transform: scale(0.75) !important;
+    padding: 8px !important;
+  }
+  
+  .mobile-phone-section {
+    transform: scale(0.8) !important;
+  }
+  
+  /* Smaller scaling for the three design solutions */
+  .design-solution:nth-child(1) .solution-visual > div,
+  .design-solution:nth-child(2) .solution-visual > div,
+  .design-solution:nth-child(3) .solution-visual > div,
+  .design-solution:first-of-type .solution-visual > div,
+  .design-solution:nth-of-type(2) .solution-visual > div,
+  .design-solution:last-of-type .solution-visual > div {
+    transform: scale(0.65) !important;
+    max-height: 300px !important;
+  }
+}
