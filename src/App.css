@@ -1630,14 +1630,14 @@ body {
     overflow: visible !important;
   }
   
-  /* Scale down React components in case studies */
+  /* Scale down React components in case studies - make slightly bigger */
   .case-study .solution-visual > div[style*="fontFamily"],
   .case-study .solution-visual > div[style*="maxWidth"],
   .case-study .solution-visual > div[style*="background: linear-gradient"] {
-    transform: scale(0.7) !important;
+    transform: scale(0.8) !important; /* Increased from 0.7 to 0.8 */
     transform-origin: top left !important;
-    width: 142.8% !important;
-    margin-bottom: -80px !important;
+    width: 125% !important; /* Adjusted for new scale */
+    margin-bottom: -120px !important; /* Increased negative margin */
     overflow: hidden !important;
     max-width: none !important;
   }
@@ -1650,15 +1650,53 @@ body {
     overflow-wrap: break-word !important;
   }
   
-  /* Specific fixes for learning interfaces */
-  .case-study .solution-visual > div[style*="fontFamily"] div[style*="fontSize"] {
-    font-size: 10px !important;
+  /* CONSISTENT TEXT SIZING FOR DESIGN RECOMMENDATION SECTIONS */
+  .case-study .design-solution h3,
+  .case-study .design-solution h4,
+  .case-study .solution-text h4 {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .case-study .design-solution p,
+  .case-study .design-solution li,
+  .case-study .solution-text p,
+  .case-study .solution-text li {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  /* Force consistent text size in solution headers */
+  .case-study .solution-header h3 {
+    font-size: 18px !important;
     line-height: 1.3 !important;
   }
   
-  .case-study .solution-visual > div[style*="fontFamily"] button {
+  .case-study .solution-header p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Specific fixes for learning interfaces - keep small for readability */
+  .case-study .solution-visual > div[style*="fontFamily"] div[style*="fontSize"] {
     font-size: 8px !important;
-    padding: 2px 4px !important;
+    line-height: 1.2 !important;
+  }
+  
+  .case-study .solution-visual > div[style*="fontFamily"] button {
+    font-size: 6px !important;
+    padding: 2px 3px !important;
+  }
+  
+  .case-study .solution-visual > div[style*="fontFamily"] h1,
+  .case-study .solution-visual > div[style*="fontFamily"] h2,
+  .case-study .solution-visual > div[style*="fontFamily"] h3,
+  .case-study .solution-visual > div[style*="fontFamily"] h4 {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 4px !important;
   }
   
   /* Override any App.css container rules for case studies */
@@ -1677,27 +1715,42 @@ body {
   
   /* Ensure case study sections don't inherit problematic mobile styles */
   .case-study .design-solution {
-    padding: 24px 16px !important;
-    margin-bottom: 20px !important;
+    padding: 20px 16px !important;
+    margin-bottom: 15px !important;
     overflow-x: hidden !important;
   }
   
   .case-study .solution-content {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 16px !important;
     overflow-x: hidden !important;
   }
   
-  /* Target specific React component containers */
+  /* Target specific React component containers - remove extra white space */
   .case-study .solution-visual > div[style*="display: grid"],
   .case-study .solution-visual > div[style*="gridTemplateColumns"] {
-    transform: scale(0.65) !important;
-    margin-bottom: -100px !important;
+    transform: scale(0.75) !important; /* Slightly bigger than before */
+    margin-bottom: -140px !important; /* More aggressive negative margin */
   }
   
   /* Additional scaling for phone mockups inside case studies */
   .case-study .solution-visual > div[style*="borderRadius"] div[style*="background: #1a1a1a"] {
-    transform: scale(0.8) !important;
+    transform: scale(0.85) !important;
     margin: 0 auto !important;
+  }
+  
+  /* Force remove any remaining bottom margins/padding */
+  .case-study .design-solution:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px !important;
+  }
+  
+  .case-study .impact-section .design-solution:last-child .solution-visual {
+    margin-bottom: -60px !important;
+  }
+  
+  /* Ensure consistent spacing between design solution sections */
+  .case-study .design-solution + .design-solution {
+    margin-top: 10px !important;
   }
 }
