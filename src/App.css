@@ -1900,3 +1900,76 @@ body {
     text-align: center !important;
   }
 }
+
+/* ADD THIS TO THE END OF YOUR App.css FILE */
+
+/* TEXTFLOW CASE STUDY MOBILE FIXES */
+@media (max-width: 768px) {
+  
+  /* FIX WHITE SPACE AROUND FIRST IMAGE (Topic Frequency Chart) */
+  .timeline-item:first-child .study-image-container {
+    margin: 16px 0 !important; /* Reduced from 24px 0 */
+  }
+  
+  .timeline-item:first-child .study-image {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+  
+  /* FIX WHITE SPACE AROUND INTERACTION DESIGN IMAGES */
+  .timeline-item:nth-child(4) .study-image-container {
+    margin: 12px 0 !important; /* Reduced white space */
+  }
+  
+  /* MAKE INTERACTION FLOW IMAGE SMALLER ON MOBILE */
+  .timeline-item:nth-child(4) .study-image-container:first-of-type .study-image {
+    max-height: 280px !important; /* Reduced from 400px */
+    margin: 8px 0 !important;
+  }
+  
+  /* MAKE SECOND IMAGE IN EVALUATION STUDY SMALLER (Error Rate Comparison) */
+  .timeline-item:nth-child(5) .study-image-container:nth-of-type(2) .study-image {
+    max-height: 200px !important; /* Reduced from 250px */
+    margin: 8px 0 !important;
+  }
+  
+  /* GENERAL WHITE SPACE REDUCTION FOR ALL TEXTFLOW IMAGES */
+  .case-study-container .study-image-container {
+    margin: 12px 0 !important; /* Reduced from 24px 0 */
+    padding: 0 !important;
+  }
+  
+  /* REDUCE PADDING IN TIMELINE CONTENT ON MOBILE */
+  .case-study-container .timeline-content {
+    padding: 20px 16px !important; /* Reduced side padding */
+  }
+  
+  /* REDUCE MARGINS IN TIMELINE DETAILS */
+  .case-study-container .timeline-details {
+    margin-top: 16px !important; /* Reduced from 20px */
+  }
+  
+  /* REDUCE SPACING IN TIMELINE DESCRIPTION */
+  .case-study-container .timeline-description p {
+    margin-bottom: 16px !important; /* Reduced from 20px */
+  }
+  
+  /* REDUCE MARGINS IN TIMELINE RESULTS */
+  .case-study-container .timeline-results {
+    margin-top: 16px !important; /* Reduced from 24px */
+    padding: 16px !important; /* Reduced from 20px */
+  }
+  
+  /* SPECIFIC FIXES FOR IMAGE CAPTIONS */
+  .case-study-container .image-caption {
+    margin-top: 6px !important; /* Reduced from 8px */
+    margin-bottom: 8px !important;
+    padding: 0 8px !important;
+    font-size: 13px !important;
+  }
+  
+  /* REDUCE TIMELINE ITEM SPACING ON MOBILE */
+  .case-study-container .timeline-item {
+    margin-bottom: 40px !important; /* Reduced from 60px */
+  }
+}
