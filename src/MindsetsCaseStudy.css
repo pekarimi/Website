@@ -1097,3 +1097,100 @@
     display: none !important;
   }
 }
+
+/* MOBILE HEIGHT FIX - Add this to the end of your existing mobile section */
+/* Replace the height constraint rules with these updated ones */
+
+@media (max-width: 768px) {
+  
+  /* REMOVE THE RESTRICTIVE HEIGHT CONSTRAINTS AND REPLACE WITH FLEXIBLE ONES */
+  
+  /* VISUAL CONTAINER - ALLOW NATURAL HEIGHT BUT PREVENT OVERFLOW */
+  .case-study .solution-visual {
+    max-height: none !important; /* Remove the 160px constraint */
+    height: auto !important;
+    overflow: visible !important; /* Allow content to show fully */
+    margin-bottom: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+  
+  .case-study .solution-visual > div {
+    max-height: none !important; /* Remove the 160px constraint */
+    height: auto !important;
+    overflow: visible !important; /* Allow content to show fully */
+    margin-bottom: 0 !important;
+    width: 90% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    padding: 4px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+  
+  /* SPECIFIC ADJUSTMENTS FOR DIFFERENT COMPONENT TYPES */
+  .case-study .solution-visual > div[style*="background: linear-gradient"] {
+    width: 85% !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* ENSURE PHONE MOCKUPS SHOW FULLY */
+  .case-study .solution-visual div[style*="borderRadius"] {
+    margin: 0 auto !important;
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  /* ALLOW NATURAL HEIGHT FOR COMPLEX COMPONENTS */
+  .case-study .solution-visual div[style*="fontFamily"] {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* PREVENT EXCESSIVE SPACING WHILE ALLOWING FULL CONTENT */
+  .case-study .solution-visual,
+  .case-study .solution-visual > div {
+    margin-bottom: 8px !important; /* Small margin instead of 0 */
+    padding-bottom: 0 !important;
+  }
+  
+  /* ADJUST DESIGN SOLUTION SPACING */
+  .case-study .impact-section .design-solution,
+  .case-study .design-solution {
+    padding: 12px 8px !important;
+    margin-bottom: 12px !important; /* Slightly more space between sections */
+    overflow: hidden !important;
+  }
+  
+  /* DESIGN SUMMARY SPACING */
+  .case-study .impact-section .design-summary,
+  .case-study .design-summary {
+    margin-top: 8px !important;
+    padding: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* FINAL SECTION SPACING */
+  .case-study .impact-section .design-solution:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 8px !important;
+  }
+  
+  .case-study .impact-section {
+    padding-bottom: 16px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* ENSURE CONTENT FLOWS NATURALLY */
+  .case-study .solution-visual * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    /* Remove any height restrictions */
+  }
+}
