@@ -663,6 +663,12 @@ const TextflowCaseStudy = ({ onBack }) => {
             margin-bottom: 16px;
           }
           
+          /* REDUCED WHITE SPACE AND SMALLER IMAGES ON MOBILE */
+          .study-image-container {
+            margin: 12px 0 !important; /* REDUCED from 24px */
+            max-width: 100%;
+            overflow: hidden;
+          }
           
           .gesture-controls-image {
             width: 100% !important;
@@ -713,41 +719,6 @@ const TextflowCaseStudy = ({ onBack }) => {
           .timeline-results strong {
             color: #2d3748;
             font-weight: 600;
-          }
-          
-          /* MOBILE SPECIFIC IMAGE SIZES FOR EACH STEP */
-          
-          
-          /* Step 3 - System architecture - LARGER */
-          .timeline-item:nth-child(3) .study-image {
-            max-height: 350px !important; /* INCREASED from 250px */
-          }
-          
-          /* Step 4 - Interaction flow and gesture controls */
-          .timeline-item:nth-child(4) .study-image {
-            max-height: 400px !important; /* Allow more height for interaction flow */
-          }
-          
-          /* Step 5 - Charts and tables with specific sizing */
-          .timeline-item:nth-child(5) .study-image {
-            max-height: 300px !important; /* Default for step 5 */
-          }
-          
-          /* Step 5 specific image adjustments */
-          .timeline-item:nth-child(5) .study-image-container:first-of-type .study-image {
-            max-height: 350px !important; /* First image - Task success - BIGGER */
-          }
-          
-          .timeline-item:nth-child(5) .study-image-container:nth-of-type(2) .study-image {
-            max-height: 250px !important; /* Second image - Error rate - SMALLER */
-          }
-          
-          .timeline-item:nth-child(5) .study-image-container:nth-of-type(3) .study-image {
-            max-height: 350px !important; /* Third image - Learnability - BIGGER */
-          }
-          
-          .timeline-item:nth-child(5) .study-image-container:last-of-type .study-image {
-            max-height: 380px !important; /* Last image - Table - BIGGER */
           }
           
           /* MOBILE SECTION SPACING */
@@ -860,16 +831,18 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </p>
                   </div>
                   
-                  {/* Topic Frequency Chart */}
-                  <div className="study-image-container">
+                  {/* Topic Frequency Chart - FIXED WHITE SPACE */}
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0'
+                  }}>
                     <img 
                       src="/images/textflow/topic-frequency-chart.png" 
                       alt="Bar chart showing frequency of messaging topics across four situations: in-vehicle, on-foot, point-of-interest, and frequent location"
                       className="study-image"
                       style={{
-                        minHeight: '570px',
-                        maxHeight: '570px',
-                        height: '570px',
+                        minHeight: isMobile ? 'auto' : '570px',
+                        maxHeight: isMobile ? '400px' : '570px',
+                        height: isMobile ? 'auto' : '570px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -910,13 +883,15 @@ const TextflowCaseStudy = ({ onBack }) => {
                   </div>
                   
                   {/* Message Generation Model */}
-                  <div className="study-image-container">
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0'
+                  }}>
                     <img 
                       src="/images/textflow/message-generation-model.png" 
                       alt="Conceptual model showing the three-stage process for generating message samples for BVI users, from defining candidate message types through augmenting samples to generating final values"
                       className="study-image"
                       style={{
-                        maxHeight: isMobile ? '400px' : '400px',
+                        maxHeight: isMobile ? '350px' : '400px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -957,13 +932,15 @@ const TextflowCaseStudy = ({ onBack }) => {
                   </div>
                   
                   {/* System Architecture Diagram */}
-                  <div className="study-image-container">
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0'
+                  }}>
                     <img 
                       src="/images/textflow/system-architecture.png" 
                       alt="TextFlow system architecture showing the three integrated components: Task Model with user interaction, User Model with context and situation, and Reasoning Model with rules and critical situations"
                       className="study-image"
                       style={{
-                        maxHeight: isMobile ? '350px' : '400px',
+                        maxHeight: isMobile ? '300px' : '400px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -1003,16 +980,18 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </p>
                   </div>
                   
-                  {/* Interaction Flow */}
-                  <div className="study-image-container">
+                  {/* Interaction Flow - SMALLER ON MOBILE */}
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0'
+                  }}>
                     <img 
                       src="/images/textflow/interaction-flow.png" 
                       alt="Two interaction modalities showing self-disclosing flow with automatic message progression and topic-by-topic browsing with user-controlled navigation"
                       className="study-image"
                       style={{
-                        minHeight: '630px',
-                        maxHeight: '630px',
-                        height: '630px',
+                        minHeight: isMobile ? 'auto' : '630px',
+                        maxHeight: isMobile ? '300px' : '630px',
+                        height: isMobile ? 'auto' : '630px',
                         width: '100%',
                         objectFit: 'contain'
                       }}
@@ -1024,7 +1003,9 @@ const TextflowCaseStudy = ({ onBack }) => {
                   </div>
                   
                   {/* Gesture Controls */}
-                  <div className="study-image-container">
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0'
+                  }}>
                     <img 
                       src="/images/textflow/gesture-controls.png" 
                       alt="Five finger gesture controls for TextFlow: thumb for select, index for forward, middle for backward, ring for delete, and pinky for stop/start"
@@ -1065,7 +1046,10 @@ const TextflowCaseStudy = ({ onBack }) => {
                   </div>
                   
                   {/* Task Success Chart */}
-                  <div className="study-image-container" style={{ padding: '8px', margin: '8px 0' }}>
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0',
+                    padding: '8px'
+                  }}>
                     <img 
                       src="/images/textflow/task-success-scenarios.png" 
                       alt="Task success rates across three scenarios showing 88.6% average success rate with breakdown of full success, partial success, and failure rates"
@@ -1074,7 +1058,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: isMobile ? '350px' : 'none',
+                        maxHeight: isMobile ? '300px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1084,8 +1068,11 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </p>
                   </div>
                   
-                  {/* Error Rate Comparison */}
-                  <div className="study-image-container" style={{ padding: '8px', margin: '8px 0' }}>
+                  {/* Error Rate Comparison - SMALLER ON MOBILE */}
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0',
+                    padding: '8px'
+                  }}>
                     <img 
                       src="/images/textflow/error-rate-comparison.png" 
                       alt="Comparison of error rates between Topic-by-Topic (TBT) and Self-Disclosing Flow (SDF) interaction modalities"
@@ -1094,7 +1081,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: isMobile ? '250px' : 'none',
+                        maxHeight: isMobile ? '180px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1105,7 +1092,10 @@ const TextflowCaseStudy = ({ onBack }) => {
                   </div>
                   
                   {/* Learnability Analysis */}
-                  <div className="study-image-container" style={{ padding: '8px', margin: '8px 0' }}>
+                  <div className="study-image-container" style={{ 
+                    margin: isMobile ? '12px 0' : '24px 0',
+                    padding: '8px'
+                  }}>
                     <img 
                       src="/images/textflow/learnability-analysis.png" 
                       alt="Learnability analysis showing decreasing cancellation and back rates across three scenarios for both interaction modalities"
@@ -1114,7 +1104,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: isMobile ? '350px' : 'none',
+                        maxHeight: isMobile ? '300px' : 'none',
                         objectFit: 'contain'
                       }}
                     />
@@ -1144,7 +1134,10 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </ul>
                     
                     {/* Interaction Behavior Table */}
-                    <div className="study-image-container" style={{ padding: '8px', margin: '16px 0' }}>
+                    <div className="study-image-container" style={{ 
+                      margin: isMobile ? '12px 0' : '16px 0',
+                      padding: '8px'
+                    }}>
                       <img 
                         src="/images/textflow/interaction-behavior-table.png" 
                         alt="Table showing percentage of tasks coded as fluidity, difficulty, and hesitation for three combinations of hand placement and finger position in TBT and SDF conditions"
@@ -1153,7 +1146,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                           width: '100%',
                           height: 'auto',
                           maxWidth: '100%',
-                          maxHeight: isMobile ? '380px' : 'none',
+                          maxHeight: isMobile ? '300px' : 'none',
                           objectFit: 'contain'
                         }}
                       />
