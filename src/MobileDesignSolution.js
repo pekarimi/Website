@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import './MobileDesignSolution.css';
 
 const MobileDesignSolution = () => {
   const [isRecording, setIsRecording] = useState(true);
   const [transcriptText, setTranscriptText] = useState(
     "The main principles of database normalization include eliminating redundancy and ensuring data integrity. First normal form requires that each column contains atomic values..."
   );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,98 +39,302 @@ const MobileDesignSolution = () => {
   }, [isRecording]);
 
   const StatusBar = () => (
-    <div className="mobile-status-bar">
+    <div style={{
+      background: '#f8f9fa',
+      height: isMobile ? '32px' : '40px',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '0 16px',
+      fontSize: isMobile ? '11px' : '14px',
+      fontWeight: '600'
+    }}>
       <span>9:41</span>
-      <div className="mobile-network-indicators">
-        <div className="mobile-signal-bar mobile-signal-1"></div>
-        <div className="mobile-signal-bar mobile-signal-2"></div>
-        <div className="mobile-signal-bar mobile-signal-3"></div>
-        <div className="mobile-signal-bar mobile-signal-4"></div>
-        <div className="mobile-battery">
-          <div className="mobile-battery-fill"></div>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+          <div style={{ width: '2px', height: '3px', background: '#333', borderRadius: '1px' }}></div>
+          <div style={{ width: '2px', height: '4px', background: '#333', borderRadius: '1px' }}></div>
+          <div style={{ width: '2px', height: '5px', background: '#333', borderRadius: '1px' }}></div>
+          <div style={{ width: '2px', height: '6px', background: '#333', borderRadius: '1px' }}></div>
+        </div>
+        <div style={{
+          width: '16px',
+          height: '8px',
+          border: '1px solid #333',
+          borderRadius: '2px',
+          position: 'relative',
+          marginLeft: '4px'
+        }}>
+          <div style={{
+            width: '80%',
+            height: '100%',
+            background: '#28a745',
+            borderRadius: '1px'
+          }} />
         </div>
       </div>
     </div>
   );
 
   const AppHeader = ({ title }) => (
-    <div className="mobile-app-header">
-      <div className="mobile-back-btn">←</div>
-      <div className="mobile-app-title">{title}</div>
+    <div style={{
+      background: '#667eea',
+      color: 'white',
+      padding: isMobile ? '10px 16px' : '15px 20px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px'
+    }}>
+      <div style={{
+        width: isMobile ? '20px' : '24px',
+        height: isMobile ? '20px' : '24px',
+        borderRadius: '50%',
+        background: 'rgba(255, 255, 255, 0.2)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        fontSize: isMobile ? '12px' : '16px',
+        cursor: 'pointer'
+      }}>
+        ←
+      </div>
+      <div style={{
+        fontSize: isMobile ? '14px' : '18px',
+        fontWeight: '600'
+      }}>
+        {title}
+      </div>
     </div>
   );
 
+  const containerStyle = {
+    width: '100%',
+    padding: isMobile ? '12px' : '20px',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    borderRadius: '16px',
+    margin: '20px 0',
+    maxWidth: '100%',
+    boxSizing: 'border-box',
+    overflow: 'hidden'
+  };
+
+  const interfacesStyle = {
+    display: 'grid',
+    gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+    gap: isMobile ? '20px' : '24px',
+    maxWidth: '100%',
+    margin: '0 auto'
+  };
+
+  const phoneStyle = {
+    background: '#1a1a1a',
+    borderRadius: isMobile ? '20px' : '24px',
+    padding: isMobile ? '4px' : '6px',
+    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
+    width: isMobile ? '100%' : '280px',
+    maxWidth: isMobile ? '300px' : '320px',
+    margin: '0 auto'
+  };
+
+  const screenStyle = {
+    background: 'white',
+    borderRadius: isMobile ? '16px' : '18px',
+    overflow: 'hidden',
+    height: isMobile ? '400px' : '500px',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column'
+  };
+
+  const contentStyle = {
+    padding: isMobile ? '12px' : '16px',
+    fontSize: isMobile ? '10px' : '12px',
+    flex: 1,
+    overflow: 'auto'
+  };
+
   return (
-    <div style={{
-      width: '100%',
-      padding: '20px',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      borderRadius: '16px',
-      margin: '20px 0'
-    }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '24px',
-        maxWidth: '800px',
-        margin: '0 auto'
-      }}>
+    <div style={containerStyle}>
+      <div style={interfacesStyle}>
         {/* Assessment Submission Interface */}
-        <div className="mobile-phone-section">
-          <div className="mobile-phone-label">Assessment Submission Interface</div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
           <div style={{
-            background: '#1a1a1a',
-            borderRadius: '24px',
-            padding: '6px',
-            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
-            width: '280px',
-            margin: '0 auto'
+            color: 'white',
+            fontSize: isMobile ? '12px' : '16px',
+            fontWeight: '600',
+            marginBottom: isMobile ? '8px' : '15px',
+            textAlign: 'center'
           }}>
-            <div style={{
-              background: 'white',
-              borderRadius: '18px',
-              overflow: 'hidden',
-              height: '500px',
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column'
-            }}>
+            Assessment Submission Interface
+          </div>
+          <div style={phoneStyle}>
+            <div style={screenStyle}>
               <StatusBar />
               <AppHeader title="Assessment Center" />
-              <div className="mobile-content" style={{ padding: '16px', fontSize: '12px' }}>
-                <div className="mobile-sync-indicator">
-                  <div className="mobile-sync-icon">✓</div>
-                  <div className="mobile-sync-text">Synced with desktop • Auto-save enabled</div>
-                </div>
-                
-                <div className="mobile-assessment-card" style={{ padding: '12px', marginBottom: '12px' }}>
-                  <div className="mobile-card-title" style={{ fontSize: '13px' }}>IT Security Assessment</div>
-                  <div className="mobile-card-subtitle" style={{ fontSize: '11px' }}>Due: Tomorrow, 11:59 PM</div>
-                  <div className="mobile-progress-bar">
-                    <div className="mobile-progress-fill" style={{width: '65%'}}></div>
+              <div style={contentStyle}>
+                <div style={{
+                  background: '#d4edda',
+                  border: '1px solid #c3e6cb',
+                  borderRadius: '6px',
+                  padding: isMobile ? '8px' : '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  marginBottom: isMobile ? '12px' : '20px'
+                }}>
+                  <div style={{
+                    width: '12px',
+                    height: '12px',
+                    background: '#28a745',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '8px'
+                  }}>
+                    ✓
                   </div>
-                  <div className="mobile-progress-text" style={{ fontSize: '10px' }}>65% Complete • 8 of 12 questions</div>
-                  <div className="mobile-action-buttons">
-                    <button className="mobile-btn mobile-btn-primary" style={{ padding: '8px 12px', fontSize: '11px' }}>Continue</button>
-                    <button className="mobile-btn mobile-btn-secondary" style={{ padding: '8px 12px', fontSize: '11px' }}>Submit</button>
-                  </div>
-                </div>
-                
-                <div className="mobile-assessment-card" style={{ padding: '12px', marginBottom: '12px' }}>
-                  <div className="mobile-card-title" style={{ fontSize: '13px' }}>Database Management Quiz</div>
-                  <div className="mobile-card-subtitle" style={{ fontSize: '11px' }}>Due: Next Week</div>
-                  <div className="mobile-progress-bar">
-                    <div className="mobile-progress-fill" style={{width: '30%'}}></div>
-                  </div>
-                  <div className="mobile-progress-text" style={{ fontSize: '10px' }}>30% Complete • 3 of 10 questions</div>
-                  <div className="mobile-action-buttons">
-                    <button className="mobile-btn mobile-btn-primary" style={{ padding: '8px 12px', fontSize: '11px' }}>Continue</button>
-                    <button className="mobile-btn mobile-btn-secondary" style={{ padding: '8px 12px', fontSize: '11px' }}>Save Draft</button>
+                  <div style={{ fontSize: isMobile ? '9px' : '12px', color: '#155724' }}>
+                    Synced with desktop • Auto-save enabled
                   </div>
                 </div>
                 
-                <div className="mobile-offline-mode">
-                  <div className="mobile-offline-text" style={{ fontSize: '10px' }}>📱 All assessments available offline</div>
+                <div style={{
+                  background: '#f8f9fa',
+                  borderRadius: '8px',
+                  padding: isMobile ? '8px' : '12px',
+                  marginBottom: isMobile ? '8px' : '12px',
+                  borderLeft: '3px solid #667eea'
+                }}>
+                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
+                    IT Security Assessment
+                  </div>
+                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#666', marginBottom: '6px' }}>
+                    Due: Tomorrow, 11:59 PM
+                  </div>
+                  <div style={{
+                    background: '#e9ecef',
+                    height: '4px',
+                    borderRadius: '2px',
+                    overflow: 'hidden',
+                    marginBottom: '4px'
+                  }}>
+                    <div style={{
+                      background: '#667eea',
+                      height: '100%',
+                      width: '65%',
+                      borderRadius: '2px'
+                    }} />
+                  </div>
+                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666', marginBottom: '6px' }}>
+                    65% Complete • 8 of 12 questions
+                  </div>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    <button style={{
+                      background: '#667eea',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      padding: isMobile ? '4px 8px' : '6px 10px',
+                      fontSize: isMobile ? '8px' : '10px',
+                      cursor: 'pointer',
+                      flex: 1
+                    }}>
+                      Continue
+                    </button>
+                    <button style={{
+                      background: 'white',
+                      color: '#667eea',
+                      border: '1px solid #667eea',
+                      borderRadius: '4px',
+                      padding: isMobile ? '4px 8px' : '6px 10px',
+                      fontSize: isMobile ? '8px' : '10px',
+                      cursor: 'pointer',
+                      flex: 1
+                    }}>
+                      Submit
+                    </button>
+                  </div>
+                </div>
+                
+                <div style={{
+                  background: '#f8f9fa',
+                  borderRadius: '8px',
+                  padding: isMobile ? '8px' : '12px',
+                  marginBottom: isMobile ? '8px' : '12px',
+                  borderLeft: '3px solid #667eea'
+                }}>
+                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
+                    Database Management Quiz
+                  </div>
+                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#666', marginBottom: '6px' }}>
+                    Due: Next Week
+                  </div>
+                  <div style={{
+                    background: '#e9ecef',
+                    height: '4px',
+                    borderRadius: '2px',
+                    overflow: 'hidden',
+                    marginBottom: '4px'
+                  }}>
+                    <div style={{
+                      background: '#667eea',
+                      height: '100%',
+                      width: '30%',
+                      borderRadius: '2px'
+                    }} />
+                  </div>
+                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666', marginBottom: '6px' }}>
+                    30% Complete • 3 of 10 questions
+                  </div>
+                  <div style={{ display: 'flex', gap: '6px' }}>
+                    <button style={{
+                      background: '#667eea',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      padding: isMobile ? '4px 8px' : '6px 10px',
+                      fontSize: isMobile ? '8px' : '10px',
+                      cursor: 'pointer',
+                      flex: 1
+                    }}>
+                      Continue
+                    </button>
+                    <button style={{
+                      background: 'white',
+                      color: '#667eea',
+                      border: '1px solid #667eea',
+                      borderRadius: '4px',
+                      padding: isMobile ? '4px 8px' : '6px 10px',
+                      fontSize: isMobile ? '8px' : '10px',
+                      cursor: 'pointer',
+                      flex: 1
+                    }}>
+                      Save Draft
+                    </button>
+                  </div>
+                </div>
+                
+                <div style={{
+                  background: '#fff3cd',
+                  border: '1px solid #ffeaa7',
+                  borderRadius: '6px',
+                  padding: isMobile ? '6px' : '8px',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#856404' }}>
+                    📱 All assessments available offline
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,63 +342,151 @@ const MobileDesignSolution = () => {
         </div>
 
         {/* Voice Input Interface */}
-        <div className="mobile-phone-section">
-          <div className="mobile-phone-label">Voice Input & Dictation Features</div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
           <div style={{
-            background: '#1a1a1a',
-            borderRadius: '24px',
-            padding: '6px',
-            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
-            width: '280px',
-            margin: '0 auto'
+            color: 'white',
+            fontSize: isMobile ? '12px' : '16px',
+            fontWeight: '600',
+            marginBottom: isMobile ? '8px' : '15px',
+            textAlign: 'center'
           }}>
-            <div style={{
-              background: 'white',
-              borderRadius: '18px',
-              overflow: 'hidden',
-              height: '500px',
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column'
-            }}>
+            Voice Input & Dictation Features
+          </div>
+          <div style={phoneStyle}>
+            <div style={screenStyle}>
               <StatusBar />
               <AppHeader title="Assignment Editor" />
-              <div className="mobile-content" style={{ padding: '16px', fontSize: '12px' }}>
-                <div className="mobile-sync-indicator mobile-recording">
-                  <div className="mobile-sync-icon">🎤</div>
-                  <div className="mobile-sync-text">Voice recording active • Transcribing...</div>
+              <div style={contentStyle}>
+                <div style={{
+                  background: '#e8f5e8',
+                  border: '1px solid #28a745',
+                  borderRadius: '6px',
+                  padding: isMobile ? '8px' : '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  marginBottom: isMobile ? '12px' : '20px'
+                }}>
+                  <div style={{ fontSize: isMobile ? '10px' : '12px' }}>🎤</div>
+                  <div style={{ fontSize: isMobile ? '9px' : '12px', color: '#155724' }}>
+                    Voice recording active • Transcribing...
+                  </div>
                 </div>
                 
-                <div className="mobile-essay-container" style={{ padding: '12px', marginBottom: '12px' }}>
-                  <div className="mobile-essay-title" style={{ fontSize: '13px' }}>Essay Response</div>
-                  <div className="mobile-essay-text" style={{ padding: '10px', minHeight: '80px' }}>
-                    <div className="mobile-transcript" style={{ fontSize: '11px' }}>
+                <div style={{
+                  background: '#f8f9fa',
+                  borderRadius: '8px',
+                  padding: isMobile ? '8px' : '12px',
+                  marginBottom: isMobile ? '8px' : '12px',
+                  borderLeft: '3px solid #667eea'
+                }}>
+                  <div style={{ fontSize: isMobile ? '10px' : '13px', fontWeight: '600', marginBottom: '6px' }}>
+                    Essay Response
+                  </div>
+                  <div style={{
+                    background: 'white',
+                    borderRadius: '6px',
+                    padding: isMobile ? '6px' : '10px',
+                    minHeight: isMobile ? '50px' : '80px',
+                    border: '2px dashed #e9ecef',
+                    marginBottom: '6px'
+                  }}>
+                    <div style={{
+                      fontSize: isMobile ? '8px' : '11px',
+                      lineHeight: 1.3,
+                      color: '#333',
+                      position: 'relative'
+                    }}>
                       {transcriptText.substring(0, 120)}...
-                      <div className="mobile-cursor"></div>
+                      <span style={{
+                        display: 'inline-block',
+                        width: '1px',
+                        height: '12px',
+                        background: '#667eea',
+                        marginLeft: '2px',
+                        animation: 'blink 1s infinite'
+                      }} />
                     </div>
                   </div>
-                  <div className="mobile-word-count" style={{ fontSize: '10px' }}>Word count: {transcriptText.split(' ').length} • Voice transcribed</div>
+                  <div style={{ fontSize: isMobile ? '7px' : '10px', color: '#666' }}>
+                    Word count: {transcriptText.split(' ').length} • Voice transcribed
+                  </div>
                 </div>
                 
-                <div className="mobile-voice-input mobile-active" style={{ padding: '12px', marginBottom: '12px' }}>
-                  <div className="mobile-mic-icon mobile-recording-pulse" style={{ width: '32px', height: '32px', fontSize: '16px' }}>🎤</div>
-                  <div className="mobile-voice-text" style={{ fontSize: '11px' }}>Recording... Tap to stop</div>
+                <div style={{
+                  background: '#e8f5e8',
+                  border: '2px dashed #28a745',
+                  borderRadius: '8px',
+                  padding: isMobile ? '8px' : '12px',
+                  textAlign: 'center',
+                  marginBottom: isMobile ? '8px' : '12px'
+                }}>
+                  <div style={{
+                    width: isMobile ? '24px' : '32px',
+                    height: isMobile ? '24px' : '32px',
+                    background: '#28a745',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 6px',
+                    color: 'white',
+                    fontSize: isMobile ? '10px' : '16px',
+                    animation: 'pulse 2s infinite'
+                  }}>
+                    🎤
+                  </div>
+                  <div style={{ fontSize: isMobile ? '8px' : '11px', color: '#155724', fontWeight: '500' }}>
+                    Recording... Tap to stop
+                  </div>
                 </div>
                 
-                <div className="mobile-voice-controls">
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '6px',
+                  marginBottom: isMobile ? '8px' : '12px'
+                }}>
                   <button 
-                    className="mobile-btn mobile-btn-secondary mobile-small"
                     onClick={() => setIsRecording(!isRecording)}
-                    style={{ padding: '6px 8px', fontSize: '10px' }}
+                    style={{
+                      background: 'white',
+                      color: '#667eea',
+                      border: '1px solid #667eea',
+                      borderRadius: '4px',
+                      padding: isMobile ? '4px 6px' : '6px 8px',
+                      fontSize: isMobile ? '7px' : '10px',
+                      cursor: 'pointer'
+                    }}
                   >
                     {isRecording ? '⏸️ Pause' : '▶️ Resume'}
                   </button>
-                  <button className="mobile-btn mobile-btn-secondary mobile-small" style={{ padding: '6px 8px', fontSize: '10px' }}>🔄 Restart</button>
+                  <button style={{
+                    background: 'white',
+                    color: '#667eea',
+                    border: '1px solid #667eea',
+                    borderRadius: '4px',
+                    padding: isMobile ? '4px 6px' : '6px 8px',
+                    fontSize: isMobile ? '7px' : '10px',
+                    cursor: 'pointer'
+                  }}>
+                    🔄 Restart
+                  </button>
                 </div>
                 
-                <div className="mobile-voice-tips" style={{ padding: '10px' }}>
-                  <div className="mobile-tips-title" style={{ fontSize: '11px' }}>💡 Voice Tips</div>
-                  <div className="mobile-tips-text" style={{ fontSize: '9px' }}>
+                <div style={{
+                  background: '#e3f2fd',
+                  borderRadius: '6px',
+                  padding: isMobile ? '6px' : '10px'
+                }}>
+                  <div style={{ fontSize: isMobile ? '8px' : '11px', fontWeight: '600', marginBottom: '4px', color: '#1976d2' }}>
+                    💡 Voice Tips
+                  </div>
+                  <div style={{ fontSize: isMobile ? '7px' : '9px', color: '#1976d2', lineHeight: 1.3 }}>
                     • Speak clearly and pause between sentences<br/>
                     • Automatic punctuation enabled<br/>
                     • Edit text after transcription
@@ -195,6 +497,17 @@ const MobileDesignSolution = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+        }
+        @keyframes blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+        }
+      `}</style>
     </div>
   );
 };
