@@ -1765,3 +1765,73 @@ body {
     max-width: 95% !important;
   }
 }
+
+/* ADD THIS TO THE VERY END OF YOUR App.css FILE */
+
+/* OVERRIDE REACT COMPONENT INLINE STYLES ON MOBILE */
+@media (max-width: 768px) {
+  /* Target the React components specifically and override their inline styles */
+  .case-study .solution-visual > div[style*="fontFamily"] {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+  
+  /* Override all text inside React components */
+  .case-study .solution-visual div[style*="fontSize"] {
+    font-size: 14px !important;
+  }
+  
+  /* Override large text specifically */
+  .case-study .solution-visual div[style*="fontSize: 16px"],
+  .case-study .solution-visual div[style*="fontSize: 18px"],
+  .case-study .solution-visual div[style*="fontSize: 20px"] {
+    font-size: 14px !important;
+  }
+  
+  /* Override very small text */
+  .case-study .solution-visual div[style*="fontSize: 6px"],
+  .case-study .solution-visual div[style*="fontSize: 7px"],
+  .case-study .solution-visual div[style*="fontSize: 8px"],
+  .case-study .solution-visual div[style*="fontSize: 9px"] {
+    font-size: 12px !important;
+  }
+  
+  /* Force text outside React components to be consistent */
+  .case-study .design-solution .solution-text,
+  .case-study .design-solution .solution-header {
+    font-size: 14px !important;
+  }
+  
+  .case-study .design-solution .solution-text p,
+  .case-study .design-solution .solution-text li {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .case-study .design-solution .solution-text li strong {
+    font-size: 14px !important;
+  }
+  
+  .case-study .design-solution h3 {
+    font-size: 20px !important;
+  }
+  
+  .case-study .design-solution h4 {
+    font-size: 18px !important;
+  }
+  
+  /* Prevent any container overflow */
+  .case-study .design-solution {
+    overflow: hidden !important;
+  }
+  
+  .case-study .solution-content {
+    overflow: hidden !important;
+  }
+}
