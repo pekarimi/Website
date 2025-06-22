@@ -808,9 +808,7 @@
   opacity: 0.9;
 }
 
-/* MOBILE FIXES FOR DESIGN SOLUTION COMPONENTS */
-/* REPLACE THE MOBILE SECTION IN MindsetsCaseStudy.css WITH THIS VERSION */
-
+/* MOBILE RESPONSIVE STYLES */
 @media (max-width: 768px) {
   /* Basic mobile layout fixes */
   .container {
@@ -847,7 +845,7 @@
     gap: 20px;
   }
   
-  /* RESTORE ORIGINAL SCALING FOR REACT COMPONENTS */
+  /* Scale down and contain all design solution components */
   .solution-visual > div,
   .design-solution .solution-visual > div {
     transform: scale(0.75);
@@ -857,7 +855,7 @@
     margin-bottom: -60px;
   }
   
-  /* ONLY FIX THE TEXT - DON'T TOUCH COMPONENT SCALING */
+  /* FORCE CONSISTENT TEXT FORMATTING FOR DESIGN SOLUTIONS */
   .case-study .design-solution h3,
   .case-study .design-solution .solution-header h3,
   .case-study .impact-section .design-solution h3 {
@@ -948,7 +946,7 @@
     margin-bottom: 20px;
   }
   
-  /* Scale down learning interfaces specifically - KEEP ORIGINAL SCALING */
+  /* Scale down learning interfaces specifically */
   .design-solution [style*="fontFamily"] {
     transform: scale(0.8) !important;
     transform-origin: top left !important;
@@ -956,7 +954,7 @@
     margin-bottom: -40px !important;
   }
   
-  /* AGGRESSIVE SCALING FOR ALL REACT COMPONENTS - RESTORE ORIGINAL */
+  /* AGGRESSIVE SCALING FOR ALL REACT COMPONENTS */
   .solution-visual > div[style*="fontFamily"],
   .solution-visual > div[style*="maxWidth"] {
     transform: scale(0.7) !important;
@@ -975,9 +973,36 @@
     overflow-x: hidden !important;
   }
   
-  /* Additional scaling for specific interface types - RESTORE ORIGINAL */
+  /* Additional scaling for specific interface types */
   .solution-visual > div[style*="background: linear-gradient"] {
     transform: scale(0.65) !important;
     margin-bottom: -100px !important;
+  }
+  
+  /* SPECIFIC FIX FOR BULLET POINT TEXT SIZE */
+  .case-study .design-solution .solution-text li,
+  .case-study .impact-section .design-solution .solution-text li,
+  .case-study .design-solution ul li,
+  .case-study .impact-section .design-solution ul li {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #555 !important;
+    margin-bottom: 12px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+    font-weight: 400 !important;
+  }
+  
+  /* Make the bullet point descriptions smaller */
+  .case-study .design-solution .solution-text li strong,
+  .case-study .impact-section .design-solution .solution-text li strong {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+  }
+  
+  /* Ensure bullet points themselves are properly sized */
+  .case-study .design-solution .solution-text li::before,
+  .case-study .impact-section .design-solution .solution-text li::before {
+    font-size: 14px !important;
   }
 }
