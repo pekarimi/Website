@@ -1145,19 +1145,7 @@
     padding: 16px;
   }
 
-  .program-charts {
-    margin: 20px 0;
-    padding: 20px;
-  }
-
-  .charts-description {
-    margin-bottom: 16px;
-  }
-
- /* MOBILE CHART FIX - Replace the existing mobile charts section in KanoCaseStudy.css */
-
-@media (max-width: 768px) {
-  /* Remove the program-charts background and padding that creates extra space */
+  /* FIXED MOBILE CHARTS - This replaces the duplicate section */
   .program-charts {
     margin: 20px 0;
     padding: 16px;
@@ -1171,7 +1159,6 @@
     font-size: 14px;
   }
 
-  /* Convert to single column layout */
   .charts-grid {
     display: block !important;
     grid-template-columns: none !important;
@@ -1191,7 +1178,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
   }
   
-  /* CRITICAL FIX: Remove container padding and background */
   .chart-image {
     width: 100% !important;
     padding: 0 !important;
@@ -1201,7 +1187,6 @@
     overflow: hidden !important;
   }
   
-  /* KEY FIX: Use cover instead of contain and remove fixed heights */
   .chart-image img {
     width: 100% !important;
     max-width: 100% !important;
@@ -1232,7 +1217,6 @@
     font-style: italic !important;
   }
 
-  /* Additional fixes for other mobile elements */
   .ranking-summary {
     padding: 16px;
     margin-top: 16px;
