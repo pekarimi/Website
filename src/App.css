@@ -1838,41 +1838,62 @@ body {
 
 /* ADD THIS TO THE END OF YOUR App.css FILE */
 
-/* MOBILE FIGURE SIZE ADJUSTMENTS FOR CSP CASE STUDY */
+/* MOBILE FIGURE SIZE ADJUSTMENTS FOR CSP CASE STUDY - SPECIFIC TARGETING */
 @media (max-width: 768px) {
-  /* Figure 1: System Architecture - make bigger on mobile */
-  .system-arch-image img {
-    width: 95% !important; /* Increased from 80% */
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  /* Figure 1: System Architecture - target by image src */
+  .prototype-image img[src="/images/CSP/system-architecture.png"] {
+    width: 95% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   
-  /* Figure 2: Interface Components - make bigger on mobile */
-  .medium-image img {
-    width: 90% !important; /* Increased from 70% */
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  /* Figure 2: Interface Components - target by image src */
+  .prototype-image img[src="/images/CSP/interface-components.png"] {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   
-  /* Figure 4: Creativity Distribution - make bigger on mobile */
-  .creativity-analysis-section .medium-image img {
-    width: 90% !important; /* Increased from 70% */
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  /* Figure 4: Creativity Distribution - target by image src */
+  .prototype-image img[src="/images/CSP/creativity-distribution.png"] {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   
-  /* Ensure proper spacing around enlarged figures */
-  .system-arch-image,
-  .medium-image {
-    margin: 20px 0;
+  /* Alternative targeting by container class if above doesn't work */
+  .system-overview-section .prototype-image.system-arch-image img,
+  .user-interface-section .prototype-image.medium-image img,
+  .similarity-patterns-section .prototype-image.medium-image img {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   
-  /* Make sure captions remain properly sized */
-  .system-arch-image .image-caption,
-  .medium-image .image-caption {
+  /* Most specific targeting - by parent section */
+  .system-overview-section .prototype-image img {
+    width: 95% !important;
+  }
+  
+  .user-interface-section .prototype-image img {
+    width: 90% !important;
+  }
+  
+  .similarity-patterns-section .prototype-image img {
+    width: 90% !important;
+  }
+  
+  /* Ensure proper spacing */
+  .prototype-image {
+    margin: 20px 0 !important;
+  }
+  
+  /* Caption sizing */
+  .prototype-image .image-caption {
     font-size: 13px !important;
     margin-top: 8px !important;
     padding: 0 8px !important;
