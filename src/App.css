@@ -1681,3 +1681,32 @@ body {
     background: white !important;
   }
 }
+
+/* Add this to the end of your App.css file */
+
+/* Reduce white space below project card images on mobile */
+@media (max-width: 768px) {
+  .project-image-container {
+    height: 200px !important; /* Reduced from 280px to 200px */
+  }
+  
+  .project-image {
+    background: #f5f5f5 !important; /* Keep the pink fix */
+  }
+  
+  .project-image-container {
+    background: white !important; /* Keep the pink fix */
+  }
+  
+  .project-img {
+    display: block !important;
+    background: white !important; /* Keep the pink fix */
+  }
+}
+
+/* Optional: Also reduce on tablet if needed */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .project-image-container {
+    height: 240px !important; /* Slightly reduced for tablet */
+  }
+}
