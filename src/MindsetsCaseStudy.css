@@ -62,21 +62,21 @@
 
 /* Mindsets-specific hero sizing - larger for text readability */
 .mindsets-hero {
-  padding: 60px 0 !important; /* Much more padding for bigger purple area */
+  padding: 60px 0 !important;
 }
 
 .mindsets-hero-container {
-  max-width: 1400px !important; /* Wider container */
-  width: 95% !important; /* Take up more width */
+  max-width: 1400px !important;
+  width: 95% !important;
 }
 
 .mindsets-hero-container img {
-  max-height: 650px !important; /* Much taller image for better text readability */
+  max-height: 650px !important;
 }
 
-/* Title Section - REDUCED PADDING */
+/* Title Section */
 .title-section {
-  padding: 40px 0; /* Reduced from 60px */
+  padding: 40px 0;
   background: white;
   text-align: center;
 }
@@ -105,9 +105,9 @@
   margin: 0 auto;
 }
 
-/* Project Overview - REDUCED PADDING */
+/* Project Overview */
 .project-overview {
-  padding: 50px 0; /* Reduced from 80px */
+  padding: 50px 0;
   background: white;
 }
 
@@ -148,47 +148,42 @@
   line-height: 1.6;
 }
 
-/* Content Sections - REDUCED PADDING */
+/* Content Sections */
 .problem-section,
 .process-section,
 .framework-section,
 .learnings-section {
-  padding: 50px 0; /* Reduced from 80px */
+  padding: 50px 0;
 }
 
-/* BALANCED WHITE SPACE ABOVE DESIGN IMPLICATIONS - MORE SPACE */
 .impact-section {
-  padding: 30px 0 50px 0 !important; /* More top padding for better breathing room */
+  padding: 30px 0 50px 0 !important;
   margin-top: 0 !important;
   background: white;
 }
 
-/* Profiles section with small bottom space */
 .profiles-section {
   background: #f8f9fa;
-  padding: 30px 0 30px 0 !important; /* More bottom padding */
+  padding: 30px 0 30px 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* Remove any margin from the last mindset profile */
 .mindset-profile:last-child {
   margin-bottom: 0 !important;
 }
 
-/* More generous spacing for Design Implications header */
 .impact-section h2 {
   margin-top: 0 !important;
-  padding-top: 30px !important; /* More space above the header */
+  padding-top: 30px !important;
   margin-bottom: 24px;
 }
 
-/* Remove extra margin from first design solution */
 .design-solution:first-child {
   margin-top: 0 !important;
 }
 
 .next-steps {
-  padding: 50px 0; /* Reduced from 80px */
+  padding: 50px 0;
 }
 
 .problem-section {
@@ -205,7 +200,7 @@
 
 .profiles-section {
   background: #f8f9fa;
-  padding: 30px 0 0px 0 !important; /* NO bottom padding */
+  padding: 30px 0 0px 0 !important;
   margin-bottom: 0 !important;
 }
 
@@ -218,11 +213,11 @@
   color: white;
 }
 
-/* Section Headers - REDUCED MARGIN */
+/* Section Headers */
 .case-study h2 {
   font-size: 36px;
   font-weight: 600;
-  margin-bottom: 24px; /* Reduced from 32px */
+  margin-bottom: 24px;
   text-align: center;
   letter-spacing: -0.01em;
 }
@@ -238,7 +233,7 @@
   gap: 60px;
   align-items: start;
   max-width: 1400px;
-  margin: 0 auto 40px; /* Reduced from 60px */
+  margin: 0 auto 40px;
 }
 
 .problem-text p {
@@ -283,9 +278,9 @@
   font-weight: bold;
 }
 
-/* Full-width image - REDUCED MARGIN */
+/* Full-width image */
 .full-width-image {
-  margin-top: 40px; /* Reduced from 60px */
+  margin-top: 40px;
 }
 
 .full-width-image-container {
@@ -310,14 +305,14 @@
   font-style: italic;
 }
 
-/* Process Section - REDUCED MARGINS */
+/* Process Section */
 .process-intro {
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: 40px;
   align-items: start;
   max-width: 1500px;
-  margin: 0 auto 40px; /* Reduced from 60px */
+  margin: 0 auto 40px;
 }
 
 .process-intro-text p {
@@ -356,13 +351,13 @@
 
 .research-outcomes {
   max-width: 1500px;
-  margin: 0 auto 60px; /* Reduced from 80px */
-  padding-top: 30px; /* Reduced from 40px */
+  margin: 0 auto 60px;
+  padding-top: 30px;
   border-top: 1px solid #e5e5e5;
 }
 
 .outcomes-text {
-  margin-bottom: 30px; /* Reduced from 40px */
+  margin-bottom: 30px;
 }
 
 .outcomes-text h3 {
@@ -375,7 +370,7 @@
 .outcomes-text h4 {
   font-size: 20px;
   font-weight: 600;
-  margin: 24px 0 16px 0; /* Reduced from 32px */
+  margin: 24px 0 16px 0;
   color: #1a1a1a;
 }
 
@@ -389,7 +384,7 @@
 .insights-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0 24px 0; /* Reduced from 32px */
+  margin: 20px 0 24px 0;
 }
 
 .insights-list li {
@@ -425,7 +420,7 @@
 }
 
 .outcomes-explanation {
-  margin-top: 30px; /* Reduced from 40px */
+  margin-top: 30px;
 }
 
 .outcomes-explanation h4 {
@@ -468,7 +463,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
-  margin-top: 36px; /* Reduced from 48px */
+  margin-top: 36px;
 }
 
 .process-step {
@@ -514,7 +509,7 @@
   font-size: 18px;
   color: #666;
   max-width: 600px;
-  margin: 0 auto 36px; /* Reduced from 48px */
+  margin: 0 auto 36px;
   line-height: 1.7;
 }
 
@@ -522,7 +517,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
-  margin-top: 36px; /* Reduced from 48px */
+  margin-top: 36px;
 }
 
 .dimension-card {
@@ -550,12 +545,12 @@
   font-size: 15px;
 }
 
-/* Mindset Profiles - REDUCED MARGINS */
+/* Mindset Profiles */
 .mindset-profile {
   background: white;
   border-radius: 16px;
   padding: 40px;
-  margin-bottom: 30px; /* Reduced from 40px */
+  margin-bottom: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -646,28 +641,26 @@
   font-weight: bold;
 }
 
-/* Design Implications Section - REDUCED MARGINS + WHITE SPACE FIX */
+/* Design Implications Section */
 .design-solution {
   background: white;
   border-radius: 16px;
   padding: 40px;
-  margin-bottom: 30px; /* Reduced from 40px */
+  margin-bottom: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Remove extra margin from first design solution */
 .design-solution:first-child {
   margin-top: 0 !important;
 }
 
-/* Ensure Design Implications header has no extra margin */
 .impact-section h2:first-child {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
 .solution-header {
-  margin-bottom: 24px; /* Reduced from 32px */
+  margin-bottom: 24px;
   border-bottom: 2px solid #f0f0f0;
   padding-bottom: 20px;
 }
@@ -759,7 +752,7 @@
   padding: 32px;
   border-radius: 12px;
   border-left: 4px solid #667eea;
-  margin-top: 30px; /* Reduced from 40px */
+  margin-top: 30px;
 }
 
 .design-summary h3 {
@@ -776,12 +769,12 @@
   margin: 0;
 }
 
-/* Learnings Section - REDUCED MARGINS */
+/* Learnings Section */
 .learnings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
-  margin-top: 36px; /* Reduced from 48px */
+  margin-top: 36px;
 }
 
 .learning-item {
@@ -809,688 +802,54 @@
   text-align: center;
 }
 
-/* ADD THESE FIXES TO THE BOTTOM OF YOUR MindsetsCaseStudy.css FILE */
-
-/* ========================================
-   IMAGE LAYOUT FIXES FOR MINDSETS CASE STUDY
-   ======================================== */
-
-/* Full-width image improvements */
-.full-width-image-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+.next-steps p {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
 }
 
-.full-width-image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border: 1px solid #e5e5e5;
-}
-
-/* Section images - make them fill horizontal space better */
-.section-image-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.section-image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border: 1px solid #e5e5e5;
-  object-fit: contain;
-}
-
-/* Process intro layout improvements */
-.process-intro {
-  display: block;
-  max-width: 1500px;
-  margin: 0 auto 40px;
-}
-
-.process-intro-text {
-  margin-bottom: 30px;
-}
-
-.process-intro-visual {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Mindset profile images - fill container properly */
-.profile-image-container {
-  width: 100%;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.profile-image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-  max-height: 400px;
-}
-
-/* Design solution visual improvements */
-.solution-content {
-  display: block;
-  gap: 0;
-}
-
-.solution-text {
-  margin-bottom: 30px;
-}
-
-.solution-visual {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-.solution-visual > div {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* Mobile design container improvements */
-.mobile-design-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 20px 0;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Ensure all images in mindset profiles are properly sized */
-.mindset-profile .profile-image-container img {
-  width: 100%;
-  height: auto;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* MOBILE SPECIFIC FIXES */
+/* SIMPLE MOBILE-ONLY FIX FOR DESIGN SOLUTION COMPONENTS */
 @media (max-width: 768px) {
-  /* Container fixes */
-  .case-study .container {
-    padding-left: 16px;
-    padding-right: 16px;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-  
-  /* Hero image mobile */
-  .hero-image-container,
-  .mindsets-hero-container {
-    max-width: calc(100vw - 32px);
-    width: calc(100vw - 32px);
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  .hero-image-container img,
-  .mindsets-hero-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: contain;
-  }
-  
-  /* Full width images mobile */
-  .full-width-image {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+  /* Basic mobile layout fixes */
+  .container {
     padding: 0 16px;
-    box-sizing: border-box;
   }
   
-  .full-width-image-container {
-    max-width: calc(100vw - 32px);
-    width: calc(100vw - 32px);
-    margin: 0 auto;
-  }
-  
-  .full-width-image-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  /* Section images mobile */
-  .section-image-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  .section-image-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  /* Process intro mobile */
-  .process-intro {
-    display: block;
-    margin-bottom: 30px;
-  }
-  
-  .process-intro-text {
-    margin-bottom: 20px;
-  }
-  
-  .process-intro-visual {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  /* Mindset profiles mobile */
-  .mindset-profile {
-    padding: 20px;
-    margin-bottom: 24px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  
-  .profile-image-container {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .profile-image-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  /* Design solutions mobile */
-  .design-solution {
-    padding: 20px;
-    margin-bottom: 24px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-  
-  .solution-content {
-    display: block;
-  }
-  
-  .solution-text {
-    margin-bottom: 20px;
-  }
-  
-  .solution-visual {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .solution-visual > div {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  /* Mobile design container mobile */
-  .mobile-design-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-    margin: 16px 0;
-    overflow: hidden;
-  }
-  
-  .mobile-interfaces {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .mobile-phone-section {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  /* Text scaling */
   .case-title {
-    font-size: 28px;
-    line-height: 1.2;
+    font-size: 32px;
     padding: 0 8px;
   }
   
   .case-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     padding: 0 8px;
   }
   
   .case-description {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 16px;
     padding: 0 8px;
   }
   
-  /* Problem content mobile */
-  .problem-content {
+  /* Make grids single column */
+  .problem-content,
+  .process-intro,
+  .solution-content {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  /* Process grid mobile */
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .process-step {
-    padding: 20px;
-    margin: 0 8px;
-  }
-  
-  /* Learnings grid mobile */
+  .overview-grid,
+  .process-grid,
   .learnings-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .learning-item {
-    padding: 20px;
-    margin: 0 8px;
-  }
-}
-
-/* Tablet responsive */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .process-intro {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .solution-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .solution-text {
-    margin-bottom: 20px;
-  }
-}
-
-/* ADD THIS TO THE BOTTOM OF YOUR MindsetsCaseStudy.css FILE */
-
-/* ========================================
-   MINDSET PROFILE IMAGES MOBILE FIX
-   ======================================== */
-
-/* Desktop - keep existing styles */
-.mindset-profile {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.profile-image-container {
-  width: 100%;
-  margin-bottom: 30px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.profile-image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-  max-height: 400px;
-}
-
-/* MOBILE FIXES - TARGET PROFILE IMAGES SPECIFICALLY */
-@media (max-width: 768px) {
-  /* Force container to respect viewport */
-  .profiles-section .container {
-    max-width: 100vw !important;
-    width: 100% !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Mindset profile cards mobile */
-  .mindset-profile {
-    padding: 16px !important;
-    margin-bottom: 20px !important;
-    margin-left: 4px !important;
-    margin-right: 4px !important;
-    max-width: calc(100vw - 24px) !important;
-    width: calc(100vw - 24px) !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-  
-  /* Profile image container - CRITICAL FIX */
-  .profile-image-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 16px !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-    border-radius: 8px !important;
-  }
-  
-  /* Profile images - PREVENT CUTTING */
-  .profile-image-container img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 200px !important;
-    object-fit: cover !important;
-    border-radius: 8px !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin: 0 !important;
-  }
-  
-  /* Ensure parent containers don't overflow */
-  .profiles-section {
-    overflow: hidden !important;
-    max-width: 100vw !important;
-    padding: 20px 0 !important;
-  }
-  
-  /* Profile text content */
-  .profile-text {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  .profile-description p {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 12px !important;
-    word-wrap: break-word !important;
-  }
-  
-  .profile-description h4 {
-    font-size: 16px !important;
-    margin-bottom: 10px !important;
-  }
-  
-  .profile-description li {
-    font-size: 13px !important;
-    line-height: 1.4 !important;
-    padding: 4px 0 !important;
-    word-wrap: break-word !important;
-  }
-  
-  /* Specific fixes for the three mindset images */
-  .mindset-profile:nth-child(1) .profile-image-container img,
-  .mindset-profile:nth-child(2) .profile-image-container img,
-  .mindset-profile:nth-child(3) .profile-image-container img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 180px !important;
-    object-fit: cover !important;
-    object-position: center !important;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .profiles-section .container {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-  }
-  
-  .mindset-profile {
-    padding: 12px !important;
-    margin-left: 2px !important;
-    margin-right: 2px !important;
-    max-width: calc(100vw - 8px) !important;
-    width: calc(100vw - 8px) !important;
-  }
-  
-  .profile-image-container img {
-    max-height: 160px !important;
-  }
-  
-  .profile-description p {
-    font-size: 13px !important;
-  }
-  
-  .profile-description li {
-    font-size: 12px !important;
-  }
-}
-
-//* REPLACE THE PREVIOUS CSS WITH THIS - MOBILE ONLY CHANGES */
-
-/* ========================================
-   MOBILE-ONLY DESIGN SOLUTIONS FIX
-   No changes to desktop/web interface
-   ======================================== */
-
-/* ONLY apply changes on mobile screens */
-@media (max-width: 768px) {
-  /* Design implications section container - MOBILE ONLY */
-  .impact-section .container {
-    max-width: 100vw !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Design solution cards - MOBILE ONLY */
-  .design-solution {
-    padding: 16px !important;
-    margin-bottom: 16px !important;
-    margin-left: 4px !important;
-    margin-right: 4px !important;
-    overflow: hidden !important;
-    max-width: calc(100vw - 16px) !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Solution content layout - MOBILE ONLY */
-  .solution-content {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-  
-  /* Solution visual container - MOBILE ONLY */
-  .solution-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-  
-  /* Target the React components inside solution-visual - MOBILE ONLY */
+  /* ONLY scale down the design solution interactive components */
   .solution-visual > div {
-    max-width: calc(100vw - 32px) !important;
-    width: calc(100vw - 32px) !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-    transform: scale(0.8) !important;
-    transform-origin: top center !important;
-  }
-  
-  /* Mobile design container - MOBILE ONLY */
-  .mobile-design-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 12px !important;
-    margin: 8px 0 !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-    transform: scale(0.85) !important;
-    transform-origin: top center !important;
-  }
-  
-  /* Mobile interfaces grid - MOBILE ONLY */
-  .mobile-interfaces {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-  }
-  
-  /* Mobile phone sections - MOBILE ONLY */
-  .mobile-phone-section {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    overflow: hidden !important;
-    transform: scale(0.9) !important;
-    transform-origin: top center !important;
-  }
-  
-  /* Phone labels - MOBILE ONLY */
-  .mobile-phone-label {
-    font-size: 11px !important;
-    margin-bottom: 8px !important;
-    padding: 0 4px !important;
-    text-align: center !important;
-  }
-  
-  /* Specific targeting for the three design solution components - MOBILE ONLY */
-  
-  /* 1. Mobile Design Solution (Learning On-the-go) - MOBILE ONLY */
-  .design-solution:nth-child(1) .solution-visual > div,
-  .design-solution:first-of-type .solution-visual > div {
-    transform: scale(0.75) !important;
-    max-height: 400px !important;
-    overflow: hidden !important;
-  }
-  
-  /* 2. Single Learning Interface (Divided Attention) - MOBILE ONLY */
-  .design-solution:nth-child(2) .solution-visual > div,
-  .design-solution:nth-of-type(2) .solution-visual > div {
-    transform: scale(0.8) !important;
-    max-height: 350px !important;
-    overflow: hidden !important;
-  }
-  
-  /* 3. Learning Portal Interface (Getting Back on Track) - MOBILE ONLY */
-  .design-solution:nth-child(3) .solution-visual > div,
-  .design-solution:last-of-type .solution-visual > div {
-    transform: scale(0.75) !important;
-    max-height: 400px !important;
-    overflow: hidden !important;
-  }
-}
-
-/* Even smaller mobile screens - MOBILE ONLY */
-@media (max-width: 480px) {
-  .solution-visual > div {
-    transform: scale(0.7) !important;
-  }
-  
-  .mobile-design-container {
-    transform: scale(0.75) !important;
-    padding: 8px !important;
-  }
-  
-  .mobile-phone-section {
-    transform: scale(0.8) !important;
-  }
-  
-  /* Smaller scaling for the three design solutions - MOBILE ONLY */
-  .design-solution:nth-child(1) .solution-visual > div,
-  .design-solution:nth-child(2) .solution-visual > div,
-  .design-solution:nth-child(3) .solution-visual > div,
-  .design-solution:first-of-type .solution-visual > div,
-  .design-solution:nth-of-type(2) .solution-visual > div,
-  .design-solution:last-of-type .solution-visual > div {
-    transform: scale(0.65) !important;
-    max-height: 300px !important;
-  }
-}
-
-/* DESKTOP - Reset any potential interference (1024px and above) */
-@media (min-width: 1024px) {
-  /* Ensure desktop remains unchanged */
-  .solution-visual > div {
-    transform: none !important;
-    max-height: none !important;
-    max-width: none !important;
-    width: auto !important;
-  }
-  
-  .mobile-design-container {
-    transform: none !important;
-    max-width: none !important;
-    width: 100% !important;
-  }
-  
-  .mobile-phone-section {
-    transform: none !important;
-  }
-  
-  .design-solution {
-    max-width: none !important;
-    width: auto !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  .solution-content {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 40px !important;
-  }
-}
-
-/* TABLET - No changes (769px to 1023px) */
-@media (min-width: 769px) and (max-width: 1023px) {
-  /* Reset any mobile changes for tablet */
-  .solution-visual > div {
-    transform: none !important;
-    max-height: none !important;
-  }
-  
-  .mobile-design-container {
-    transform: none !important;
-  }
-  
-  .mobile-phone-section {
-    transform: none !important;
+    transform: scale(0.8);
+    transform-origin: top center;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
