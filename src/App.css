@@ -1664,49 +1664,27 @@ body {
   }
 }
 
-/* Fix pink artifact on mobile project cards */
+/* FINAL MOBILE IMAGE FIX - Replace the duplicate sections at the end with this */
 @media (max-width: 768px) {
-  .project-image {
-    background: #f5f5f5 !important; /* Override the pink gradient with neutral background */
-  }
-  
-  /* Alternative fix: Remove background entirely and ensure proper image sizing */
-  .project-image-container {
+  /* Force reduce project card image height with maximum specificity */
+  .work-section .projects-grid .project-card .project-image-container {
+    height: 160px !important; /* Significantly reduced from 280px */
+    min-height: 160px !important;
+    max-height: 160px !important;
     background: white !important;
   }
   
-  /* Ensure images fill container properly without changing their size */
-  .project-img {
+  /* Fix pink artifact and ensure proper image sizing */
+  .work-section .projects-grid .project-card .project-image {
+    background: #f5f5f5 !important; /* No pink gradient */
+    height: 160px !important;
+  }
+  
+  .work-section .projects-grid .project-card .project-image-container .project-img {
+    height: 160px !important;
+    object-fit: cover !important;
+    width: 100% !important;
     display: block !important;
     background: white !important;
-  }
-}
-
-/* Add this to the end of your App.css file */
-
-/* Reduce white space below project card images on mobile */
-@media (max-width: 768px) {
-  .project-image-container {
-    height: 200px !important; /* Reduced from 280px to 200px */
-  }
-  
-  .project-image {
-    background: #f5f5f5 !important; /* Keep the pink fix */
-  }
-  
-  .project-image-container {
-    background: white !important; /* Keep the pink fix */
-  }
-  
-  .project-img {
-    display: block !important;
-    background: white !important; /* Keep the pink fix */
-  }
-}
-
-/* Optional: Also reduce on tablet if needed */
-@media (min-width: 769px) and (max-width: 1199px) {
-  .project-image-container {
-    height: 240px !important; /* Slightly reduced for tablet */
   }
 }
