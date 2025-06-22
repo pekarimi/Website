@@ -135,10 +135,10 @@ const MobileDesignSolution = () => {
   const phoneStyle = {
     background: '#1a1a1a',
     borderRadius: isMobile ? '12px' : '24px',
-    padding: isMobile ? '3px' : '6px',
+    padding: isMobile ? '2px' : '6px',
     boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
     width: '100%',
-    maxWidth: isMobile ? '240px' : '320px',
+    maxWidth: isMobile ? '180px' : '320px',
     margin: '0 auto'
   };
 
@@ -146,15 +146,15 @@ const MobileDesignSolution = () => {
     background: 'white',
     borderRadius: isMobile ? '10px' : '18px',
     overflow: 'hidden',
-    height: isMobile ? '320px' : '500px',
+    height: isMobile ? '200px' : '500px',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column'
   };
 
   const contentStyle = {
-    padding: isMobile ? '8px' : '16px',
-    fontSize: isMobile ? '8px' : '12px',
+    padding: isMobile ? '4px' : '16px',
+    fontSize: isMobile ? '6px' : '12px',
     flex: 1,
     overflow: 'auto'
   };
@@ -205,7 +205,7 @@ const MobileDesignSolution = () => {
                   }}>
                     ✓
                   </div>
-                  <div style={{ fontSize: isMobile ? '7px' : '12px', color: '#155724' }}>
+                  <div style={{ fontSize: isMobile ? '5px' : '12px', color: '#155724' }}>
                     Synced with desktop • Auto-save enabled
                   </div>
                 </div>
@@ -217,10 +217,10 @@ const MobileDesignSolution = () => {
                   marginBottom: isMobile ? '6px' : '12px',
                   borderLeft: '3px solid #667eea'
                 }}>
-                  <div style={{ fontSize: isMobile ? '8px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
+                  <div style={{ fontSize: isMobile ? '6px' : '13px', fontWeight: '600', marginBottom: '4px' }}>
                     IT Security Assessment
                   </div>
-                  <div style={{ fontSize: isMobile ? '6px' : '11px', color: '#666', marginBottom: '6px' }}>
+                  <div style={{ fontSize: isMobile ? '4px' : '11px', color: '#666', marginBottom: '6px' }}>
                     Due: Tomorrow, 11:59 PM
                   </div>
                   <div style={{
