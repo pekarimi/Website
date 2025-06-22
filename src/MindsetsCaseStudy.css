@@ -808,7 +808,7 @@
   opacity: 0.9;
 }
 
-/* MOBILE RESPONSIVE STYLES */
+/* MOBILE RESPONSIVE STYLES - FINAL VERSION */
 @media (max-width: 768px) {
   /* Basic mobile layout fixes */
   .container {
@@ -845,540 +845,7 @@
     gap: 20px;
   }
   
-  /* Scale down and contain all design solution components */
-  .solution-visual > div,
-  .design-solution .solution-visual > div {
-    transform: scale(0.75);
-    transform-origin: top center;
-    max-width: 100%;
-    overflow: hidden;
-    margin-bottom: -60px;
-  }
-  
-  /* FORCE CONSISTENT TEXT FORMATTING FOR DESIGN SOLUTIONS */
-  .case-study .design-solution h3,
-  .case-study .design-solution .solution-header h3,
-  .case-study .impact-section .design-solution h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  .case-study .design-solution h4,
-  .case-study .design-solution .solution-text h4,
-  .case-study .impact-section .design-solution h4 {
-    font-size: 18px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  .case-study .design-solution p,
-  .case-study .design-solution .solution-header p,
-  .case-study .design-solution .solution-text p,
-  .case-study .design-solution li,
-  .case-study .impact-section .design-solution p,
-  .case-study .impact-section .design-solution li {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #555 !important;
-    margin-bottom: 20px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  .case-study .design-solution ul,
-  .case-study .impact-section .design-solution ul {
-    padding-left: 20px !important;
-    margin: 20px 0 !important;
-  }
-  
-  .case-study .design-solution li,
-  .case-study .impact-section .design-solution li {
-    margin-bottom: 16px !important;
-    padding-left: 24px !important;
-    position: relative !important;
-  }
-  
-  .case-study .design-solution li::before,
-  .case-study .impact-section .design-solution li::before {
-    content: "→" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #667eea !important;
-    font-weight: bold !important;
-    font-size: 16px !important;
-  }
-  
-  .case-study .design-solution li strong,
-  .case-study .impact-section .design-solution li strong {
-    color: #1a1a1a !important;
-    font-weight: 600 !important;
-  }
-  
-  /* Fix the summary section specifically */
-  .case-study .design-summary h3,
-  .case-study .impact-section .design-summary h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  .case-study .design-summary p,
-  .case-study .impact-section .design-summary p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #555 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  /* Reduce padding to prevent overflow */
-  .design-solution {
-    padding: 24px 16px;
-    margin-bottom: 20px;
-  }
-  
-  /* Scale down learning interfaces specifically */
-  .design-solution [style*="fontFamily"] {
-    transform: scale(0.8) !important;
-    transform-origin: top left !important;
-    width: 125% !important;
-    margin-bottom: -40px !important;
-  }
-  
-  /* AGGRESSIVE SCALING FOR ALL REACT COMPONENTS */
-  .solution-visual > div[style*="fontFamily"],
-  .solution-visual > div[style*="maxWidth"] {
-    transform: scale(0.7) !important;
-    transform-origin: top left !important;
-    width: 142.8% !important;
-    margin-bottom: -80px !important;
-    overflow: hidden !important;
-  }
-  
-  /* Prevent horizontal overflow on the page */
-  .design-solution {
-    overflow-x: hidden !important;
-  }
-  
-  .solution-content {
-    overflow-x: hidden !important;
-  }
-  
-  /* Additional scaling for specific interface types */
-  .solution-visual > div[style*="background: linear-gradient"] {
-    transform: scale(0.65) !important;
-    margin-bottom: -100px !important;
-  }
-  
-  /* SPECIFIC FIX FOR BULLET POINT TEXT SIZE */
-  .case-study .design-solution .solution-text li,
-  .case-study .impact-section .design-solution .solution-text li,
-  .case-study .design-solution ul li,
-  .case-study .impact-section .design-solution ul li {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    color: #555 !important;
-    margin-bottom: 12px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  /* Make the bullet point descriptions smaller */
-  .case-study .design-solution .solution-text li strong,
-  .case-study .impact-section .design-solution .solution-text li strong {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-  }
-  
-  /* Ensure bullet points themselves are properly sized */
-  .case-study .design-solution .solution-text li::before,
-  .case-study .impact-section .design-solution .solution-text li::before {
-    font-size: 14px !important;
-  }
-}
-
-/* MOBILE-ONLY FIXES FOR MINDSETS CASE STUDY */
-@media (max-width: 768px) {
-  
-  /* DESIGN SOLUTIONS SECTION - TEXT SIZE CONSISTENCY */
-  .case-study .design-solution .solution-text h4,
-  .case-study .impact-section .design-solution .solution-text h4 {
-    font-size: 16px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 12px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  /* BULLET POINT TEXT - MAKE SMALLER AND CONSISTENT */
-  .case-study .design-solution .solution-text p,
-  .case-study .design-solution .solution-text li,
-  .case-study .impact-section .design-solution .solution-text p,
-  .case-study .impact-section .design-solution .solution-text li {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    color: #555 !important;
-    margin-bottom: 10px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  /* STRONG TEXT WITHIN BULLET POINTS */
-  .case-study .design-solution .solution-text li strong,
-  .case-study .impact-section .design-solution .solution-text li strong {
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-  }
-  
-  /* BULLET POINT ARROWS */
-  .case-study .design-solution .solution-text li::before,
-  .case-study .impact-section .design-solution .solution-text li::before {
-    font-size: 13px !important;
-  }
-  
-  /* REACT COMPONENT SCALING AND SPACING FIXES */
-  .case-study .solution-visual > div {
-    transform: scale(0.75) !important;
-    transform-origin: top center !important;
-    width: 133.33% !important;
-    margin-left: -16.67% !important;
-    margin-bottom: -60px !important;
-    overflow: hidden !important;
-    max-width: none !important;
-  }
-  
-  /* SPECIFIC SCALING FOR DIFFERENT COMPONENT TYPES */
-  .case-study .solution-visual > div[style*="background: linear-gradient"] {
-    transform: scale(0.7) !important;
-    width: 142.8% !important;
-    margin-left: -21.4% !important;
-    margin-bottom: -80px !important;
-  }
-  
-  /* EXTRA AGGRESSIVE SCALING FOR COMPLEX INTERFACES */
-  .case-study .solution-visual > div[style*="fontFamily"] {
-    transform: scale(0.65) !important;
-    width: 153.8% !important;
-    margin-left: -26.9% !important;
-    margin-bottom: -100px !important;
-  }
-  
-  /* PREVENT HORIZONTAL OVERFLOW */
-  .case-study .design-solution {
-    overflow-x: hidden !important;
-    padding: 20px 12px !important;
-    margin-bottom: 16px !important;
-  }
-  
-  .case-study .solution-content {
-    overflow-x: hidden !important;
-    gap: 16px !important;
-  }
-  
-  /* REMOVE EXTRA SPACING AT BOTTOM OF LAST SECTION */
-  .case-study .impact-section .design-solution:last-child {
-    margin-bottom: 0 !important;
-  }
-  
-  .case-study .impact-section {
-    padding-bottom: 20px !important;
-    margin-bottom: 0 !important;
-  }
-  
-  /* ENSURE CONSISTENT GRID LAYOUT */
-  .case-study .solution-content {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-  
-  /* FORCE CONTAINER WIDTH CONSTRAINTS */
-  .case-study .container {
-    max-width: calc(100vw - 32px) !important;
-    padding: 0 16px !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* TEXT CONTENT AREA SPACING */
-  .case-study .solution-text {
-    margin-bottom: 20px !important;
-  }
-  
-  /* VISUAL CONTENT AREA SPACING */
-  .case-study .solution-visual {
-    margin-bottom: 0 !important;
-    overflow: hidden !important;
-  }
-  
-  /* DESIGN SUMMARY SECTION */
-  .case-study .design-summary {
-    margin-top: 20px !important;
-    padding: 16px !important;
-  }
-  
-  .case-study .design-summary h3 {
-    font-size: 18px !important;
-    margin-bottom: 12px !important;
-  }
-  
-  .case-study .design-summary p {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-  }
-  
-  /* PREVENT ANY COMPONENT FROM CAUSING OVERFLOW */
-  .case-study .solution-visual * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* ADDITIONAL SAFETY MEASURES FOR REACT COMPONENTS */
-  .case-study .solution-visual div[style*="width"] {
-    max-width: 100% !important;
-  }
-  
-  .case-study .solution-visual div[style*="maxWidth"] {
-    max-width: 100% !important;
-  }
-}
-
-/* CONSOLIDATED MOBILE FIX - ADD TO END OF MindsetsCaseStudy.css */
-/* This will override all conflicting rules from App.css and existing styles */
-
-@media (max-width: 768px) {
-  
-  /* MAXIMUM SPECIFICITY - OVERRIDE ALL EXISTING MOBILE RULES */
-  
-  /* DESIGN SOLUTION HEADERS */
-  .case-study .impact-section .design-solution h3,
-  .case-study .design-solution h3,
-  .case-study .impact-section .design-solution .solution-header h3,
-  .case-study .design-solution .solution-header h3 {
-    font-size: 18px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 12px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  /* DESIGN SOLUTION SUB-HEADERS */
-  .case-study .impact-section .design-solution h4,
-  .case-study .design-solution h4,
-  .case-study .impact-section .design-solution .solution-text h4,
-  .case-study .design-solution .solution-text h4 {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 10px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-  }
-  
-  /* ALL PARAGRAPH AND LIST TEXT */
-  .case-study .impact-section .design-solution p,
-  .case-study .design-solution p,
-  .case-study .impact-section .design-solution .solution-header p,
-  .case-study .design-solution .solution-header p,
-  .case-study .impact-section .design-solution .solution-text p,
-  .case-study .design-solution .solution-text p,
-  .case-study .impact-section .design-solution li,
-  .case-study .design-solution li,
-  .case-study .impact-section .design-solution .solution-text li,
-  .case-study .design-solution .solution-text li,
-  .case-study .impact-section .design-solution ul li,
-  .case-study .design-solution ul li {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    color: #555 !important;
-    margin-bottom: 8px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  /* STRONG TEXT WITHIN CONTENT */
-  .case-study .impact-section .design-solution li strong,
-  .case-study .design-solution li strong,
-  .case-study .impact-section .design-solution .solution-text li strong,
-  .case-study .design-solution .solution-text li strong {
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-  }
-  
-  /* BULLET POINT ARROWS */
-  .case-study .impact-section .design-solution li::before,
-  .case-study .design-solution li::before,
-  .case-study .impact-section .design-solution .solution-text li::before,
-  .case-study .design-solution .solution-text li::before {
-    content: "→" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #667eea !important;
-    font-weight: bold !important;
-    font-size: 12px !important;
-  }
-  
-  /* LIST STYLING */
-  .case-study .impact-section .design-solution ul,
-  .case-study .design-solution ul,
-  .case-study .impact-section .design-solution .solution-text ul,
-  .case-study .design-solution .solution-text ul {
-    padding-left: 16px !important;
-    margin: 12px 0 !important;
-    list-style: none !important;
-  }
-  
-  .case-study .impact-section .design-solution ul li,
-  .case-study .design-solution ul li,
-  .case-study .impact-section .design-solution .solution-text ul li,
-  .case-study .design-solution .solution-text ul li {
-    margin-bottom: 8px !important;
-    padding-left: 20px !important;
-    position: relative !important;
-  }
-  
-  /* DESIGN SOLUTION CONTAINER SIZING */
-  .case-study .impact-section .design-solution,
-  .case-study .design-solution {
-    padding: 16px 12px !important;
-    margin-bottom: 16px !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* SOLUTION CONTENT GRID */
-  .case-study .impact-section .design-solution .solution-content,
-  .case-study .design-solution .solution-content {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* REACT COMPONENT SCALING - MOST AGGRESSIVE APPROACH */
-  .case-study .impact-section .solution-visual > div,
-  .case-study .solution-visual > div,
-  .case-study .impact-section .design-solution .solution-visual > div,
-  .case-study .design-solution .solution-visual > div {
-    transform: scale(0.6) !important;
-    transform-origin: top left !important;
-    width: 166.67% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: -120px !important;
-    overflow: hidden !important;
-    max-width: none !important;
-  }
-  
-  /* ALTERNATIVE SCALING FOR GRADIENT BACKGROUNDS */
-  .case-study .solution-visual > div[style*="background: linear-gradient"],
-  .case-study .impact-section .solution-visual > div[style*="background: linear-gradient"] {
-    transform: scale(0.55) !important;
-    width: 181.8% !important;
-    margin-bottom: -140px !important;
-  }
-  
-  /* FONT FAMILY COMPONENTS (MOST COMPLEX) */
-  .case-study .solution-visual > div[style*="fontFamily"],
-  .case-study .impact-section .solution-visual > div[style*="fontFamily"] {
-    transform: scale(0.5) !important;
-    width: 200% !important;
-    margin-bottom: -160px !important;
-  }
-  
-  /* CONTAINER OVERFLOW PREVENTION */
-  .case-study .impact-section .container,
-  .case-study .container {
-    max-width: calc(100vw - 32px) !important;
-    padding: 0 16px !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* REMOVE BOTTOM SPACING FROM LAST ELEMENTS */
-  .case-study .impact-section .design-solution:last-child {
-    margin-bottom: 0 !important;
-  }
-  
-  .case-study .impact-section {
-    padding-bottom: 20px !important;
-    margin-bottom: 0 !important;
-  }
-  
-  /* DESIGN SUMMARY FIXES */
-  .case-study .impact-section .design-summary,
-  .case-study .design-summary {
-    margin-top: 16px !important;
-    padding: 12px !important;
-  }
-  
-  .case-study .impact-section .design-summary h3,
-  .case-study .design-summary h3 {
-    font-size: 16px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 8px !important;
-  }
-  
-  .case-study .impact-section .design-summary p,
-  .case-study .design-summary p {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    color: #555 !important;
-    margin: 0 !important;
-  }
-  
-  /* FORCE ALL INLINE STYLED ELEMENTS TO RESPECT BOUNDARIES */
-  .case-study .solution-visual * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* OVERRIDE ANY REMAINING APP.CSS CONFLICTS */
-  .case-study .solution-visual div[style*="fontSize"] {
-    max-width: 100% !important;
-  }
-  
-  /* PREVENT HORIZONTAL SCROLL ON BODY */
-  body {
-    overflow-x: hidden !important;
-  }
-  
-  /* SAFETY NET - FORCE SCALE ON ALL VISUAL CONTENT */
-  .case-study .solution-visual {
-    overflow: hidden !important;
-    width: 100% !important;
-    position: relative !important;
-  }
-  
-  .case-study .solution-visual > div:first-child {
-    transform: scale(0.6) !important;
-    transform-origin: top left !important;
-    width: 166.67% !important;
-    margin-bottom: -120px !important;
-  }
-}
-
-/* MOBILE CONTAINMENT FIX - REPLACE SCALING WITH PROPER CONTAINMENT */
-/* Add this to the very end of MindsetsCaseStudy.css */
-
-@media (max-width: 768px) {
-  
-  /* REMOVE ALL SCALING - USE CONTAINMENT INSTEAD */
-  
-  /* TEXT CONSISTENCY - SMALL SIZES */
+  /* TEXT CONSISTENCY - DESIGN SOLUTIONS */
   .case-study .impact-section .design-solution h3,
   .case-study .design-solution h3,
   .case-study .impact-section .design-solution .solution-header h3,
@@ -1427,11 +894,11 @@
     font-size: 10px !important;
   }
   
-  /* CONTAINER FIXES - NO SCALING */
+  /* CONTAINER FIXES */
   .case-study .impact-section .design-solution,
   .case-study .design-solution {
     padding: 12px 8px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
     overflow: hidden !important;
   }
   
@@ -1443,7 +910,7 @@
     overflow: hidden !important;
   }
   
-  /* REACT COMPONENT CONTAINMENT - NO TRANSFORM */
+  /* REACT COMPONENT CENTERING AND CONTAINMENT */
   .case-study .impact-section .solution-visual,
   .case-study .solution-visual,
   .case-study .impact-section .design-solution .solution-visual,
@@ -1454,6 +921,9 @@
     margin: 0 !important;
     padding: 0 !important;
     height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
   }
   
   .case-study .impact-section .solution-visual > div,
@@ -1461,18 +931,36 @@
   .case-study .impact-section .design-solution .solution-visual > div,
   .case-study .design-solution .solution-visual > div {
     transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
+    width: 90% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
     padding: 4px !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
+    display: block !important;
+  }
+  
+  /* SPECIFIC FIX FOR FIRST IMAGE (MOBILE DESIGN SOLUTION) */
+  .case-study .solution-visual > div[style*="background: linear-gradient"],
+  .case-study .impact-section .solution-visual > div[style*="background: linear-gradient"] {
+    width: 85% !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* FIX HORIZONTAL STRETCHING IN COMPONENTS */
+  .case-study .solution-visual div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  
+  .case-study .solution-visual div[style*="display: grid"] {
+    display: block !important;
   }
   
   /* FORCE ALL NESTED ELEMENTS TO RESPECT BOUNDARIES */
   .case-study .solution-visual * {
     max-width: 100% !important;
-    width: auto !important;
     box-sizing: border-box !important;
   }
   
@@ -1487,7 +975,7 @@
   }
   
   .case-study .solution-visual div[style*="padding"] {
-    padding: 4px !important;
+    padding: 2px !important;
   }
   
   /* FORCE FONT SIZES IN REACT COMPONENTS */
@@ -1513,21 +1001,43 @@
     font-size: 6px !important;
   }
   
-  /* REMOVE ANY BOTTOM MARGINS THAT CREATE EMPTY SPACE */
+  /* ELIMINATE WHITE SPACE BELOW IMAGES */
+  .case-study .solution-visual::after {
+    content: none !important;
+    display: none !important;
+  }
+  
+  .case-study .solution-visual > div::after {
+    content: none !important;
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* REMOVE BOTTOM MARGINS AND PADDING */
   .case-study .impact-section .design-solution:last-child {
     margin-bottom: 0 !important;
+    padding-bottom: 4px !important;
   }
   
   .case-study .impact-section {
-    padding-bottom: 16px !important;
+    padding-bottom: 8px !important;
     margin-bottom: 0 !important;
+  }
+  
+  /* REMOVE SPACING FROM VISUAL CONTENT */
+  .case-study .solution-visual,
+  .case-study .solution-visual > div {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
   
   /* DESIGN SUMMARY */
   .case-study .impact-section .design-summary,
   .case-study .design-summary {
-    margin-top: 8px !important;
+    margin-top: 4px !important;
     padding: 8px !important;
+    margin-bottom: 0 !important;
   }
   
   .case-study .impact-section .design-summary h3,
@@ -1557,18 +1067,33 @@
   
   /* FORCE HEIGHT CONSTRAINTS ON VISUAL CONTAINERS */
   .case-study .solution-visual {
-    max-height: 200px !important;
+    max-height: 160px !important;
     overflow: hidden !important;
+    margin-bottom: 0 !important;
   }
   
   .case-study .solution-visual > div {
-    max-height: 200px !important;
+    max-height: 160px !important;
     overflow: hidden !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* CENTER PHONE-LIKE COMPONENTS */
+  .case-study .solution-visual div[style*="borderRadius"] {
+    margin: 0 auto !important;
+    display: block !important;
   }
   
   /* EMERGENCY OVERRIDE FOR STUBBORN INLINE STYLES */
   .case-study .solution-visual div[style] {
     max-width: 100% !important;
-    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  /* REMOVE ANY PSEUDO-ELEMENTS THAT CREATE SPACE */
+  .case-study .solution-visual *::after,
+  .case-study .solution-visual *::before {
+    display: none !important;
   }
 }
