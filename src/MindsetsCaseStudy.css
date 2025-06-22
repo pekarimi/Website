@@ -922,3 +922,85 @@
     margin-bottom: -100px !important;
   }
 }
+
+/* Add this to the end of your MindsetsCaseStudy.css file */
+
+/* MOBILE TEXT CONSISTENCY FIX */
+@media (max-width: 768px) {
+  /* Ensure all design solution text uses consistent formatting */
+  .design-solution h3,
+  .design-solution .solution-header h3 {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .design-solution h4,
+  .design-solution .solution-text h4 {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .design-solution p,
+  .design-solution .solution-header p,
+  .design-solution .solution-text p,
+  .design-solution li {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #555 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .design-solution ul {
+    padding-left: 16px !important;
+    margin: 16px 0 !important;
+  }
+  
+  .design-solution li {
+    margin-bottom: 12px !important;
+    padding-left: 20px !important;
+  }
+  
+  .design-solution li::before {
+    left: 0 !important;
+    font-size: 14px !important;
+  }
+  
+  .design-solution li strong {
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Fix the summary section specifically */
+  .design-summary h3 {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+  }
+  
+  .design-summary p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #555 !important;
+  }
+  
+  /* Ensure solution content grids stack properly */
+  .solution-content {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Remove the overly aggressive scaling that might be affecting text */
+  .solution-visual > div[style*="fontFamily"] * {
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: none !important;
+    white-space: normal !important;
+  }
+}

@@ -199,16 +199,42 @@ const CSPCaseStudy = ({ onBack }) => {
                 </div>
                 
                 {/* FIXED BEHAVIOR IMAGES GRID */}
-                <div className="behavior-images-grid-fixed">
-                  <div className="behavior-scatter-fixed">
-                    <img src="/images/CSP/behavior-clusters.png" alt="Scatter plot showing three distinct clusters of user behavior based on drawing time vs inspiration-seeking time" />
-                    <p className="image-caption">Figure 5a: Three interaction behavior clusters identified through K-means analysis of drawing and inspiration-seeking patterns</p>
-                  </div>
-                  <div className="behavior-table-fixed">
-                    <img src="/images/CSP/behavior-correlation.png" alt="Table showing correlation between interaction clusters and creativity types with percentages for combinatorial, exploratory, and transformational creativity" />
-                    <p className="image-caption">Figure 5b: Correlation between interaction behavior clusters and creativity types showing statistical distribution across C (Combinatorial), E (Exploratory), and T (Transformational) creativity</p>
-                  </div>
-                </div>
+<div className="interaction-behavior-section">
+  <h3>Interaction Behavior Clusters</h3>
+  <div className="behavior-intro">
+    <p>Through K-means clustering analysis of user interaction patterns, I identified three distinct designer personalities in their collaboration with AI.</p>
+  </div>
+  
+  {/* FIXED BEHAVIOR IMAGES GRID */}
+  <div className="behavior-images-grid-fixed">
+    <div className="behavior-scatter-fixed">
+      <img src="/images/CSP/behavior-clusters.png" alt="Scatter plot showing three distinct clusters of user behavior based on drawing time vs inspiration-seeking time" />
+      <p className="image-caption">Figure 5a: Three interaction behavior clusters identified through K-means analysis of drawing and inspiration-seeking patterns</p>
+    </div>
+    <div className="behavior-table-fixed">
+      <img src="/images/CSP/behavior-correlation.png" alt="Table showing correlation between interaction clusters and creativity types with percentages for combinatorial, exploratory, and transformational creativity" />
+      <p className="image-caption">Figure 5b: Correlation between interaction behavior clusters and creativity types showing statistical distribution across C (Combinatorial), E (Exploratory), and T (Transformational) creativity</p>
+    </div>
+  </div>
+  
+  <div className="cluster-analysis">
+    <h4>Behavioral Patterns & Creativity Correlation</h4>
+    <div className="cluster-grid">
+      <div className="cluster-card">
+        <h5>Cluster 1: High Inspiration Seekers</h5>
+        <p>64.3% completed with exploratory creativity. These users frequently requested AI inspiration and made parametric changes to their designs.</p>
+      </div>
+      <div className="cluster-card">
+        <h5>Cluster 2: Balanced Creators</h5>
+        <p>Even distribution across creativity types (44.5% transformational, 33.3% exploratory, 22.2% combinatorial).</p>
+      </div>
+      <div className="cluster-card">
+        <h5>Cluster 3: Independent Drawers</h5>
+        <p>50% transformational creativity. Spent maximum time drawing with minimal inspiration-seeking, leading to radical design changes.</p>
+      </div>
+    </div>
+  </div>
+</div>
                 
                 <div className="cluster-analysis">
                   <h4>Behavioral Patterns & Creativity Correlation</h4>

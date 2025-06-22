@@ -1688,3 +1688,80 @@ body {
     background: white !important;
   }
 }
+
+/* ADD THIS TO YOUR APP.CSS - BEHAVIOR IMAGES GRID FIX */
+
+/* Behavior Images Grid - Fixed Layout for Figures 5a and 5b */
+.behavior-images-grid-fixed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 0;
+  align-items: start;
+}
+
+.behavior-scatter-fixed,
+.behavior-table-fixed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.behavior-scatter-fixed img,
+.behavior-table-fixed img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  object-fit: contain !important;
+  background: white !important;
+}
+
+.behavior-scatter-fixed .image-caption,
+.behavior-table-fixed .image-caption {
+  font-size: 14px !important;
+  color: #666 !important;
+  text-align: center !important;
+  margin-top: 8px !important;
+  font-style: italic !important;
+  line-height: 1.4 !important;
+}
+
+/* MOBILE RESPONSIVE FOR BEHAVIOR IMAGES */
+@media (max-width: 768px) {
+  .behavior-images-grid-fixed {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin: 16px 0 !important;
+  }
+  
+  .behavior-scatter-fixed img,
+  .behavior-table-fixed img {
+    width: 100% !important;
+    max-width: calc(100vw - 64px) !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  .behavior-scatter-fixed .image-caption,
+  .behavior-table-fixed .image-caption {
+    font-size: 13px !important;
+    margin-top: 6px !important;
+    padding: 0 8px !important;
+  }
+}
+
+/* TABLET RESPONSIVE FOR BEHAVIOR IMAGES */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .behavior-images-grid-fixed {
+    gap: 20px;
+  }
+  
+  .behavior-scatter-fixed img,
+  .behavior-table-fixed img {
+    max-width: 95% !important;
+  }
+}
