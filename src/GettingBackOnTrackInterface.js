@@ -52,50 +52,45 @@ const LearningPortalInterface = () => {
       margin: '0 auto',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
       background: '#f8fafc',
-      minHeight: isMobile ? '400px' : '500px',
+      minHeight: isMobile ? '500px' : '600px',
       borderRadius: isMobile ? '12px' : '16px',
       overflow: 'hidden',
       boxShadow: '0 4px 25px rgba(0,0,0,0.08)',
-      width: isMobile ? 'calc(100vw - 32px)' : 'auto',
-      boxSizing: 'border-box',
-      transform: isMobile ? 'scale(0.9)' : 'scale(1)',
-      transformOrigin: 'top center',
-      marginBottom: isMobile ? '0' : '0',
-      marginLeft: isMobile ? 'auto' : 'auto',
-      marginRight: isMobile ? 'auto' : 'auto'
+      width: isMobile ? '100%' : 'auto',
+      boxSizing: 'border-box'
     }}>
       
       {/* Header Navigation */}
       <div style={{
         background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
-        padding: isMobile ? '8px 12px' : '16px 24px',
+        padding: isMobile ? '12px 16px' : '16px 24px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         color: 'white',
         flexDirection: isMobile ? 'column' : 'row',
-        gap: isMobile ? '8px' : '0'
+        gap: isMobile ? '12px' : '0'
       }}>
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
-          gap: isMobile ? '8px' : '16px',
+          gap: isMobile ? '12px' : '16px',
           width: isMobile ? '100%' : 'auto',
           justifyContent: isMobile ? 'center' : 'flex-start'
         }}>
           <div style={{
             background: '#3b82f6',
-            borderRadius: isMobile ? '6px' : '8px',
-            padding: isMobile ? '4px' : '8px',
+            borderRadius: isMobile ? '8px' : '8px',
+            padding: isMobile ? '6px' : '8px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Book size={isMobile ? 12 : 20} style={{ color: 'white' }} />
+            <Book size={isMobile ? 16 : 20} style={{ color: 'white' }} />
           </div>
           <h1 style={{
             margin: 0,
-            fontSize: isMobile ? '12px' : '20px',
+            fontSize: isMobile ? '16px' : '20px',
             fontWeight: '600',
             textAlign: isMobile ? 'center' : 'left'
           }}>
@@ -106,22 +101,22 @@ const LearningPortalInterface = () => {
         <div style={{ 
           display: 'flex', 
           alignItems: 'center', 
-          gap: isMobile ? '8px' : '12px',
+          gap: isMobile ? '12px' : '12px',
           justifyContent: isMobile ? 'center' : 'flex-end'
         }}>
-          <Bell size={isMobile ? 12 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
-          <Settings size={isMobile ? 12 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
+          <Bell size={isMobile ? 16 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
+          <Settings size={isMobile ? 16 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
           <div style={{
             background: '#475569',
             borderRadius: '50%',
-            width: isMobile ? '20px' : '32px',
-            height: isMobile ? '20px' : '32px',
+            width: isMobile ? '24px' : '32px',
+            height: isMobile ? '24px' : '32px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer'
           }}>
-            <User size={isMobile ? 10 : 16} />
+            <User size={isMobile ? 12 : 16} />
           </div>
         </div>
       </div>
@@ -129,9 +124,9 @@ const LearningPortalInterface = () => {
       {/* Welcome Back Banner */}
       <div style={{
         background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-        margin: isMobile ? '8px 8px 0 8px' : '24px 24px 0 24px',
+        margin: isMobile ? '12px 12px 0 12px' : '24px 24px 0 24px',
         borderRadius: isMobile ? '8px' : '12px',
-        padding: isMobile ? '10px' : '20px',
+        padding: isMobile ? '16px' : '20px',
         color: 'white',
         display: 'block',
         textAlign: isMobile ? 'center' : 'left'
@@ -139,14 +134,14 @@ const LearningPortalInterface = () => {
         <div>
           <h2 style={{
             margin: '0 0 4px 0',
-            fontSize: isMobile ? '12px' : '22px',
+            fontSize: isMobile ? '16px' : '22px',
             fontWeight: '600'
           }}>
             Welcome back, Lian! 🎯
           </h2>
           <p style={{
-            margin: '0 0 8px 0',
-            fontSize: isMobile ? '9px' : '14px',
+            margin: '0 0 12px 0',
+            fontSize: isMobile ? '12px' : '14px',
             opacity: 0.9
           }}>
             You've been away for 2 weeks. We've prepared a personalized catch-up plan.
@@ -155,88 +150,68 @@ const LearningPortalInterface = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: isMobile ? 'center' : 'flex-start',
-            gap: isMobile ? '6px' : '12px',
-            fontSize: isMobile ? '7px' : '12px',
+            gap: isMobile ? '8px' : '12px',
+            fontSize: isMobile ? '10px' : '12px',
             flexWrap: 'wrap',
-            marginBottom: isMobile ? '8px' : '0'
+            marginBottom: isMobile ? '12px' : '0'
           }}>
             <div style={{
               background: 'rgba(255,255,255,0.2)',
-              padding: isMobile ? '2px 4px' : '4px 8px',
-              borderRadius: isMobile ? '8px' : '12px'
+              padding: isMobile ? '4px 8px' : '4px 8px',
+              borderRadius: isMobile ? '12px' : '12px'
             }}>
               📅 Deadlines extended by 1 week
             </div>
             <div style={{
               background: 'rgba(255,255,255,0.2)',
-              padding: isMobile ? '2px 4px' : '4px 8px',
-              borderRadius: isMobile ? '8px' : '12px'
+              padding: isMobile ? '4px 8px' : '4px 8px',
+              borderRadius: isMobile ? '12px' : '12px'
             }}>
               ⏱️ 3 assignments pending
             </div>
           </div>
-          {isMobile && (
-            <button style={{
-              background: 'rgba(255,255,255,0.2)',
-              border: '1px solid rgba(255,255,255,0.3)',
-              borderRadius: '6px',
-              color: 'white',
-              padding: '6px 10px',
-              fontSize: '8px',
-              cursor: 'pointer',
-              fontWeight: '500',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px',
-              width: '100%',
-              justifyContent: 'center',
-              marginTop: '8px'
-            }}>
-              Start Catch-up Plan
-              <ArrowRight size={8} />
-            </button>
-          )}
-        </div>
-        {!isMobile && (
           <button style={{
             background: 'rgba(255,255,255,0.2)',
             border: '1px solid rgba(255,255,255,0.3)',
             borderRadius: '8px',
             color: 'white',
-            padding: '10px 16px',
-            fontSize: '14px',
+            padding: isMobile ? '10px 16px' : '10px 16px',
+            fontSize: isMobile ? '12px' : '14px',
             cursor: 'pointer',
             fontWeight: '500',
             display: 'flex',
             alignItems: 'center',
-            gap: '6px'
+            gap: '6px',
+            width: isMobile ? '100%' : 'auto',
+            justifyContent: 'center',
+            marginTop: isMobile ? '8px' : '0'
           }}>
             Start Catch-up Plan
-            <ArrowRight size={14} />
+            <ArrowRight size={isMobile ? 12 : 14} />
           </button>
-        )}
+        </div>
       </div>
 
       {/* Main Content */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr',
-        gap: isMobile ? '12px' : '24px',
-        padding: isMobile ? '8px' : '24px'
+        gap: isMobile ? '16px' : '24px',
+        padding: isMobile ? '12px' : '24px'
       }}>
         
         {/* Course List */}
-        <div style={{ marginBottom: isMobile ? '12px' : '0' }}>
+        <div style={{ marginBottom: isMobile ? '16px' : '0' }}>
           <h3 style={{
             margin: '0 0 16px 0',
-            fontSize: isMobile ? '11px' : '16px',
+            fontSize: isMobile ? '14px' : '16px',
             fontWeight: '600',
             color: '#1e293b'
           }}>
             Your Courses
           </h3>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '4px' : '8px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '8px' : '8px' }}>
             {Object.entries(courses).map(([key, course]) => (
               <div
                 key={key}
@@ -245,7 +220,7 @@ const LearningPortalInterface = () => {
                   background: selectedCourse === key ? '#f1f5f9' : 'white',
                   border: selectedCourse === key ? '2px solid #3b82f6' : '1px solid #e2e8f0',
                   borderRadius: isMobile ? '8px' : '12px',
-                  padding: isMobile ? '8px' : '16px',
+                  padding: isMobile ? '12px' : '16px',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease'
                 }}
@@ -254,11 +229,11 @@ const LearningPortalInterface = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'flex-start',
-                  marginBottom: isMobile ? '4px' : '8px'
+                  marginBottom: isMobile ? '6px' : '8px'
                 }}>
                   <h4 style={{
                     margin: 0,
-                    fontSize: isMobile ? '9px' : '14px',
+                    fontSize: isMobile ? '12px' : '14px',
                     fontWeight: '600',
                     color: '#1e293b'
                   }}>
@@ -267,9 +242,9 @@ const LearningPortalInterface = () => {
                   <span style={{
                     background: course.status === 'Behind Schedule' ? '#fef3c7' : '#dcfce7',
                     color: course.status === 'Behind Schedule' ? '#92400e' : '#166534',
-                    padding: isMobile ? '1px 4px' : '2px 8px',
-                    borderRadius: isMobile ? '8px' : '12px',
-                    fontSize: isMobile ? '6px' : '10px',
+                    padding: isMobile ? '2px 6px' : '2px 8px',
+                    borderRadius: isMobile ? '10px' : '12px',
+                    fontSize: isMobile ? '8px' : '10px',
                     fontWeight: '500'
                   }}>
                     {course.status}
@@ -278,10 +253,10 @@ const LearningPortalInterface = () => {
                 
                 <div style={{
                   background: '#f1f5f9',
-                  height: isMobile ? '3px' : '6px',
+                  height: isMobile ? '4px' : '6px',
                   borderRadius: '3px',
                   overflow: 'hidden',
-                  marginBottom: isMobile ? '4px' : '8px'
+                  marginBottom: isMobile ? '6px' : '8px'
                 }}>
                   <div style={{
                     background: course.progress >= 60 ? '#10b981' : '#f59e0b',
@@ -296,7 +271,7 @@ const LearningPortalInterface = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  fontSize: isMobile ? '7px' : '12px',
+                  fontSize: isMobile ? '9px' : '12px',
                   color: '#64748b'
                 }}>
                   <span>{course.progress}% complete</span>
@@ -308,49 +283,49 @@ const LearningPortalInterface = () => {
 
           {/* Quick Actions */}
           <div style={{
-            marginTop: isMobile ? '12px' : '20px',
+            marginTop: isMobile ? '16px' : '20px',
             background: 'white',
             borderRadius: isMobile ? '8px' : '12px',
-            padding: isMobile ? '8px' : '16px',
+            padding: isMobile ? '12px' : '16px',
             border: '1px solid #e2e8f0'
           }}>
             <h4 style={{
               margin: '0 0 12px 0',
-              fontSize: isMobile ? '9px' : '14px',
+              fontSize: isMobile ? '12px' : '14px',
               fontWeight: '600',
               color: '#1e293b'
             }}>
               Quick Actions
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '4px' : '8px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '6px' : '8px' }}>
               <button style={{
                 background: '#f8fafc',
                 border: '1px solid #e2e8f0',
                 borderRadius: isMobile ? '6px' : '8px',
-                padding: isMobile ? '4px 6px' : '8px 12px',
-                fontSize: isMobile ? '7px' : '12px',
+                padding: isMobile ? '8px 10px' : '8px 12px',
+                fontSize: isMobile ? '10px' : '12px',
                 cursor: 'pointer',
                 textAlign: 'left',
                 display: 'flex',
                 alignItems: 'center',
-                gap: isMobile ? '4px' : '8px'
+                gap: isMobile ? '6px' : '8px'
               }}>
-                <Calendar size={isMobile ? 8 : 14} style={{ color: '#3b82f6' }} />
+                <Calendar size={isMobile ? 12 : 14} style={{ color: '#3b82f6' }} />
                 Schedule study sessions
               </button>
               <button style={{
                 background: '#f8fafc',
                 border: '1px solid #e2e8f0',
                 borderRadius: isMobile ? '6px' : '8px',
-                padding: isMobile ? '4px 6px' : '8px 12px',
-                fontSize: isMobile ? '7px' : '12px',
+                padding: isMobile ? '8px 10px' : '8px 12px',
+                fontSize: isMobile ? '10px' : '12px',
                 cursor: 'pointer',
                 textAlign: 'left',
                 display: 'flex',
                 alignItems: 'center',
-                gap: isMobile ? '4px' : '8px'
+                gap: isMobile ? '6px' : '8px'
               }}>
-                <Award size={isMobile ? 8 : 14} style={{ color: '#10b981' }} />
+                <Award size={isMobile ? 12 : 14} style={{ color: '#10b981' }} />
                 View achievements
               </button>
             </div>
@@ -363,13 +338,13 @@ const LearningPortalInterface = () => {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginBottom: isMobile ? '8px' : '16px',
+            marginBottom: isMobile ? '12px' : '16px',
             flexDirection: isMobile ? 'column' : 'row',
-            gap: isMobile ? '4px' : '0'
+            gap: isMobile ? '8px' : '0'
           }}>
             <h3 style={{
               margin: 0,
-              fontSize: isMobile ? '12px' : '18px',
+              fontSize: isMobile ? '16px' : '18px',
               fontWeight: '600',
               color: '#1e293b'
             }}>
@@ -378,9 +353,9 @@ const LearningPortalInterface = () => {
             <div style={{
               background: '#3b82f6',
               color: 'white',
-              padding: isMobile ? '3px 6px' : '6px 12px',
-              borderRadius: isMobile ? '12px' : '20px',
-              fontSize: isMobile ? '7px' : '12px',
+              padding: isMobile ? '4px 8px' : '6px 12px',
+              borderRadius: isMobile ? '16px' : '20px',
+              fontSize: isMobile ? '10px' : '12px',
               fontWeight: '500'
             }}>
               {currentCourse.progress}% Complete
@@ -398,17 +373,17 @@ const LearningPortalInterface = () => {
               <div
                 key={chapter.id}
                 style={{
-                  padding: isMobile ? '8px 10px' : '16px 20px',
+                  padding: isMobile ? '12px 16px' : '16px 20px',
                   borderBottom: index < currentCourse.chapters.length - 1 ? '1px solid #f1f5f9' : 'none',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: isMobile ? '8px' : '16px',
+                  gap: isMobile ? '12px' : '16px',
                   background: chapter.current ? '#fef3c7' : 'transparent'
                 }}
               >
                 <div style={{
-                  width: isMobile ? '20px' : '32px',
-                  height: isMobile ? '20px' : '32px',
+                  width: isMobile ? '24px' : '32px',
+                  height: isMobile ? '24px' : '32px',
                   borderRadius: '50%',
                   background: chapter.completed ? '#dcfce7' : chapter.current ? '#fed7aa' : '#f1f5f9',
                   display: 'flex',
@@ -416,12 +391,12 @@ const LearningPortalInterface = () => {
                   justifyContent: 'center'
                 }}>
                   {chapter.completed ? (
-                    <CheckCircle size={isMobile ? 10 : 16} style={{ color: '#16a34a' }} />
+                    <CheckCircle size={isMobile ? 12 : 16} style={{ color: '#16a34a' }} />
                   ) : chapter.current ? (
-                    <Play size={isMobile ? 8 : 14} style={{ color: '#ea580c' }} />
+                    <Play size={isMobile ? 10 : 14} style={{ color: '#ea580c' }} />
                   ) : (
                     <span style={{ 
-                      fontSize: isMobile ? '7px' : '12px', 
+                      fontSize: isMobile ? '10px' : '12px', 
                       fontWeight: '600', 
                       color: '#64748b' 
                     }}>
@@ -433,7 +408,7 @@ const LearningPortalInterface = () => {
                 <div style={{ flex: 1 }}>
                   <h4 style={{
                     margin: '0 0 4px 0',
-                    fontSize: isMobile ? '9px' : '14px',
+                    fontSize: isMobile ? '12px' : '14px',
                     fontWeight: '600',
                     color: '#1e293b'
                   }}>
@@ -442,15 +417,15 @@ const LearningPortalInterface = () => {
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: isMobile ? '6px' : '12px',
-                    fontSize: isMobile ? '7px' : '12px',
+                    gap: isMobile ? '8px' : '12px',
+                    fontSize: isMobile ? '9px' : '12px',
                     color: '#64748b',
                     flexDirection: isMobile ? 'column' : 'row',
                     alignItems: isMobile ? 'flex-start' : 'center',
-                    gap: isMobile ? '2px' : '12px'
+                    gap: isMobile ? '4px' : '12px'
                   }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <Clock size={isMobile ? 7 : 12} />
+                      <Clock size={isMobile ? 10 : 12} />
                       {chapter.duration}
                     </span>
                     {chapter.completed && (
@@ -468,16 +443,16 @@ const LearningPortalInterface = () => {
                     color: 'white',
                     border: 'none',
                     borderRadius: isMobile ? '4px' : '6px',
-                    padding: isMobile ? '3px 6px' : '8px 16px',
-                    fontSize: isMobile ? '7px' : '12px',
+                    padding: isMobile ? '6px 8px' : '8px 16px',
+                    fontSize: isMobile ? '9px' : '12px',
                     fontWeight: '500',
                     cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: isMobile ? '2px' : '4px'
+                    gap: isMobile ? '3px' : '4px'
                   }}>
                     {chapter.current ? 'Continue' : 'Start'}
-                    <ArrowRight size={isMobile ? 7 : 12} />
+                    <ArrowRight size={isMobile ? 10 : 12} />
                   </button>
                 )}
               </div>
@@ -486,22 +461,22 @@ const LearningPortalInterface = () => {
 
           {/* Study Tips */}
           <div style={{
-            marginTop: isMobile ? '8px' : '16px',
+            marginTop: isMobile ? '12px' : '16px',
             background: '#eff6ff',
             border: '1px solid #bfdbfe',
             borderRadius: isMobile ? '8px' : '12px',
-            padding: isMobile ? '8px' : '16px'
+            padding: isMobile ? '12px' : '16px'
           }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: isMobile ? '4px' : '8px',
-              marginBottom: isMobile ? '4px' : '8px'
+              gap: isMobile ? '6px' : '8px',
+              marginBottom: isMobile ? '6px' : '8px'
             }}>
-              <span style={{ fontSize: isMobile ? '10px' : '16px' }}>💡</span>
+              <span style={{ fontSize: isMobile ? '14px' : '16px' }}>💡</span>
               <h4 style={{
                 margin: 0,
-                fontSize: isMobile ? '9px' : '14px',
+                fontSize: isMobile ? '12px' : '14px',
                 fontWeight: '600',
                 color: '#1e40af'
               }}>
@@ -510,7 +485,7 @@ const LearningPortalInterface = () => {
             </div>
             <p style={{
               margin: 0,
-              fontSize: isMobile ? '7px' : '12px',
+              fontSize: isMobile ? '10px' : '12px',
               color: '#1e40af',
               lineHeight: 1.4
             }}>
