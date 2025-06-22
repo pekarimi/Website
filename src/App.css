@@ -1622,141 +1622,44 @@ body {
   }
 }
 
-/* CASE STUDY SPECIFIC MOBILE OVERRIDES - ADD TO END OF APP.CSS */
+/* SIMPLE CASE STUDY MOBILE FIXES - ADD TO END OF APP.CSS */
 @media (max-width: 768px) {
-  /* MATCH MINDSET PROFILE & FIVE KEY DIMENSIONS FONT SIZES */
-  .case-study .design-solution h3,
-  .case-study .solution-header h3 {
+  /* Clear previous conflicting rules and set consistent fonts */
+  .case-study .design-solution h3 {
     font-size: 20px !important;
     line-height: 1.3 !important;
     font-weight: 600 !important;
   }
   
-  .case-study .design-solution h4,
-  .case-study .solution-text h4 {
-    font-size: 18px !important;
+  .case-study .design-solution h4 {
+    font-size: 18px !important; 
     line-height: 1.4 !important;
     font-weight: 600 !important;
   }
   
   .case-study .design-solution p,
-  .case-study .solution-text p,
-  .case-study .solution-header p,
-  .case-study .design-solution li,
-  .case-study .solution-text li {
+  .case-study .design-solution li {
     font-size: 16px !important;
     line-height: 1.7 !important;
-    font-weight: normal !important;
   }
   
-  /* FIXED CENTERING - Universal approach for all components */
-  .case-study .solution-visual {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    text-align: center !important;
-    position: relative !important;
-  }
-  
-  /* Target ALL divs in solution visual to ensure centering */
-  .case-study .solution-visual > div {
-    transform: scale(0.85) !important;
-    transform-origin: center center !important;
-    margin: 0 auto -100px auto !important;
-    display: block !important;
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) scale(0.85) !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  /* SPECIFIC FIX FOR THIRD/LAST IMAGE - extra targeting */
-  .case-study .design-solution:last-child .solution-visual > div,
-  .case-study .design-solution:nth-child(3) .solution-visual > div,
-  .case-study .impact-section .design-solution:last-child .solution-visual > div {
-    transform: translateX(-50%) scale(0.85) !important;
-    left: 50% !important;
-    position: relative !important;
-    margin: 0 auto -120px auto !important;
-  }
-  
-  /* Ensure React components are also centered */
-  .case-study .solution-visual > div[style*="fontFamily"],
-  .case-study .solution-visual > div[style*="maxWidth"],
-  .case-study .solution-visual > div[style*="background: linear-gradient"],
-  .case-study .solution-visual > div[style*="display: grid"] {
-    transform: translateX(-50%) scale(0.85) !important;
-    left: 50% !important;
-    position: relative !important;
-    margin: 0 auto -100px auto !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-  
-  /* Keep internal component text small but readable */
-  .case-study .solution-visual > div[style*="fontFamily"] *,
-  .case-study .solution-visual > div[style*="fontFamily"] div,
-  .case-study .solution-visual > div[style*="fontFamily"] span,
-  .case-study .solution-visual > div[style*="fontFamily"] p,
-  .case-study .solution-visual > div[style*="fontFamily"] button {
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-    padding: 2px 3px !important;
-  }
-  
-  .case-study .solution-visual > div[style*="fontFamily"] h1,
-  .case-study .solution-visual > div[style*="fontFamily"] h2,
-  .case-study .solution-visual > div[style*="fontFamily"] h3,
-  .case-study .solution-visual > div[style*="fontFamily"] h4 {
-    font-size: 9px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 2px !important;
-  }
-  
-  /* AGGRESSIVE white space removal especially for last image */
-  .case-study .design-solution:last-child,
-  .case-study .impact-section .design-solution:last-child {
-    margin-bottom: -120px !important;
-    padding-bottom: 0 !important;
-  }
-  
-  .case-study .design-solution:nth-last-child(1),
-  .case-study .design-solution:nth-last-child(2),
-  .case-study .design-solution:nth-last-child(3) {
-    margin-bottom: -100px !important;
-    padding-bottom: 0 !important;
+  /* Remove extra white space from last section only */
+  .case-study .design-solution:last-child {
+    margin-bottom: -20px !important;
   }
   
   .case-study .impact-section {
-    padding-bottom: 0 !important;
-    margin-bottom: -50px !important;
+    padding-bottom: 30px !important;
   }
   
-  /* Ensure consistent layout */
+  /* Basic mobile layout */
   .case-study .container {
     padding: 0 16px !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-  
-  .case-study .design-solution {
-    padding: 20px 16px !important;
-    margin-bottom: 20px !important;
     overflow-x: hidden !important;
   }
   
   .case-study .solution-content {
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
-    overflow-x: hidden !important;
-  }
-  
-  /* Force all images to be contained */
-  .case-study img {
-    max-width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+    gap: 20px !important;
   }
 }

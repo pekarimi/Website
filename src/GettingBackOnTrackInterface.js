@@ -58,10 +58,473 @@ const LearningPortalInterface = () => {
       boxShadow: '0 4px 25px rgba(0,0,0,0.08)',
       width: isMobile ? 'calc(100vw - 32px)' : 'auto',
       boxSizing: 'border-box',
-      transform: isMobile ? 'scale(0.85)' : 'scale(1)',
+      // FIXED: Better mobile scaling and centering
+      transform: isMobile ? 'scale(0.9)' : 'scale(1)',
       transformOrigin: 'top center',
-      marginBottom: isMobile ? '-30px' : '0'
+      marginBottom: isMobile ? '0' : '0',
+      marginLeft: isMobile ? 'auto' : 'auto',
+      marginRight: isMobile ? 'auto' : 'auto'
     }}>
+      
+      {/* Header Navigation */}
+      <div style={{
+        background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
+        padding: isMobile ? '8px 12px' : '16px 24px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: 'white',
+        flexDirection: isMobile ? 'column' : 'row',
+        gap: isMobile ? '8px' : '0'
+      }}>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: isMobile ? '8px' : '16px',
+          width: isMobile ? '100%' : 'auto',
+          justifyContent: isMobile ? 'center' : 'flex-start'
+        }}>
+          <div style={{
+            background: '#3b82f6',
+            borderRadius: isMobile ? '6px' : '8px',
+            padding: isMobile ? '4px' : '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Book size={isMobile ? 12 : 20} style={{ color: 'white' }} />
+          </div>
+          <h1 style={{
+            margin: 0,
+            fontSize: isMobile ? '12px' : '20px',
+            fontWeight: '600',
+            textAlign: isMobile ? 'center' : 'left'
+          }}>
+            {currentCourse.title}
+          </h1>
+        </div>
+        
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: isMobile ? '8px' : '12px',
+          justifyContent: isMobile ? 'center' : 'flex-end'
+        }}>
+          <Bell size={isMobile ? 12 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
+          <Settings size={isMobile ? 12 : 18} style={{ opacity: 0.8, cursor: 'pointer' }} />
+          <div style={{
+            background: '#475569',
+            borderRadius: '50%',
+            width: isMobile ? '20px' : '32px',
+            height: isMobile ? '20px' : '32px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer'
+          }}>
+            <User size={isMobile ? 10 : 16} />
+          </div>
+        </div>
+      </div>
+
+      {/* Welcome Back Banner */}
+      <div style={{
+        background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+        margin: isMobile ? '8px 8px 0 8px' : '24px 24px 0 24px',
+        borderRadius: isMobile ? '8px' : '12px',
+        padding: isMobile ? '10px' : '20px',
+        color: 'white',
+        display: 'block',
+        textAlign: isMobile ? 'center' : 'left'
+      }}>
+        <div>
+          <h2 style={{
+            margin: '0 0 4px 0',
+            fontSize: isMobile ? '12px' : '22px',
+            fontWeight: '600'
+          }}>
+            Welcome back, Lian! 🎯
+          </h2>
+          <p style={{
+            margin: '0 0 8px 0',
+            fontSize: isMobile ? '9px' : '14px',
+            opacity: 0.9
+          }}>
+            You've been away for 2 weeks. We've prepared a personalized catch-up plan.
+          </p>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: isMobile ? 'center' : 'flex-start',
+            gap: isMobile ? '6px' : '12px',
+            fontSize: isMobile ? '7px' : '12px',
+            flexWrap: 'wrap',
+            marginBottom: isMobile ? '8px' : '0'
+          }}>
+            <div style={{
+              background: 'rgba(255,255,255,0.2)',
+              padding: isMobile ? '2px 4px' : '4px 8px',
+              borderRadius: isMobile ? '8px' : '12px'
+            }}>
+              📅 Deadlines extended by 1 week
+            </div>
+            <div style={{
+              background: 'rgba(255,255,255,0.2)',
+              padding: isMobile ? '2px 4px' : '4px 8px',
+              borderRadius: isMobile ? '8px' : '12px'
+            }}>
+              ⏱️ 3 assignments pending
+            </div>
+          </div>
+          {isMobile && (
+            <button style={{
+              background: 'rgba(255,255,255,0.2)',
+              border: '1px solid rgba(255,255,255,0.3)',
+              borderRadius: '6px',
+              color: 'white',
+              padding: '6px 10px',
+              fontSize: '8px',
+              cursor: 'pointer',
+              fontWeight: '500',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              width: '100%',
+              justifyContent: 'center',
+              marginTop: '8px'
+            }}>
+              Start Catch-up Plan
+              <ArrowRight size={8} />
+            </button>
+          )}
+        </div>
+        {!isMobile && (
+          <button style={{
+            background: 'rgba(255,255,255,0.2)',
+            border: '1px solid rgba(255,255,255,0.3)',
+            borderRadius: '8px',
+            color: 'white',
+            padding: '10px 16px',
+            fontSize: '14px',
+            cursor: 'pointer',
+            fontWeight: '500',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px'
+          }}>
+            Start Catch-up Plan
+            <ArrowRight size={14} />
+          </button>
+        )}
+      </div>
+
+      {/* Main Content */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr',
+        gap: isMobile ? '12px' : '24px',
+        padding: isMobile ? '8px' : '24px'
+      }}>
+        
+        {/* Course List */}
+        <div style={{ marginBottom: isMobile ? '12px' : '0' }}>
+          <h3 style={{
+            margin: '0 0 16px 0',
+            fontSize: isMobile ? '11px' : '16px',
+            fontWeight: '600',
+            color: '#1e293b'
+          }}>
+            Your Courses
+          </h3>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '4px' : '8px' }}>
+            {Object.entries(courses).map(([key, course]) => (
+              <div
+                key={key}
+                onClick={() => setSelectedCourse(key)}
+                style={{
+                  background: selectedCourse === key ? '#f1f5f9' : 'white',
+                  border: selectedCourse === key ? '2px solid #3b82f6' : '1px solid #e2e8f0',
+                  borderRadius: isMobile ? '8px' : '12px',
+                  padding: isMobile ? '8px' : '16px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-start',
+                  marginBottom: isMobile ? '4px' : '8px'
+                }}>
+                  <h4 style={{
+                    margin: 0,
+                    fontSize: isMobile ? '9px' : '14px',
+                    fontWeight: '600',
+                    color: '#1e293b'
+                  }}>
+                    {course.title}
+                  </h4>
+                  <span style={{
+                    background: course.status === 'Behind Schedule' ? '#fef3c7' : '#dcfce7',
+                    color: course.status === 'Behind Schedule' ? '#92400e' : '#166534',
+                    padding: isMobile ? '1px 4px' : '2px 8px',
+                    borderRadius: isMobile ? '8px' : '12px',
+                    fontSize: isMobile ? '6px' : '10px',
+                    fontWeight: '500'
+                  }}>
+                    {course.status}
+                  </span>
+                </div>
+                
+                <div style={{
+                  background: '#f1f5f9',
+                  height: isMobile ? '3px' : '6px',
+                  borderRadius: '3px',
+                  overflow: 'hidden',
+                  marginBottom: isMobile ? '4px' : '8px'
+                }}>
+                  <div style={{
+                    background: course.progress >= 60 ? '#10b981' : '#f59e0b',
+                    height: '100%',
+                    width: `${course.progress}%`,
+                    borderRadius: '3px',
+                    transition: 'width 0.3s ease'
+                  }} />
+                </div>
+                
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  fontSize: isMobile ? '7px' : '12px',
+                  color: '#64748b'
+                }}>
+                  <span>{course.progress}% complete</span>
+                  <span>Due: {course.nextDeadline}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Actions */}
+          <div style={{
+            marginTop: isMobile ? '12px' : '20px',
+            background: 'white',
+            borderRadius: isMobile ? '8px' : '12px',
+            padding: isMobile ? '8px' : '16px',
+            border: '1px solid #e2e8f0'
+          }}>
+            <h4 style={{
+              margin: '0 0 12px 0',
+              fontSize: isMobile ? '9px' : '14px',
+              fontWeight: '600',
+              color: '#1e293b'
+            }}>
+              Quick Actions
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '4px' : '8px' }}>
+              <button style={{
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: isMobile ? '6px' : '8px',
+                padding: isMobile ? '4px 6px' : '8px 12px',
+                fontSize: isMobile ? '7px' : '12px',
+                cursor: 'pointer',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: isMobile ? '4px' : '8px'
+              }}>
+                <Calendar size={isMobile ? 8 : 14} style={{ color: '#3b82f6' }} />
+                Schedule study sessions
+              </button>
+              <button style={{
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                borderRadius: isMobile ? '6px' : '8px',
+                padding: isMobile ? '4px 6px' : '8px 12px',
+                fontSize: isMobile ? '7px' : '12px',
+                cursor: 'pointer',
+                textAlign: 'left',
+                display: 'flex',
+                alignItems: 'center',
+                gap: isMobile ? '4px' : '8px'
+              }}>
+                <Award size={isMobile ? 8 : 14} style={{ color: '#10b981' }} />
+                View achievements
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Course Detail */}
+        <div>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: isMobile ? '8px' : '16px',
+            flexDirection: isMobile ? 'column' : 'row',
+            gap: isMobile ? '4px' : '0'
+          }}>
+            <h3 style={{
+              margin: 0,
+              fontSize: isMobile ? '12px' : '18px',
+              fontWeight: '600',
+              color: '#1e293b'
+            }}>
+              {currentCourse.title}
+            </h3>
+            <div style={{
+              background: '#3b82f6',
+              color: 'white',
+              padding: isMobile ? '3px 6px' : '6px 12px',
+              borderRadius: isMobile ? '12px' : '20px',
+              fontSize: isMobile ? '7px' : '12px',
+              fontWeight: '500'
+            }}>
+              {currentCourse.progress}% Complete
+            </div>
+          </div>
+
+          {/* Chapter List */}
+          <div style={{
+            background: 'white',
+            borderRadius: isMobile ? '8px' : '12px',
+            border: '1px solid #e2e8f0',
+            overflow: 'hidden'
+          }}>
+            {currentCourse.chapters.map((chapter, index) => (
+              <div
+                key={chapter.id}
+                style={{
+                  padding: isMobile ? '8px 10px' : '16px 20px',
+                  borderBottom: index < currentCourse.chapters.length - 1 ? '1px solid #f1f5f9' : 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: isMobile ? '8px' : '16px',
+                  background: chapter.current ? '#fef3c7' : 'transparent'
+                }}
+              >
+                <div style={{
+                  width: isMobile ? '20px' : '32px',
+                  height: isMobile ? '20px' : '32px',
+                  borderRadius: '50%',
+                  background: chapter.completed ? '#dcfce7' : chapter.current ? '#fed7aa' : '#f1f5f9',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  {chapter.completed ? (
+                    <CheckCircle size={isMobile ? 10 : 16} style={{ color: '#16a34a' }} />
+                  ) : chapter.current ? (
+                    <Play size={isMobile ? 8 : 14} style={{ color: '#ea580c' }} />
+                  ) : (
+                    <span style={{ 
+                      fontSize: isMobile ? '7px' : '12px', 
+                      fontWeight: '600', 
+                      color: '#64748b' 
+                    }}>
+                      {chapter.id}
+                    </span>
+                  )}
+                </div>
+                
+                <div style={{ flex: 1 }}>
+                  <h4 style={{
+                    margin: '0 0 4px 0',
+                    fontSize: isMobile ? '9px' : '14px',
+                    fontWeight: '600',
+                    color: '#1e293b'
+                  }}>
+                    {chapter.title}
+                  </h4>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: isMobile ? '6px' : '12px',
+                    fontSize: isMobile ? '7px' : '12px',
+                    color: '#64748b',
+                    flexDirection: isMobile ? 'column' : 'row',
+                    alignItems: isMobile ? 'flex-start' : 'center',
+                    gap: isMobile ? '2px' : '12px'
+                  }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <Clock size={isMobile ? 7 : 12} />
+                      {chapter.duration}
+                    </span>
+                    {chapter.completed && (
+                      <span style={{ color: '#16a34a', fontWeight: '500' }}>✓ Completed</span>
+                    )}
+                    {chapter.current && (
+                      <span style={{ color: '#ea580c', fontWeight: '500' }}>🔥 Continue here</span>
+                    )}
+                  </div>
+                </div>
+
+                {(chapter.current || !chapter.completed) && (
+                  <button style={{
+                    background: chapter.current ? '#ea580c' : '#3b82f6',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: isMobile ? '4px' : '6px',
+                    padding: isMobile ? '3px 6px' : '8px 16px',
+                    fontSize: isMobile ? '7px' : '12px',
+                    fontWeight: '500',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: isMobile ? '2px' : '4px'
+                  }}>
+                    {chapter.current ? 'Continue' : 'Start'}
+                    <ArrowRight size={isMobile ? 7 : 12} />
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Study Tips */}
+          <div style={{
+            marginTop: isMobile ? '8px' : '16px',
+            background: '#eff6ff',
+            border: '1px solid #bfdbfe',
+            borderRadius: isMobile ? '8px' : '12px',
+            padding: isMobile ? '8px' : '16px'
+          }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: isMobile ? '4px' : '8px',
+              marginBottom: isMobile ? '4px' : '8px'
+            }}>
+              <span style={{ fontSize: isMobile ? '10px' : '16px' }}>💡</span>
+              <h4 style={{
+                margin: 0,
+                fontSize: isMobile ? '9px' : '14px',
+                fontWeight: '600',
+                color: '#1e40af'
+              }}>
+                Personalized Study Tip
+              </h4>
+            </div>
+            <p style={{
+              margin: 0,
+              fontSize: isMobile ? '7px' : '12px',
+              color: '#1e40af',
+              lineHeight: 1.4
+            }}>
+              Since you've been away, start with Chapter 4 review materials. Break your study into 20-minute focused sessions with 5-minute breaks to rebuild your learning momentum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LearningPortalInterface;
       
       {/* Header Navigation */}
       <div style={{
