@@ -809,7 +809,7 @@
 }
 
 /* MOBILE FIXES FOR DESIGN SOLUTION COMPONENTS */
-/* REPLACE THE ENTIRE MOBILE SECTION IN MindsetsCaseStudy.css WITH THIS */
+/* REPLACE THE MOBILE SECTION IN MindsetsCaseStudy.css WITH THIS VERSION */
 
 @media (max-width: 768px) {
   /* Basic mobile layout fixes */
@@ -847,18 +847,17 @@
     gap: 20px;
   }
   
-  /* REMOVE ALL AGGRESSIVE SCALING AND TRANSFORMS */
+  /* RESTORE ORIGINAL SCALING FOR REACT COMPONENTS */
   .solution-visual > div,
   .design-solution .solution-visual > div {
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-    margin-bottom: 0 !important;
-    box-sizing: border-box !important;
+    transform: scale(0.75);
+    transform-origin: top center;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: -60px;
   }
   
-  /* FORCE CONSISTENT TEXT FORMATTING FOR DESIGN SOLUTIONS */
+  /* ONLY FIX THE TEXT - DON'T TOUCH COMPONENT SCALING */
   .case-study .design-solution h3,
   .case-study .design-solution .solution-header h3,
   .case-study .impact-section .design-solution h3 {
@@ -867,7 +866,7 @@
     font-weight: 600 !important;
     color: #1a1a1a !important;
     margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
   }
   
   .case-study .design-solution h4,
@@ -878,7 +877,7 @@
     font-weight: 600 !important;
     color: #1a1a1a !important;
     margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
   }
   
   .case-study .design-solution p,
@@ -891,7 +890,7 @@
     line-height: 1.7 !important;
     color: #555 !important;
     margin-bottom: 20px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
     font-weight: 400 !important;
   }
   
@@ -931,7 +930,7 @@
     line-height: 1.3 !important;
     font-weight: 600 !important;
     color: #1a1a1a !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
   }
   
   .case-study .design-summary p,
@@ -939,254 +938,46 @@
     font-size: 16px !important;
     line-height: 1.7 !important;
     color: #555 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
     font-weight: 400 !important;
   }
   
-  /* Ensure proper mobile layout for React components */
-  .solution-visual {
-    width: 100% !important;
-    overflow: visible !important;
+  /* Reduce padding to prevent overflow */
+  .design-solution {
+    padding: 24px 16px;
+    margin-bottom: 20px;
   }
   
-  /* Remove any problematic scaling */
+  /* Scale down learning interfaces specifically - KEEP ORIGINAL SCALING */
+  .design-solution [style*="fontFamily"] {
+    transform: scale(0.8) !important;
+    transform-origin: top left !important;
+    width: 125% !important;
+    margin-bottom: -40px !important;
+  }
+  
+  /* AGGRESSIVE SCALING FOR ALL REACT COMPONENTS - RESTORE ORIGINAL */
   .solution-visual > div[style*="fontFamily"],
   .solution-visual > div[style*="maxWidth"] {
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
-    margin-bottom: 0 !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Reduce padding on mobile */
-  .design-solution {
-    padding: 24px 16px !important;
-    margin-bottom: 20px !important;
-    overflow: visible !important;
-  }
-  
-  /* Prevent any text cutting */
-  .design-solution * {
-    overflow: visible !important;
-    text-overflow: initial !important;
-    white-space: normal !important;
-  }
-}
-
-/* STRONGER MOBILE TEXT CONSISTENCY FIX */
-@media (max-width: 768px) {
-  /* Override ALL design solution text with maximum specificity */
-  .case-study .design-solution h3,
-  .case-study .design-solution .solution-header h3,
-  .case-study .impact-section .design-solution h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-  }
-  
-  .case-study .design-solution h4,
-  .case-study .design-solution .solution-text h4,
-  .case-study .impact-section .design-solution h4 {
-    font-size: 18px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin-bottom: 16px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-  }
-  
-  .case-study .design-solution p,
-  .case-study .design-solution .solution-header p,
-  .case-study .design-solution .solution-text p,
-  .case-study .design-solution li,
-  .case-study .impact-section .design-solution p,
-  .case-study .impact-section .design-solution li {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #555 !important;
-    margin-bottom: 20px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  .case-study .design-solution ul,
-  .case-study .impact-section .design-solution ul {
-    padding-left: 20px !important;
-    margin: 20px 0 !important;
-  }
-  
-  .case-study .design-solution li,
-  .case-study .impact-section .design-solution li {
-    margin-bottom: 16px !important;
-    padding-left: 24px !important;
-    position: relative !important;
-  }
-  
-  .case-study .design-solution li::before,
-  .case-study .impact-section .design-solution li::before {
-    content: "→" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #667eea !important;
-    font-weight: bold !important;
-    font-size: 16px !important;
-  }
-  
-  .case-study .design-solution li strong,
-  .case-study .impact-section .design-solution li strong {
-    color: #1a1a1a !important;
-    font-weight: 600 !important;
-  }
-  
-  /* Fix the summary section specifically */
-  .case-study .design-summary h3,
-  .case-study .impact-section .design-summary h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-  }
-  
-  .case-study .design-summary p,
-  .case-study .impact-section .design-summary p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #555 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 400 !important;
-  }
-  
-  /* Completely disable the scaling that's affecting text */
-  .case-study .solution-visual > div[style*="fontFamily"] * {
-    max-width: none !important;
-    overflow: visible !important;
-    text-overflow: none !important;
-    white-space: normal !important;
-    transform: none !important;
-    scale: none !important;
-  }
-  
-  /* Remove all aggressive scaling from React components */
-  .case-study .solution-visual > div[style*="fontFamily"],
-  .case-study .solution-visual > div[style*="maxWidth"] {
-    transform: scale(0.8) !important;
-    transform-origin: top center !important;
-    width: 125% !important;
-    margin-bottom: -60px !important;
+    transform: scale(0.7) !important;
+    transform-origin: top left !important;
+    width: 142.8% !important;
+    margin-bottom: -80px !important;
     overflow: hidden !important;
   }
   
-  /* Ensure grid layout is proper */
-  .case-study .solution-content {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-}
-
-/* ADD THIS TO THE VERY END OF MindsetsCaseStudy.css - AFTER everything else */
-
-/* NUCLEAR MOBILE TEXT FIX - MAXIMUM OVERRIDE POWER */
-@media (max-width: 768px) {
-  /* Force override ALL text in design implications section */
-  html body .case-study .impact-section h2,
-  html body .case-study .impact-section .design-solution h3,
-  html body .case-study .impact-section .solution-header h3 {
-    font-size: 24px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin: 32px 0 20px 0 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-    text-align: left !important;
+  /* Prevent horizontal overflow on the page */
+  .design-solution {
+    overflow-x: hidden !important;
   }
   
-  html body .case-study .impact-section .design-solution h4,
-  html body .case-study .impact-section .solution-text h4 {
-    font-size: 20px !important;
-    line-height: 1.4 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    margin: 24px 0 16px 0 !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  .solution-content {
+    overflow-x: hidden !important;
   }
   
-  html body .case-study .impact-section .design-solution p,
-  html body .case-study .impact-section .solution-header p,
-  html body .case-study .impact-section .solution-text p,
-  html body .case-study .impact-section .design-solution li,
-  html body .case-study .impact-section .design-summary p {
-    font-size: 16px !important;
-    line-height: 1.7 !important;
-    color: #555 !important;
-    margin-bottom: 20px !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 400 !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
-  }
-  
-  html body .case-study .impact-section .design-summary h3 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    font-weight: 600 !important;
-    color: #1a1a1a !important;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-  }
-  
-  /* Force bullet points to match other sections */
-  html body .case-study .impact-section .solution-text ul {
-    padding-left: 20px !important;
-    margin: 20px 0 !important;
-    list-style: none !important;
-  }
-  
-  html body .case-study .impact-section .solution-text li {
-    margin-bottom: 16px !important;
-    padding-left: 24px !important;
-    position: relative !important;
-  }
-  
-  html body .case-study .impact-section .solution-text li::before {
-    content: "→" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #667eea !important;
-    font-weight: bold !important;
-    font-size: 16px !important;
-  }
-  
-  html body .case-study .impact-section .solution-text li strong {
-    color: #1a1a1a !important;
-    font-weight: 600 !important;
-  }
-  
-  /* Make sure the main section title matches */
-  html body .case-study .impact-section h2:first-child {
-    font-size: 24px !important;
-    margin: 32px 0 20px 0 !important;
-    text-align: center !important;
-  }
-  
-  /* Override any scaling or transforms on text elements */
-  html body .case-study .impact-section * {
-    transform: none !important;
-    scale: none !important;
-  }
-  
-  /* Ensure grids work properly */
-  html body .case-study .impact-section .solution-content {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-  
-  /* Override any React component scaling that affects text */
-  html body .case-study .solution-visual > div {
-    max-width: 100% !important;
+  /* Additional scaling for specific interface types - RESTORE ORIGINAL */
+  .solution-visual > div[style*="background: linear-gradient"] {
+    transform: scale(0.65) !important;
+    margin-bottom: -100px !important;
   }
 }
