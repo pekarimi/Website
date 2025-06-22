@@ -1621,3 +1621,83 @@ body {
     box-sizing: border-box;
   }
 }
+
+/* CASE STUDY SPECIFIC MOBILE OVERRIDES - ADD TO END OF APP.CSS */
+@media (max-width: 768px) {
+  /* Override App.css mobile rules specifically for case study pages */
+  .case-study .solution-visual,
+  .case-study .design-solution .solution-visual {
+    overflow: visible !important;
+  }
+  
+  /* Scale down React components in case studies */
+  .case-study .solution-visual > div[style*="fontFamily"],
+  .case-study .solution-visual > div[style*="maxWidth"],
+  .case-study .solution-visual > div[style*="background: linear-gradient"] {
+    transform: scale(0.7) !important;
+    transform-origin: top left !important;
+    width: 142.8% !important;
+    margin-bottom: -80px !important;
+    overflow: hidden !important;
+    max-width: none !important;
+  }
+  
+  /* Prevent text overflow in scaled components */
+  .case-study .solution-visual > div[style*="fontFamily"] *,
+  .case-study .solution-visual > div[style*="maxWidth"] * {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Specific fixes for learning interfaces */
+  .case-study .solution-visual > div[style*="fontFamily"] div[style*="fontSize"] {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .case-study .solution-visual > div[style*="fontFamily"] button {
+    font-size: 8px !important;
+    padding: 2px 4px !important;
+  }
+  
+  /* Override any App.css container rules for case studies */
+  .case-study .container {
+    padding: 0 16px !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Override App.css image rules for case studies */
+  .case-study img {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Ensure case study sections don't inherit problematic mobile styles */
+  .case-study .design-solution {
+    padding: 24px 16px !important;
+    margin-bottom: 20px !important;
+    overflow-x: hidden !important;
+  }
+  
+  .case-study .solution-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Target specific React component containers */
+  .case-study .solution-visual > div[style*="display: grid"],
+  .case-study .solution-visual > div[style*="gridTemplateColumns"] {
+    transform: scale(0.65) !important;
+    margin-bottom: -100px !important;
+  }
+  
+  /* Additional scaling for phone mockups inside case studies */
+  .case-study .solution-visual > div[style*="borderRadius"] div[style*="background: #1a1a1a"] {
+    transform: scale(0.8) !important;
+    margin: 0 auto !important;
+  }
+}
