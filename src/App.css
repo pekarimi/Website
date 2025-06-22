@@ -1835,3 +1835,47 @@ body {
     overflow: hidden !important;
   }
 }
+
+/* ADD THIS TO THE END OF YOUR App.css FILE */
+
+/* MOBILE FIGURE SIZE ADJUSTMENTS FOR CSP CASE STUDY */
+@media (max-width: 768px) {
+  /* Figure 1: System Architecture - make bigger on mobile */
+  .system-arch-image img {
+    width: 95% !important; /* Increased from 80% */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Figure 2: Interface Components - make bigger on mobile */
+  .medium-image img {
+    width: 90% !important; /* Increased from 70% */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Figure 4: Creativity Distribution - make bigger on mobile */
+  .creativity-analysis-section .medium-image img {
+    width: 90% !important; /* Increased from 70% */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Ensure proper spacing around enlarged figures */
+  .system-arch-image,
+  .medium-image {
+    margin: 20px 0;
+  }
+  
+  /* Make sure captions remain properly sized */
+  .system-arch-image .image-caption,
+  .medium-image .image-caption {
+    font-size: 13px !important;
+    margin-top: 8px !important;
+    padding: 0 8px !important;
+    text-align: center !important;
+  }
+}
