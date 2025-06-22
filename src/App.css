@@ -1663,3 +1663,21 @@ body {
     gap: 20px !important;
   }
 }
+
+/* Fix pink artifact on mobile project cards */
+@media (max-width: 768px) {
+  .project-image {
+    background: #f5f5f5 !important; /* Override the pink gradient with neutral background */
+  }
+  
+  /* Alternative fix: Remove background entirely and ensure proper image sizing */
+  .project-image-container {
+    background: white !important;
+  }
+  
+  /* Ensure images fill container properly without changing their size */
+  .project-img {
+    display: block !important;
+    background: white !important;
+  }
+}
