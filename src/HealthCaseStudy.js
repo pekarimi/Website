@@ -786,16 +786,17 @@ const HealthCaseStudy = ({ onBack }) => {
           /* Figure 6: Paper prototype - bigger */
           .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/paper-prototype.png"],
           .prototype-image img[src="/images/Health/paper-prototype.png"] {
-            width: 90% !important;
+            width: 95% !important;
             margin: 0 auto !important;
             display: block !important;
           }
           
-          /* Figure 7: Framework - keep medium */
+          /* Figure 7: Framework - bigger */
+          .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/framework.png"],
           .prototype-image img[src="/images/Health/framework.png"] {
-            width: 70% !important;
-            margin: 0 auto;
-            display: block;
+            width: 95% !important;
+            margin: 0 auto !important;
+            display: block !important;
           }
           
           /* The four images under "Final Solution - Comprehensive Health Management Platform" */
