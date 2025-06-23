@@ -1908,14 +1908,14 @@ body {
   max-height: none !important; /* Remove any global max-height constraints */
 }
 
-/* ERROR RATE COMPARISON - Make smaller on both web and mobile */
+/* ERROR RATE COMPARISON - Make bigger on web, smaller on mobile */
 .case-study-container img[src="/images/textflow/error-rate-comparison.png"] {
-  max-height: 250px !important;
+  max-height: 320px !important; /* Increased from 250px */
 }
 
-/* INTERACTION BEHAVIOR TABLE - Make bigger on both web and mobile */
+/* INTERACTION BEHAVIOR TABLE - Make much bigger on both web and mobile */
 .case-study-container img[src="/images/textflow/interaction-behavior-table.png"] {
-  max-height: 450px !important;
+  max-height: 600px !important; /* Increased from 450px */
 }
 
 /* MOBILE SPECIFIC OVERRIDES */
@@ -1925,8 +1925,8 @@ body {
     max-height: 160px !important;
   }
   
-  /* INTERACTION BEHAVIOR TABLE - Bigger on mobile */
+  /* INTERACTION BEHAVIOR TABLE - Much bigger on mobile */
   .case-study-container img[src="/images/textflow/interaction-behavior-table.png"] {
-    max-height: 350px !important;
+    max-height: 450px !important; /* Increased from 350px */
   }
 }
