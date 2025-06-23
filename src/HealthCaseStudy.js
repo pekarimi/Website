@@ -726,79 +726,88 @@ const HealthCaseStudy = ({ onBack }) => {
 
           /* Health Case Study Mobile Figure Adjustments */
           
-          /* Figure 1: Research outcomes - slightly bigger */
+          /* Figure 1: Research outcomes - much bigger */
           .prototype-image img[src="/images/Health/image1.png"] {
-            width: 85% !important;
+            width: 100% !important;
             margin: 0 auto;
             display: block;
+            max-width: calc(100vw - 16px) !important;
           }
           
-          /* Figure 2: Scribe mobile interface - slightly bigger */
+          /* Figure 2: Scribe mobile interface - much bigger */
           .prototype-image img[src="/images/Health/image2.png"] {
-            width: 85% !important;
+            width: 95% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 3: Barriers before - slightly smaller */
+          /* Figure 3: Barriers before (Summary of access barriers) - slightly bigger */
           .barrier-diagram img[src="/images/Health/barriers-before.png"] {
-            width: 55% !important;
+            width: 80% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 4: Barriers after - slightly smaller */
+          /* Figure 4: Barriers after (Summary of potential open access barriers) - slightly bigger */
           .barrier-diagram img[src="/images/Health/barriers-after.png"] {
-            width: 55% !important;
+            width: 80% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 5: MIHA conversational interface - slightly bigger */
+          /* Figure 5: MIHA conversational interface - keep medium */
           .prototype-image img[src="/images/Health/image3.png"] {
-            width: 85% !important;
+            width: 70% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Wizard of Oz study interface - much bigger */
+          /* Wizard of Oz study interface - keep current size */
           .woz-image img[src="/images/Health/miha-woz.png"] {
             width: 95% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 6: Paper prototype - slightly bigger */
+          /* Figure 6: Paper prototype - keep medium */
           .prototype-image img[src="/images/Health/paper-prototype.png"] {
-            width: 85% !important;
+            width: 70% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 8: Personal notes - slightly bigger */
+          /* Figure 7: Framework - keep medium */
+          .prototype-image img[src="/images/Health/framework.png"] {
+            width: 70% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* The four images under "Final Solution - Comprehensive Health Management Platform" */
+          /* Figure 8: Doctor Visits & Information Management - bigger */
           .prototype-image img[src="/images/Health/image4.png"] {
-            width: 85% !important;
+            width: 90% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 9: Visit summary with caregiver sharing - slightly bigger */
+          /* Figure 9: Caregiver Sharing - bigger */
           .prototype-image img[src="/images/Health/image5.png"] {
-            width: 85% !important;
+            width: 90% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 10: Personal notes feature - slightly bigger */
+          /* Figure 10: Personal Notes - bigger */
           .prototype-image img[src="/images/Health/image6.png"] {
-            width: 85% !important;
+            width: 90% !important;
             margin: 0 auto;
             display: block;
           }
           
-          /* Figure 11: Questions & Answers - slightly bigger */
+          /* Figure 11: Questions & Answers - bigger */
           .prototype-image img[src="/images/Health/questions-answers.png"] {
-            width: 85% !important;
+            width: 90% !important;
             margin: 0 auto;
             display: block;
           }
