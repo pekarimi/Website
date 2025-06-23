@@ -830,65 +830,85 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 0 !important;
           }
           
-          /* The four images under "Final Solution - Comprehensive Health Management Platform" - MAXIMUM SPECIFICITY */
-          /* Figure 8: Doctor Visits & Information Management - FORCE BIGGER */
+          /* The four images under "Final Solution - Comprehensive Health Management Platform" - ABSOLUTE MAXIMUM SIZE */
+          /* Figure 8: Doctor Visits & Information Management - ABSOLUTE BIGGEST */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .prototype-image img[src="/images/Health/image4.png"],
           img[src="/images/Health/image4.png"] {
-            width: 100% !important;
-            margin: 0 auto !important;
+            width: 100vw !important;
+            margin: 0 !important;
+            margin-left: calc(-50vw + 50%) !important;
             display: block !important;
-            max-width: calc(100vw - 16px) !important;
+            max-width: 100vw !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 90% !important;
+            min-width: 100vw !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            transform: translateX(-50%) !important;
           }
           
-          /* Figure 9: Caregiver Sharing - FORCE BIGGER */
+          /* Figure 9: Caregiver Sharing - ABSOLUTE BIGGEST */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .prototype-image img[src="/images/Health/image5.png"],
           img[src="/images/Health/image5.png"] {
-            width: 100% !important;
-            margin: 0 auto !important;
+            width: 100vw !important;
+            margin: 0 !important;
+            margin-left: calc(-50vw + 50%) !important;
             display: block !important;
-            max-width: calc(100vw - 16px) !important;
+            max-width: 100vw !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 90% !important;
+            min-width: 100vw !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            transform: translateX(-50%) !important;
           }
           
-          /* Figure 10: Personal Notes - FORCE BIGGER */
+          /* Figure 10: Personal Notes - ABSOLUTE BIGGEST */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .prototype-image img[src="/images/Health/image6.png"],
           img[src="/images/Health/image6.png"] {
-            width: 100% !important;
-            margin: 0 auto !important;
+            width: 100vw !important;
+            margin: 0 !important;
+            margin-left: calc(-50vw + 50%) !important;
             display: block !important;
-            max-width: calc(100vw - 16px) !important;
+            max-width: 100vw !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 90% !important;
+            min-width: 100vw !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            transform: translateX(-50%) !important;
           }
           
-          /* Figure 11: Questions & Answers - FORCE BIGGER */
+          /* Figure 11: Questions & Answers - ABSOLUTE BIGGEST */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .prototype-image img[src="/images/Health/questions-answers.png"],
           img[src="/images/Health/questions-answers.png"] {
-            width: 100% !important;
-            margin: 0 auto !important;
+            width: 100vw !important;
+            margin: 0 !important;
+            margin-left: calc(-50vw + 50%) !important;
             display: block !important;
-            max-width: calc(100vw - 16px) !important;
+            max-width: 100vw !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 90% !important;
+            min-width: 100vw !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            transform: translateX(-50%) !important;
           }
           
           /* Override ALL container constraints for final solution images */
