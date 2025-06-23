@@ -830,33 +830,80 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 0 !important;
           }
           
-          /* The four images under "Final Solution - Comprehensive Health Management Platform" */
-          /* Figure 8: Doctor Visits & Information Management - bigger */
-          .prototype-image img[src="/images/Health/image4.png"] {
-            width: 90% !important;
-            margin: 0 auto;
-            display: block;
+          /* The four images under "Final Solution - Comprehensive Health Management Platform" - MAXIMUM SPECIFICITY */
+          /* Figure 8: Doctor Visits & Information Management - FORCE BIGGER */
+          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          .prototype-image img[src="/images/Health/image4.png"],
+          img[src="/images/Health/image4.png"] {
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            min-width: 90% !important;
           }
           
-          /* Figure 9: Caregiver Sharing - bigger */
-          .prototype-image img[src="/images/Health/image5.png"] {
-            width: 90% !important;
-            margin: 0 auto;
-            display: block;
+          /* Figure 9: Caregiver Sharing - FORCE BIGGER */
+          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          .prototype-image img[src="/images/Health/image5.png"],
+          img[src="/images/Health/image5.png"] {
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            min-width: 90% !important;
           }
           
-          /* Figure 10: Personal Notes - bigger */
-          .prototype-image img[src="/images/Health/image6.png"] {
-            width: 90% !important;
-            margin: 0 auto;
-            display: block;
+          /* Figure 10: Personal Notes - FORCE BIGGER */
+          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          .prototype-image img[src="/images/Health/image6.png"],
+          img[src="/images/Health/image6.png"] {
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            min-width: 90% !important;
           }
           
-          /* Figure 11: Questions & Answers - bigger */
-          .prototype-image img[src="/images/Health/questions-answers.png"] {
-            width: 90% !important;
-            margin: 0 auto;
-            display: block;
+          /* Figure 11: Questions & Answers - FORCE BIGGER */
+          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          .prototype-image img[src="/images/Health/questions-answers.png"],
+          img[src="/images/Health/questions-answers.png"] {
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            min-width: 90% !important;
+          }
+          
+          /* Override ALL container constraints for final solution images */
+          .case-study .content-main .final-solution .prototype-image,
+          .final-solution .prototype-image {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 24px 0 !important;
+            padding: 0 !important;
+          }
+          
+          /* Additional targeting for all final-solution images */
+          .final-solution img {
+            width: 100% !important;
+            max-width: calc(100vw - 16px) !important;
           }
         }
       `}</style>
