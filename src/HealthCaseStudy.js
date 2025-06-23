@@ -733,7 +733,7 @@ const HealthCaseStudy = ({ onBack }) => {
             width: 100% !important;
             margin: 0 auto !important;
             display: block !important;
-            max-width: calc(100vw - 32px) !important;
+            max-width: calc(100vw - 16px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
           }
@@ -747,12 +747,25 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 0 !important;
           }
           
-          /* Figure 2: Scribe mobile interface - much bigger */
+          /* Figure 2: Scribe mobile interface - much bigger with maximum specificity */
           .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/image2.png"],
+          .prototype-section .prototype-image img[src="/images/Health/image2.png"],
           .prototype-image img[src="/images/Health/image2.png"] {
-            width: 95% !important;
+            width: 100% !important;
             margin: 0 auto !important;
             display: block !important;
+            max-width: calc(100vw - 16px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+          }
+          
+          /* Override any container constraints for Figure 2 */
+          .case-study .content-main .prototype-section:has(img[src="/images/Health/image2.png"]) .prototype-image,
+          .prototype-section:has(img[src="/images/Health/image2.png"]) .prototype-image {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 24px 0 !important;
+            padding: 0 !important;
           }
           
           /* Figure 3: Barriers before (Summary of access barriers) - slightly bigger */
@@ -769,11 +782,16 @@ const HealthCaseStudy = ({ onBack }) => {
             display: block;
           }
           
-          /* Figure 5: MIHA conversational interface - keep medium */
+          /* Figure 5: MIHA conversational interface - bigger with maximum specificity */
+          .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/image3.png"],
+          .prototype-section .prototype-image img[src="/images/Health/image3.png"],
           .prototype-image img[src="/images/Health/image3.png"] {
-            width: 70% !important;
-            margin: 0 auto;
-            display: block;
+            width: 95% !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 32px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
           }
           
           /* Wizard of Oz study interface - keep current size */
