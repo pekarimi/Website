@@ -1068,7 +1068,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </p>
                   </div>
                   
-                  {/* Error Rate Comparison - SMALLER ON MOBILE */}
+                  {/* Error Rate Comparison - SMALLER ON BOTH WEB AND MOBILE */}
                   <div className="study-image-container" style={{ 
                     margin: isMobile ? '12px 0' : '24px 0',
                     padding: '8px'
@@ -1081,7 +1081,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                         width: '100%',
                         height: 'auto',
                         maxWidth: '100%',
-                        maxHeight: isMobile ? '180px' : 'none',
+                        maxHeight: isMobile ? '160px' : '250px',
                         objectFit: 'contain'
                       }}
                     />
@@ -1133,7 +1133,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                       <li><strong>Hesitation Patterns:</strong> 10.91% of interactions involved 2+ second pauses for decision making</li>
                     </ul>
                     
-                    {/* Interaction Behavior Table */}
+                    {/* Interaction Behavior Table - BIGGER ON BOTH WEB AND MOBILE */}
                     <div className="study-image-container" style={{ 
                       margin: isMobile ? '12px 0' : '16px 0',
                       padding: '8px'
@@ -1146,7 +1146,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                           width: '100%',
                           height: 'auto',
                           maxWidth: '100%',
-                          maxHeight: isMobile ? '300px' : 'none',
+                          maxHeight: isMobile ? '350px' : '450px',
                           objectFit: 'contain'
                         }}
                       />
