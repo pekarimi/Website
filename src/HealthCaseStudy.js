@@ -723,6 +723,85 @@ const HealthCaseStudy = ({ onBack }) => {
           .prototype-section {
             padding: 24px;
           }
+
+          /* Health Case Study Mobile Figure Adjustments */
+          
+          /* Figure 1: Research outcomes - slightly bigger */
+          .prototype-image img[src="/images/Health/image1.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 2: Scribe mobile interface - slightly bigger */
+          .prototype-image img[src="/images/Health/image2.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 3: Barriers before - slightly smaller */
+          .barrier-diagram img[src="/images/Health/barriers-before.png"] {
+            width: 55% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 4: Barriers after - slightly smaller */
+          .barrier-diagram img[src="/images/Health/barriers-after.png"] {
+            width: 55% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 5: MIHA conversational interface - slightly bigger */
+          .prototype-image img[src="/images/Health/image3.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Wizard of Oz study interface - much bigger */
+          .woz-image img[src="/images/Health/miha-woz.png"] {
+            width: 95% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 6: Paper prototype - slightly bigger */
+          .prototype-image img[src="/images/Health/paper-prototype.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 8: Personal notes - slightly bigger */
+          .prototype-image img[src="/images/Health/image4.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 9: Visit summary with caregiver sharing - slightly bigger */
+          .prototype-image img[src="/images/Health/image5.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 10: Personal notes feature - slightly bigger */
+          .prototype-image img[src="/images/Health/image6.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          /* Figure 11: Questions & Answers - slightly bigger */
+          .prototype-image img[src="/images/Health/questions-answers.png"] {
+            width: 85% !important;
+            margin: 0 auto;
+            display: block;
+          }
         }
       `}</style>
     </div>
