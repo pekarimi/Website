@@ -791,12 +791,25 @@ const HealthCaseStudy = ({ onBack }) => {
             display: block !important;
           }
           
-          /* Figure 7: Framework - bigger */
+          /* Figure 7: Framework - much bigger with maximum specificity */
           .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/framework.png"],
+          .prototype-section .prototype-image img[src="/images/Health/framework.png"],
           .prototype-image img[src="/images/Health/framework.png"] {
-            width: 95% !important;
+            width: 100% !important;
             margin: 0 auto !important;
             display: block !important;
+            max-width: calc(100vw - 32px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+          }
+          
+          /* Override any container constraints for Figure 7 */
+          .case-study .content-main .prototype-section:has(img[src="/images/Health/framework.png"]) .prototype-image,
+          .prototype-section:has(img[src="/images/Health/framework.png"]) .prototype-image {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 24px 0 !important;
+            padding: 0 !important;
           }
           
           /* The four images under "Final Solution - Comprehensive Health Management Platform" */
