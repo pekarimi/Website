@@ -849,95 +849,141 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 0 !important;
           }
           
-          /* The four images under "Final Solution - Comprehensive Health Management Platform" - MOBILE OPTIMIZED SIZE */
-          /* Figure 8: Doctor Visits & Information Management - MOBILE OPTIMIZED */
-          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
-          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
-          .final-solution .prototype-image img[src="/images/Health/image4.png"],
-          .prototype-image img[src="/images/Health/image4.png"],
-          img[src="/images/Health/image4.png"] {
-            width: 95% !important;
+          /* The four images under "Final Solution - Comprehensive Health Management Platform" - MOBILE OPTIMIZED WITH MAXIMUM SPECIFICITY */
+          /* Figure 8: Doctor Visits & Information Management - SUPER HIGH SPECIFICITY */
+          html body div.case-study section.content-section div.container div.content-main div.final-solution div.prototype-image img[src="/images/Health/image4.png"],
+          html body .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          html body .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          html body .final-solution .prototype-image img[src="/images/Health/image4.png"],
+          html body .prototype-image img[src="/images/Health/image4.png"],
+          html body img[src="/images/Health/image4.png"] {
+            width: 85% !important;
+            max-width: 85% !important;
+            min-width: auto !important;
             margin: 0 auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
             display: block !important;
-            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            position: relative !important;
+            position: static !important;
             left: auto !important;
             right: auto !important;
             transform: none !important;
+            overflow: hidden !important;
           }
           
-          /* Figure 9: Caregiver Sharing - MOBILE OPTIMIZED */
-          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
-          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
-          .final-solution .prototype-image img[src="/images/Health/image5.png"],
-          .prototype-image img[src="/images/Health/image5.png"],
-          img[src="/images/Health/image5.png"] {
-            width: 95% !important;
+          /* Figure 9: Caregiver Sharing - SUPER HIGH SPECIFICITY */
+          html body div.case-study section.content-section div.container div.content-main div.final-solution div.prototype-image img[src="/images/Health/image5.png"],
+          html body .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          html body .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          html body .final-solution .prototype-image img[src="/images/Health/image5.png"],
+          html body .prototype-image img[src="/images/Health/image5.png"],
+          html body img[src="/images/Health/image5.png"] {
+            width: 85% !important;
+            max-width: 85% !important;
+            min-width: auto !important;
             margin: 0 auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
             display: block !important;
-            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            position: relative !important;
+            position: static !important;
             left: auto !important;
             right: auto !important;
             transform: none !important;
+            overflow: hidden !important;
           }
           
-          /* Figure 10: Personal Notes - MOBILE OPTIMIZED */
-          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
-          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
-          .final-solution .prototype-image img[src="/images/Health/image6.png"],
-          .prototype-image img[src="/images/Health/image6.png"],
-          img[src="/images/Health/image6.png"] {
-            width: 95% !important;
+          /* Figure 10: Personal Notes - SUPER HIGH SPECIFICITY */
+          html body div.case-study section.content-section div.container div.content-main div.final-solution div.prototype-image img[src="/images/Health/image6.png"],
+          html body .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          html body .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          html body .final-solution .prototype-image img[src="/images/Health/image6.png"],
+          html body .prototype-image img[src="/images/Health/image6.png"],
+          html body img[src="/images/Health/image6.png"] {
+            width: 85% !important;
+            max-width: 85% !important;
+            min-width: auto !important;
             margin: 0 auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
             display: block !important;
-            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            position: relative !important;
+            position: static !important;
             left: auto !important;
             right: auto !important;
             transform: none !important;
+            overflow: hidden !important;
           }
           
-          /* Figure 11: Questions & Answers - MOBILE OPTIMIZED */
-          .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
-          .case-study .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
-          .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
-          .prototype-image img[src="/images/Health/questions-answers.png"],
-          img[src="/images/Health/questions-answers.png"] {
-            width: 95% !important;
+          /* Figure 11: Questions & Answers - SUPER HIGH SPECIFICITY */
+          html body div.case-study section.content-section div.container div.content-main div.final-solution div.prototype-image img[src="/images/Health/questions-answers.png"],
+          html body .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          html body .case-study .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          html body .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
+          html body .prototype-image img[src="/images/Health/questions-answers.png"],
+          html body img[src="/images/Health/questions-answers.png"] {
+            width: 85% !important;
+            max-width: 85% !important;
+            min-width: auto !important;
             margin: 0 auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
             display: block !important;
-            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            position: relative !important;
+            position: static !important;
             left: auto !important;
             right: auto !important;
             transform: none !important;
+            overflow: hidden !important;
           }
           
-          /* Override ALL container constraints for final solution images */
-          .case-study .content-main .final-solution .prototype-image,
-          .final-solution .prototype-image {
+          /* Override ALL container constraints for final solution images - MAXIMUM SPECIFICITY */
+          html body div.case-study section.content-section div.container div.content-main div.final-solution div.prototype-image,
+          html body .case-study .content-main .final-solution .prototype-image,
+          html body .final-solution .prototype-image {
             width: 100% !important;
             max-width: 100% !important;
             margin: 24px 0 !important;
-            padding: 0 !important;
+            padding: 0 8px !important;
             text-align: center !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
           }
           
-          /* Additional targeting for all final-solution images */
-          .final-solution img {
-            width: 95% !important;
-            max-width: calc(100vw - 32px) !important;
+          /* Additional targeting for all final-solution images - MAXIMUM SPECIFICITY */
+          html body .final-solution img {
+            width: 85% !important;
+            max-width: 85% !important;
             margin: 0 auto !important;
             display: block !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+          }
+          
+          /* Force container width containment - PREVENT OVERFLOW */
+          html body .case-study .final-solution {
+            overflow: hidden !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          
+          html body .case-study .content-main {
+            overflow: hidden !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          
+          html body .case-study .container {
+            overflow: hidden !important;
+            max-width: 100% !important;
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+            box-sizing: border-box !important;
           }
         }
       `}</style>
