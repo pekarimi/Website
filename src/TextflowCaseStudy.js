@@ -1068,7 +1068,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                     </p>
                   </div>
                   
-                  {/* Error Rate Comparison - SIZE CONTROLLED BY CSS */}
+                  {/* Error Rate Comparison - CONTROLLED SIZE */}
                   <div className="study-image-container" style={{ 
                     margin: isMobile ? '12px 0' : '24px 0',
                     padding: '8px'
@@ -1080,7 +1080,11 @@ const TextflowCaseStudy = ({ onBack }) => {
                       style={{
                         width: '100%',
                         height: 'auto',
-                        objectFit: 'contain'
+                        maxHeight: isMobile ? '160px' : '320px',
+                        objectFit: 'contain',
+                        border: '1px solid #e0e0e0',
+                        borderRadius: '8px',
+                        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)'
                       }}
                     />
                     <p className="image-caption">
@@ -1131,7 +1135,7 @@ const TextflowCaseStudy = ({ onBack }) => {
                       <li><strong>Hesitation Patterns:</strong> 10.91% of interactions involved 2+ second pauses for decision making</li>
                     </ul>
                     
-                    {/* Interaction Behavior Table - SIZE CONTROLLED BY CSS */}
+                    {/* Interaction Behavior Table - FORCE BIGGER SIZE */}
                     <div className="study-image-container" style={{ 
                       margin: isMobile ? '12px 0' : '16px 0',
                       padding: '8px'
@@ -1143,7 +1147,12 @@ const TextflowCaseStudy = ({ onBack }) => {
                         style={{
                           width: '100%',
                           height: 'auto',
-                          objectFit: 'contain'
+                          maxHeight: isMobile ? '500px' : '600px',
+                          minHeight: isMobile ? '350px' : '400px',
+                          objectFit: 'contain',
+                          border: '1px solid #e0e0e0',
+                          borderRadius: '8px',
+                          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)'
                         }}
                       />
                       <p className="image-caption">

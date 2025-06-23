@@ -1901,34 +1901,3 @@ body {
   }
 }
 
-/* ADD THIS TO THE END OF YOUR App.css FILE */
-
-/* ADD THIS TO THE END OF YOUR App.css FILE */
-
-/* TEXTFLOW SPECIFIC IMAGE SIZE OVERRIDES */
-.case-study-container .study-image {
-  max-height: none !important; /* Remove any global max-height constraints */
-}
-
-/* ERROR RATE COMPARISON - Make bigger on web, smaller on mobile */
-.case-study-container img[src="/images/textflow/error-rate-comparison.png"] {
-  max-height: 320px !important; /* Increased from 250px */
-}
-
-/* INTERACTION BEHAVIOR TABLE - Make much bigger on both web and mobile */
-.case-study-container img[src="/images/textflow/interaction-behavior-table.png"] {
-  max-height: 600px !important; /* Increased from 450px */
-}
-
-/* MOBILE SPECIFIC OVERRIDES */
-@media (max-width: 768px) {
-  /* ERROR RATE COMPARISON - Smaller on mobile */
-  .case-study-container img[src="/images/textflow/error-rate-comparison.png"] {
-    max-height: 160px !important;
-  }
-  
-  /* INTERACTION BEHAVIOR TABLE - Much bigger on mobile */
-  .case-study-container img[src="/images/textflow/interaction-behavior-table.png"] {
-    max-height: 450px !important; /* Increased from 350px */
-  }
-}
