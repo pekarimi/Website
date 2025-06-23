@@ -783,11 +783,12 @@ const HealthCaseStudy = ({ onBack }) => {
             display: block;
           }
           
-          /* Figure 6: Paper prototype - keep medium */
+          /* Figure 6: Paper prototype - bigger */
+          .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/paper-prototype.png"],
           .prototype-image img[src="/images/Health/paper-prototype.png"] {
-            width: 70% !important;
-            margin: 0 auto;
-            display: block;
+            width: 90% !important;
+            margin: 0 auto !important;
+            display: block !important;
           }
           
           /* Figure 7: Framework - keep medium */
