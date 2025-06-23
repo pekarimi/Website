@@ -675,6 +675,25 @@ const HealthCaseStudy = ({ onBack }) => {
           font-weight: 600;
         }
 
+        .study-highlights h4 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 24px 0 16px 0;
+          color: #1a1a1a;
+        }
+
+        .study-highlights ul {
+          margin: 20px 0;
+          padding-left: 20px;
+        }
+
+        .study-highlights li {
+          font-size: 16px;
+          line-height: 1.7;
+          color: #555;
+          margin-bottom: 12px;
+        }
+
         @media (max-width: 768px) {
           .hero-image-section {
             padding: 20px 0;
@@ -830,85 +849,77 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 0 !important;
           }
           
-          /* The four images under "Final Solution - Comprehensive Health Management Platform" - ABSOLUTE MAXIMUM SIZE */
-          /* Figure 8: Doctor Visits & Information Management - ABSOLUTE BIGGEST */
+          /* The four images under "Final Solution - Comprehensive Health Management Platform" - MOBILE OPTIMIZED SIZE */
+          /* Figure 8: Doctor Visits & Information Management - MOBILE OPTIMIZED */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .final-solution .prototype-image img[src="/images/Health/image4.png"],
           .prototype-image img[src="/images/Health/image4.png"],
           img[src="/images/Health/image4.png"] {
-            width: 100vw !important;
-            margin: 0 !important;
-            margin-left: calc(-50vw + 50%) !important;
+            width: 95% !important;
+            margin: 0 auto !important;
             display: block !important;
-            max-width: 100vw !important;
+            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 100vw !important;
             position: relative !important;
-            left: 50% !important;
-            right: 50% !important;
-            transform: translateX(-50%) !important;
+            left: auto !important;
+            right: auto !important;
+            transform: none !important;
           }
           
-          /* Figure 9: Caregiver Sharing - ABSOLUTE BIGGEST */
+          /* Figure 9: Caregiver Sharing - MOBILE OPTIMIZED */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .final-solution .prototype-image img[src="/images/Health/image5.png"],
           .prototype-image img[src="/images/Health/image5.png"],
           img[src="/images/Health/image5.png"] {
-            width: 100vw !important;
-            margin: 0 !important;
-            margin-left: calc(-50vw + 50%) !important;
+            width: 95% !important;
+            margin: 0 auto !important;
             display: block !important;
-            max-width: 100vw !important;
+            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 100vw !important;
             position: relative !important;
-            left: 50% !important;
-            right: 50% !important;
-            transform: translateX(-50%) !important;
+            left: auto !important;
+            right: auto !important;
+            transform: none !important;
           }
           
-          /* Figure 10: Personal Notes - ABSOLUTE BIGGEST */
+          /* Figure 10: Personal Notes - MOBILE OPTIMIZED */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .final-solution .prototype-image img[src="/images/Health/image6.png"],
           .prototype-image img[src="/images/Health/image6.png"],
           img[src="/images/Health/image6.png"] {
-            width: 100vw !important;
-            margin: 0 !important;
-            margin-left: calc(-50vw + 50%) !important;
+            width: 95% !important;
+            margin: 0 auto !important;
             display: block !important;
-            max-width: 100vw !important;
+            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 100vw !important;
             position: relative !important;
-            left: 50% !important;
-            right: 50% !important;
-            transform: translateX(-50%) !important;
+            left: auto !important;
+            right: auto !important;
+            transform: none !important;
           }
           
-          /* Figure 11: Questions & Answers - ABSOLUTE BIGGEST */
+          /* Figure 11: Questions & Answers - MOBILE OPTIMIZED */
           .case-study .content-section .container .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .case-study .content-main .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .final-solution .prototype-image img[src="/images/Health/questions-answers.png"],
           .prototype-image img[src="/images/Health/questions-answers.png"],
           img[src="/images/Health/questions-answers.png"] {
-            width: 100vw !important;
-            margin: 0 !important;
-            margin-left: calc(-50vw + 50%) !important;
+            width: 95% !important;
+            margin: 0 auto !important;
             display: block !important;
-            max-width: 100vw !important;
+            max-width: calc(100vw - 32px) !important;
             padding: 0 !important;
             box-sizing: border-box !important;
-            min-width: 100vw !important;
             position: relative !important;
-            left: 50% !important;
-            right: 50% !important;
-            transform: translateX(-50%) !important;
+            left: auto !important;
+            right: auto !important;
+            transform: none !important;
           }
           
           /* Override ALL container constraints for final solution images */
@@ -918,12 +929,15 @@ const HealthCaseStudy = ({ onBack }) => {
             max-width: 100% !important;
             margin: 24px 0 !important;
             padding: 0 !important;
+            text-align: center !important;
           }
           
           /* Additional targeting for all final-solution images */
           .final-solution img {
-            width: 100% !important;
-            max-width: calc(100vw - 16px) !important;
+            width: 95% !important;
+            max-width: calc(100vw - 32px) !important;
+            margin: 0 auto !important;
+            display: block !important;
           }
         }
       `}</style>
