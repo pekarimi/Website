@@ -724,21 +724,35 @@ const HealthCaseStudy = ({ onBack }) => {
             padding: 24px;
           }
 
-          /* Health Case Study Mobile Figure Adjustments */
+          /* Health Case Study Mobile Figure Adjustments - HIGHEST SPECIFICITY */
           
-          /* Figure 1: Research outcomes - much bigger */
+          /* Figure 1: Research outcomes - much bigger with maximum specificity */
+          .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/image1.png"],
+          .prototype-section .prototype-image img[src="/images/Health/image1.png"],
           .prototype-image img[src="/images/Health/image1.png"] {
             width: 100% !important;
-            margin: 0 auto;
-            display: block;
-            max-width: calc(100vw - 16px) !important;
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: calc(100vw - 32px) !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+          }
+          
+          /* Override any container constraints for Figure 1 */
+          .case-study .content-main .prototype-section:has(img[src="/images/Health/image1.png"]) .prototype-image,
+          .prototype-section:has(img[src="/images/Health/image1.png"]) .prototype-image {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 24px 0 !important;
+            padding: 0 !important;
           }
           
           /* Figure 2: Scribe mobile interface - much bigger */
+          .case-study .content-main .prototype-section .prototype-image img[src="/images/Health/image2.png"],
           .prototype-image img[src="/images/Health/image2.png"] {
             width: 95% !important;
-            margin: 0 auto;
-            display: block;
+            margin: 0 auto !important;
+            display: block !important;
           }
           
           /* Figure 3: Barriers before (Summary of access barriers) - slightly bigger */
