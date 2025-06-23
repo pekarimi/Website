@@ -576,6 +576,39 @@ const TextflowCaseStudy = ({ onBack }) => {
             padding: 0 16px;
           }
           
+          /* MAXIMUM SPECIFICITY TO OVERRIDE APP.CSS CONFLICTS */
+          html body .case-study-container .textflow-interaction-table-container,
+          html body .textflow-interaction-table-container {
+            margin: 2px 0 !important;
+            padding: 1px !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+          }
+          
+          html body .case-study-container .textflow-interaction-table-image,
+          html body .textflow-interaction-table-image {
+            width: 98% !important;
+            max-width: 98% !important;
+            height: auto !important;
+            max-height: 300px !important;
+            min-height: 180px !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            display: block !important;
+            object-fit: contain !important;
+            box-sizing: border-box !important;
+          }
+          
+          html body .case-study-container .textflow-interaction-table-caption,
+          html body .textflow-interaction-table-caption {
+            margin: 1px 0 0 0 !important;
+            padding: 0 2px !important;
+            font-size: 11px !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+          }
+          
           /* LARGER HERO IMAGE ON MOBILE */
           .hero-image-container {
             width: 98%;
@@ -1135,28 +1168,32 @@ const TextflowCaseStudy = ({ onBack }) => {
                       <li><strong>Hesitation Patterns:</strong> 10.91% of interactions involved 2+ second pauses for decision making</li>
                     </ul>
                     
-                    {/* Interaction Behavior Table - REDUCED WHITE SPACE ON MOBILE */}
-                    <div className="study-image-container" style={{ 
-                      margin: isMobile ? '8px 0' : '16px 0',
-                      padding: isMobile ? '4px' : '8px'
+                    {/* Interaction Behavior Table - MAXIMUM SPECIFICITY TO OVERRIDE APP.CSS */}
+                    <div className="study-image-container textflow-interaction-table-container" style={{ 
+                      margin: isMobile ? '4px 0 !important' : '16px 0',
+                      padding: isMobile ? '2px !important' : '8px'
                     }}>
                       <img 
                         src="/images/textflow/interaction-behavior-table.png" 
                         alt="Table showing percentage of tasks coded as fluidity, difficulty, and hesitation for three combinations of hand placement and finger position in TBT and SDF conditions"
-                        className="study-image"
+                        className="study-image textflow-interaction-table-image"
                         style={{
                           width: '100%',
                           height: 'auto',
-                          maxHeight: isMobile ? '400px' : '600px',
-                          minHeight: isMobile ? '250px' : '400px',
+                          maxHeight: isMobile ? '350px !important' : '600px',
+                          minHeight: isMobile ? '200px !important' : '400px',
                           objectFit: 'contain',
                           border: '1px solid #e0e0e0',
                           borderRadius: '8px',
-                          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)'
+                          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
+                          margin: isMobile ? '0 !important' : 'auto'
                         }}
                       />
-                      <p className="image-caption" style={{
-                        margin: isMobile ? '4px 0 0 0' : '8px 0 0 0'
+                      <p className="image-caption textflow-interaction-table-caption" style={{
+                        margin: isMobile ? '2px 0 0 0 !important' : '8px 0 0 0',
+                        padding: isMobile ? '0 4px !important' : '0 8px',
+                        fontSize: isMobile ? '12px !important' : '14px',
+                        lineHeight: isMobile ? '1.3 !important' : '1.5'
                       }}>
                         Percentage of tasks coded as fluidity, difficulty, and hesitation for three combination of hand placement and finger position in TBT and SDF conditions across all participants.
                       </p>
