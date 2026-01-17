@@ -1,0 +1,503 @@
+/* Customer Portal Case Study Styles */
+.customer-portal-case-study {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Back Button */
+.customer-portal-case-study .back-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.customer-portal-case-study .back-button:hover {
+  background: #00D4AA;
+  color: white;
+  transform: translateX(-4px);
+}
+
+/* Hero Section */
+.portal-hero {
+  width: 100%;
+  padding: 80px 24px 0;
+  background: linear-gradient(135deg, #00D4AA 0%, #7C3AED 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.portal-hero .hero-full-image {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Section */
+.customer-portal-case-study .title-section {
+  padding: 60px 0 40px;
+  background: #fff;
+}
+
+.customer-portal-case-study .title-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.customer-portal-case-study .subtitle {
+  font-size: 22px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Container */
+.customer-portal-case-study .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Project Overview */
+.customer-portal-case-study .project-overview {
+  padding: 40px 0;
+  background: #f8f9fa;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.customer-portal-case-study .overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.customer-portal-case-study .overview-item h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #00D4AA;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.customer-portal-case-study .overview-item p {
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Challenge Section */
+.customer-portal-case-study .challenge-section {
+  padding: 80px 0;
+}
+
+.customer-portal-case-study .challenge-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+.customer-portal-case-study .challenge-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.customer-portal-case-study .goals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.customer-portal-case-study .goal-card {
+  background: #f8f9fa;
+  padding: 28px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.customer-portal-case-study .goal-card:hover {
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.customer-portal-case-study .goal-icon {
+  width: 40px;
+  height: 40px;
+  color: #00D4AA;
+  margin-bottom: 16px;
+}
+
+.customer-portal-case-study .goal-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.customer-portal-case-study .goal-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Feature Section */
+.customer-portal-case-study .feature-section {
+  padding: 80px 0;
+}
+
+.customer-portal-case-study .feature-section.alt-bg {
+  background: #f8f9fa;
+}
+
+.customer-portal-case-study .feature-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.customer-portal-case-study .feature-header-icon {
+  width: 48px;
+  height: 48px;
+  color: #00D4AA;
+}
+
+.customer-portal-case-study .feature-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.customer-portal-case-study .feature-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 4px 0 0 0;
+}
+
+.customer-portal-case-study .feature-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.customer-portal-case-study .feature-content.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.customer-portal-case-study .feature-content.reverse .feature-image {
+  order: 2;
+}
+
+.customer-portal-case-study .feature-content.reverse .feature-details {
+  order: 1;
+}
+
+.customer-portal-case-study .feature-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.customer-portal-case-study .feature-details h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.customer-portal-case-study .feature-details p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 24px 0;
+}
+
+.customer-portal-case-study .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.customer-portal-case-study .feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.customer-portal-case-study .feature-list li svg {
+  color: #00D4AA;
+  flex-shrink: 0;
+}
+
+/* Approach Section */
+.customer-portal-case-study .approach-section {
+  padding: 80px 0;
+  background: #1a1a1a;
+  color: white;
+}
+
+.customer-portal-case-study .approach-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.customer-portal-case-study .approach-section .section-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.customer-portal-case-study .approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.customer-portal-case-study .approach-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.customer-portal-case-study .approach-icon {
+  width: 48px;
+  height: 48px;
+  color: #00D4AA;
+  margin-bottom: 20px;
+}
+
+.customer-portal-case-study .approach-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.customer-portal-case-study .approach-card p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Visual Design Section */
+.customer-portal-case-study .visual-design-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.customer-portal-case-study .visual-design-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.customer-portal-case-study .visual-design-section .section-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.customer-portal-case-study .color-palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.customer-portal-case-study .color-swatch {
+  padding: 40px 20px 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.customer-portal-case-study .color-swatch:last-child {
+  color: white;
+}
+
+.customer-portal-case-study .color-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.customer-portal-case-study .color-value {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Impact Section */
+.customer-portal-case-study .impact-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #00D4AA 0%, #00A88A 100%);
+  color: white;
+}
+
+.customer-portal-case-study .impact-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 48px 0;
+  text-align: center;
+}
+
+.customer-portal-case-study .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.customer-portal-case-study .impact-card {
+  text-align: center;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.customer-portal-case-study .impact-number {
+  display: block;
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.customer-portal-case-study .impact-label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.customer-portal-case-study .impact-summary {
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Reflection Section */
+.customer-portal-case-study .reflection-section {
+  padding: 80px 0;
+}
+
+.customer-portal-case-study .reflection-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+.customer-portal-case-study .reflection-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .customer-portal-case-study .feature-content,
+  .customer-portal-case-study .feature-content.reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .customer-portal-case-study .feature-content.reverse .feature-image,
+  .customer-portal-case-study .feature-content.reverse .feature-details {
+    order: unset;
+  }
+
+  .customer-portal-case-study .goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-portal-case-study .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-portal-case-study .title-content h1 {
+    font-size: 32px;
+  }
+
+  .customer-portal-case-study .subtitle {
+    font-size: 18px;
+  }
+
+  .customer-portal-case-study .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .customer-portal-case-study .goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-portal-case-study .color-palette {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-portal-case-study .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .customer-portal-case-study .impact-number {
+    font-size: 42px;
+  }
+
+  .customer-portal-case-study .back-button {
+    top: 16px;
+    left: 16px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

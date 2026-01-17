@@ -6,10 +6,12 @@ import HealthCaseStudy from './HealthCaseStudy';
 import DropoutCaseStudy from './DropoutCaseStudy';
 import TextflowCaseStudy from './TextflowCaseStudy';
 import CSPCaseStudy from './CSPCaseStudy';
+import ISonoHealthCaseStudy from './iSonoHealthCaseStudy';
+import CustomerPortalCaseStudy from './CustomerPortalCaseStudy';
 import './App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('portfolio'); // 'portfolio', 'mindsets', 'kano', 'health', 'dropout', 'textflow', or 'csp'
+  const [currentView, setCurrentView] = useState('portfolio'); // 'portfolio', 'mindsets', 'kano', 'health', 'dropout', 'textflow', 'csp', 'isono', or 'customerportal'
 
   const handleProjectClick = (projectId) => {
     if (projectId === 1) {
@@ -24,6 +26,10 @@ function App() {
       setCurrentView('textflow');
     } else if (projectId === 6) {
       setCurrentView('csp');
+    } else if (projectId === 7) {
+      setCurrentView('isono');
+    } else if (projectId === 8) {
+      setCurrentView('customerportal');
     }
   };
 
@@ -53,6 +59,12 @@ function App() {
       )}
       {currentView === 'csp' && (
         <CSPCaseStudy onBack={handleBackToPortfolio} />
+      )}
+      {currentView === 'isono' && (
+        <ISonoHealthCaseStudy onBack={handleBackToPortfolio} />
+      )}
+      {currentView === 'customerportal' && (
+        <CustomerPortalCaseStudy onBack={handleBackToPortfolio} />
       )}
     </div>
   );
