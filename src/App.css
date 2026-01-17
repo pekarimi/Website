@@ -1914,4 +1914,20 @@ body {
   .project-image-container {
     background: #f5f5f5 !important;
   }
+
+  /* Fix empty space below images */
+  .project-image-container {
+    height: auto !important;
+    min-height: 180px;
+  }
+
+  .project-image {
+    height: auto !important;
+  }
+
+  .project-img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
 }
