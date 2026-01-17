@@ -442,6 +442,15 @@ const Portfolio = ({ onProjectClick }) => {
             grid-template-columns: 1fr;
             gap: 24px;
           }
+
+          /* Fix pink overlay on mobile */
+          .filtered-projects-grid .project-card .project-overlay {
+            display: none;
+          }
+
+          .filtered-projects-grid .project-card .project-image-container::after {
+            display: none;
+          }
         }
       `}</style>
 
