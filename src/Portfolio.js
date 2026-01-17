@@ -375,6 +375,12 @@ const Portfolio = ({ onProjectClick }) => {
           height: 100%;
         }
 
+        /* Ensure all project images are centered */
+        .project-img {
+          object-fit: cover !important;
+          object-position: center center !important;
+        }
+
         /* Force contact info styling */
         .portfolio-contact-override {
           background: rgba(224, 247, 255, 0.95) !important;
